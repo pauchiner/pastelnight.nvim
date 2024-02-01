@@ -6,10 +6,10 @@ local M = {}
 function M.generate(colors)
   local zathura = util.template(
     [[
-# Pastelnight color theme for Zathura
+# PastelNight color theme for Zathura
 # Swaps Foreground for Background to get a light version if the user prefers
 #
-# Pastelnight color theme
+# PastelNight color theme
 #
 set notification-error-bg "${red}"
 set notification-error-fg "${fg}"

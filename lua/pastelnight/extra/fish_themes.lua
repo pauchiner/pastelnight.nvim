@@ -13,7 +13,7 @@ function M.generate(colors)
 
   local fish = util.template(
     [[
-    # Pastelnight
+    # PastelNight
 
     # Syntax Highlighting Colors
     fish_color_normal ${fg}

@@ -8,7 +8,7 @@ function M.generate(colors)
     [[
 #!/usr/bin/env bash
 
-# Pastelnight colors for Tmux
+# PastelNight colors for Tmux
 
 set -g mode-style "fg=${blue},bg=${fg_gutter}"
 

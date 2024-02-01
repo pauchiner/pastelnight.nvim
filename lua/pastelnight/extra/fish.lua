@@ -13,7 +13,7 @@ function M.generate(colors)
 
   local fish = util.template(
     [[
-    # Pastelnight Color Palette
+    # PastelNight Color Palette
     set -l foreground ${fg}
     set -l selection ${bg_visual}
     set -l comment ${comment}

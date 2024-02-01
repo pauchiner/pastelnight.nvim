@@ -6,7 +6,7 @@ local M = {}
 function M.generate(colors)
   local xr = util.template(
     [[
-! Pastelnight colors for Xresources
+! PastelNight colors for Xresources
 
 *background: ${bg}
 *foreground: ${fg}

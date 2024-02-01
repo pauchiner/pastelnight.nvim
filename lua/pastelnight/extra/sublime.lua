@@ -18,7 +18,7 @@ M.template = [[
 	<key>colorSpaceName</key>
 	<string>sRGB</string>
 	<key>name</key>
-	<string>Pastelnight</string>
+	<string>PastelNight</string>
 	<key>semanticClass</key>
 	<string>enki.theme.tokyo</string>
 	<key>settings</key>

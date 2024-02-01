@@ -91,7 +91,7 @@ function M.setup()
       local colors = require("solarized-osaka.colors").setup({ transform = true })
       local fname = extra .. "/pastelnight_" .. style .. "." .. info.ext
       colors["_upstream_url"] = "https://github.com/folke/tokyonight.nvim/raw/main/extras/" .. fname
-      colors["_style_name"] = "Pastelnight" .. style_name
+      colors["_style_name"] = "PastelNight" .. style_name
       write(plugin.generate(colors), fname)
     end
   end

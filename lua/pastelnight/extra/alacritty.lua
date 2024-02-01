@@ -13,7 +13,7 @@ function M.generate(colors)
 
   local alacritty = util.template(
     [[
-# Pastelnight Alacritty Colors
+# PastelNight Alacritty Colors
 colors:
   # Default colors
   primary:
