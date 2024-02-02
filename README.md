@@ -1,11 +1,11 @@
 <h1 align="center">PastelNight</h1>
     
 <h5 align="center">
-  <a href="#%F0%9F%8E%A8-colors">🎨 Palette </a>
+  <a href="#-colors">🎨 Palette </a>
   ·
-  <a href="#%F0%9F%9B%A0%EF%B8%8F-installation">  ⚡️ Quick Start  </a>
+  <a href="#%EF%B8%8F-installation">  ⚡️ Quick Start  </a>
   ·
-  <a href="#%E2%9A%99%EF%B8%8F-configuration"> ⚙️ Configuration </a>
+  <a href="#%EF%B8%8F--configuration"> ⚙️ Configuration </a>
 </h5>
 
 <p align="center">
