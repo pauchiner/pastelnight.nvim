@@ -12,7 +12,7 @@
 A <a href="https://neovim.io/">Neovim</a> theme inspired on the original <a href="https://github.com/whizkydee/vscode-palenight-theme">Palenight</a> theme, fully written in <a href="https://www.lua.org/">Lua</a>.
 </p>
 
-> [!DANGER]  
+> [!CAUTION]  
 > Theme under development, NOT READY TO USE.
 
 <img align="center" src="./.github/images/showcase.png" />
