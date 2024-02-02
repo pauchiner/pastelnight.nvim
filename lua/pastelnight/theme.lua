@@ -423,6 +423,7 @@ function M.setup()
     NvimTreeFolderIcon = { bg = c.none, fg = c.blue },
     NvimTreeFolderArrowClose = {fg = c.base200},
     NvimTreeFolderName= { fg = c.sky300 },
+    NvimTreeEmptyFolderName = {fg = c.blue50},
 
     NeoTreeNormal = { fg = c.bg, bg = c.bg_sidebar },
     NeoTreeNormalNC = { fg = c.bg, bg = c.bg_sidebar },
