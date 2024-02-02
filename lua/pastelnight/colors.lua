@@ -7,8 +7,6 @@ local M = {}
 ---@class Palette
 M.default = {
   none      = "NONE",
-  fg        = hsl(220, 007, 91), --- base50
-  bg        = hsl(234, 018, 20), --- base500
 
   base50    = hsl(220, 007, 91),
   base100   = hsl(231, 005, 74),
@@ -72,19 +70,30 @@ M.default = {
 
 ---@return ColorScheme
 function M.setup(opts)
-  opts = opts or {}
   local config = require("pastelnight.config")
+  opts = opts or {}
 
-  -- local style = config.is_day() and config.options.light_style or config.options.style
-  local style = "default"
-  local palette = M[style] or {}
+  local palette = M["default"] or {}
   if type(palette) == "function" then
     palette = palette()
   end
 
-  -- Color Palette
+  --- Color Palette
   ---@class ColorScheme: Palette
   local colors = vim.tbl_deep_extend("force", vim.deepcopy(M.default), palette)
+
+  --- Base definition
+  colors.yellow = colors.yellow200
+  colors.orange = colors.orange200
+  colors.purple = colors.purple200
+  colors.green = colors.green200
+  colors.blue = colors.blue200
+  colors.pink = colors.pink200
+  colors.red = colors.red200
+  colors.sky = colors.sky200
+  colors.bg = colors.base500
+  colors.fg = colors.base50
+
 
   util.bg = colors.bg
   util.day_brightness = config.options.day_brightness
@@ -107,10 +116,10 @@ function M.setup(opts)
 
   colors.fg_float = colors.fg
 
-  colors.error = colors.red200
-  colors.warning = colors.yellow200
-  colors.info = colors.blue200
-  colors.hint = colors.sky200
+  colors.error = colors.red
+  colors.warning = colors.yellow
+  colors.info = colors.blue
+  colors.hint = colors.sky
 
   return colors
 end
