@@ -75,9 +75,9 @@ M.default = {
   green700 = hsl(68, 100, 20),
   green900 = hsl(68, 100, 10),
 
-  bg = hsl(192, 100, 5),
-  bg_highlight = hsl(192, 100, 11),
-  fg = hsl(186, 8, 55),
+  bg = hsl(233, 13, 27),
+  bg_highlight = hsl(232, 7, 42),
+  fg = hsl(220, 7, 91),
 }
 
 ---@return ColorScheme
