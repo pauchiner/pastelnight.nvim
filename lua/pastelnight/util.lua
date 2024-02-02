@@ -36,19 +36,6 @@ function M.lighten(hex, amount, fg)
   return M.blend(hex, fg or M.fg, amount)
 end
 
-function M.invert_color(color)
-  local hsluv = require("pastelnight.hsluv")
-  if color ~= "NONE" then
-    local hsl = hsluv.hex_to_hsluv(color)
-    hsl[3] = 100 - hsl[3]
-    if hsl[3] < 40 then
-      hsl[3] = hsl[3] + (100 - hsl[3]) * M.day_brightness
-    end
-    return hsluv.hsluv_to_hex(hsl)
-  end
-  return color
-end
-
 ---@param group string
 function M.highlight(group, hl)
   group = ts.get(group)
@@ -151,33 +138,6 @@ function M.terminal(colors)
 
   vim.g.terminal_color_6 = colors.sky
   vim.g.terminal_color_14 = colors.sky
-end
-
----@param colors ColorScheme
-function M.invert_colors(colors)
-  if type(colors) == "string" then
-    ---@diagnostic disable-next-line: return-type-mismatch
-    return M.invert_color(colors)
-  end
-  for key, value in pairs(colors) do
-    colors[key] = M.invert_colors(value)
-  end
-  return colors
-end
-
----@param hls Highlights
-function M.invert_highlights(hls)
-  for _, hl in pairs(hls) do
-    if hl.fg then
-      hl.fg = M.invert_color(hl.fg)
-    end
-    if hl.bg then
-      hl.bg = M.invert_color(hl.bg)
-    end
-    if hl.sp then
-      hl.sp = M.invert_color(hl.sp)
-    end
-  end
 end
 
 ---@param theme Theme
