@@ -677,6 +677,9 @@ function M.setup()
     -- Lazy
     LazyProgressDone = { bold = true, fg = c.pink },
     LazyProgressTodo = { bold = true, fg = c.base600 },
+    LazyH1 = {fg = c.purple200, bold = true},
+    LazyNoCond = {fg = c.base200},
+    LazySpecial = {fg = c.base100},
 
     -- Notify
     NotifyBackground = { fg = c.fg, bg = c.bg },
