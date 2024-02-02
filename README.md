@@ -63,7 +63,7 @@ vim.api.nvim_command [[colorscheme pastelnight]]
 ## ⚙️  Configuration
 
 > [!WARNING]  
-> Set the configuration **BEFORE** loading the color scheme with `colorscheme pastelnight`.
+> Set the configuration **before** loading the color scheme with `colorscheme pastelnight`.
 
 #### Default Setup
 ```lua
@@ -196,7 +196,6 @@ This plugin is highly inspired on the structure of the [Solarized Osaka Theme](h
 
 ---
 
-<div  align="center">
-    <br>
+<div align="center">
     <sup>With 💚 by Pau García Chiner</sup>
 </div>
