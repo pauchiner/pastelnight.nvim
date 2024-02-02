@@ -65,10 +65,10 @@ function M.setup()
     Whitespace = { fg = c.base300 },                                                                             --- "nbsp", "space", "tab" and "trail" in 'listchars'.
     SpecialKey = { fg = c.base300 },                                                                             --- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|.
     Pmenu = { fg = c.fg, bg = c.base400 },                                                                       --- Popup menu: normal item.
-    PmenuSel = { fg = c.base500, bg = c.purple100, reverse = true },                                             --- Popup menu: selected item.
+    PmenuSel = { fg = c.base500, bg = c.purple100},                                             --- Popup menu: selected item.
     PmenuSbar = { fg = c.base600 },                                                                              --- Popup menu: scrollbar.
     PmenuThumb = { fg = c.base300 },                                                                             --- Popup menu: Thumb of the scrollbar.
-    WildMenu = { fg = c.base500, bg = c.purple100, reverse = true },                                             --- current match in 'wildmenu' completion.
+    WildMenu = { fg = c.base500, bg = c.purple400},                                             --- current match in 'wildmenu' completion.
     Question = { fg = c.yellow, bold = true },                                                                --- |hit-enter| prompt and yes/no questions.
     SpellBad = { sp = c.red100, undercurl = true },                                                              --- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
     SpellCap = { sp = c.purple100, undercurl = true },                                                           --- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
