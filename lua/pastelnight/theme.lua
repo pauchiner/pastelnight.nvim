@@ -58,8 +58,6 @@ function M.setup()
     ErrorMsg = { fg = c.red, bold = true },                                                                   --- error messages on the command line.
     MoreMsg = { fg = c.blue, bold = true },                                                                   --- |more-prompt|.
     WarningMsg = { fg = c.orange100, bold = true },                                                              --- warning messages.
-    CurSearch = { fg = c.bg, c.orange },                                                                      ---
-    IncSearch = { fg = c.bg, c.orange100, reverse = true },                                                      --- 'incsearch' highlighting; also used for the text replaced with ":s///c".
     Search = { fg = c.bg, bg = c.yellow300 },                                                                    ---
     Substitute = { fg = c.bg, bg = c.pink100 },                                                                  --- |:substitute| replacement text highlighting.
     MatchParen = { fg = c.none, bg = c.base200 },                                                                --- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|.
@@ -78,8 +76,6 @@ function M.setup()
     SpellRare = { sp = c.yellow100, undercurl = true },                                                          --- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
     StatusLine = { fg = c.fg, bg = c.base500 },                                                                  --- status line of current window.
     StatusLineTerm  = { fg = c.fg, bg = c.base500 },                                                             --- status line of current terminal .
-    StatusLineNC = { fg = c.base200, bg = c.base600 },                                                           --- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
-    StatusLineTermNC = { fg = c.base200, bg = c.base600 },                                                       --- status lines of not-current terminal Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
     TabLine = { fg = c.fg, bg = c.base400 },                                                                     --- tab pages line, not active tab page label.
     TabLineFill = { fg = c.base200, bg = c.base400 },                                                            --- tab pages line, where there are no labels.
     TabLineSel = { fg = c.bg, bg = c.fg },                                                                       --- tab pages line, active tab page label.
@@ -100,7 +96,9 @@ function M.setup()
     Title = { fg = c.orange, bold = true },                                                                   --- titles for output from ":set all", ":autocmd" etc.
     ToolbarButton = {fg = c.bg, bg = c.blue400},
 
-
+    -- THIS LINES GIVES ERROR TODO: Check if those groups exists
+    --CurSearch = { fg = c.bg, c.orange },                                                                      ---
+    --IncSearch = { fg = c.bg, c.orange100, reverse = true },                                                      --- 'incsearch' highlighting; also used for the text replaced with ":s///c".
 
     -- These groups are not listed as default vim groups,
     -- but they are defacto standard group names for syntax highlighting.
