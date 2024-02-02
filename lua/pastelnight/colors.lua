@@ -6,86 +6,68 @@ local M = {}
 
 ---@class Palette
 M.default = {
-  none = "NONE",
+  none      = "NONE",
+  fg        = hsl(220, 007, 91), --- base50
+  bg        = hsl(234, 018, 20), --- base500
 
-  base04 = hsl(234, 24, 8),
-  base03 = hsl(235, 21, 11),
-  base02 = hsl(232, 21, 14),
-  base01 = hsl(233, 20, 17),
-  base00 = hsl(234, 18, 20),
-  base0 = hsl(233, 13, 27),
-  base1 = hsl(232, 7, 42),
-  base2 = hsl(235, 6, 58),
-  base3 = hsl(231, 5, 74),
-  base4 = hsl(220, 7, 91),
+  base50    = hsl(220, 007, 91),
+  base100   = hsl(231, 005, 74),
+  base200   = hsl(235, 006, 58),
+  base300   = hsl(232, 007, 42),
+  base400   = hsl(233, 013, 27),
+  base500   = hsl(234, 018, 20),
+  base600   = hsl(233, 020, 17),
+  base700   = hsl(232, 021, 14),
+  base800   = hsl(235, 021, 11),
+  base900   = hsl(234, 024, 08),
 
-  yellow = hsl(39, 100, 70),
+  yellow50  = hsl(039, 100, 86),
+  yellow100 = hsl(039, 100, 80),
+  yellow200 = hsl(039, 100, 70),
+  yellow300 = hsl(039, 067, 61),
+  yellow400 = hsl(039, 047, 52),
 
-  yellow100 = hsl(39, 100, 86),
-  yellow300 = hsl(39, 100, 80),
-  yellow500 = hsl(39, 100, 70),
-  yellow700 = hsl(39, 67, 61),
-  yellow900 = hsl(39, 47, 52),
+  orange50  = hsl(019, 100, 86),
+  orange100 = hsl(019, 100, 76),
+  orange200 = hsl(019, 100, 65),
+  orange300 = hsl(019, 070, 56),
+  orange400 = hsl(019, 055, 48),
 
-  orange = hsl(19, 100, 65),
+  red50     = hsl(000, 100, 86),
+  red100    = hsl(000, 100, 76),
+  red200    = hsl(000, 100, 65),
+  red300    = hsl(000, 070, 56),
+  red400    = hsl(000, 055, 48),
 
-  orange100 = hsl(19, 100, 86),
-  orange300 = hsl(19, 100, 76),
-  orange500 = hsl(19, 100, 65),
-  orange700 = hsl(19, 70, 56),
-  orange900 = hsl(19, 55, 48),
+  pink50    = hsl(318, 100, 92),
+  pink100   = hsl(318, 100, 86),
+  pink200   = hsl(318, 100, 80),
+  pink300   = hsl(318, 058, 69),
+  pink400   = hsl(318, 038, 59),
 
-  red = hsl(0, 100, 65),
+  purple50  = hsl(272, 053, 88),
+  purple100 = hsl(272, 051, 79),
+  purple200 = hsl(272, 050, 70),
+  purple300 = hsl(272, 033, 61),
+  purple400 = hsl(272, 024, 52),
 
-  red100 = hsl(0, 100, 86),
-  red300 = hsl(0, 100, 76),
-  red500 = hsl(0, 100, 65),
-  red700 = hsl(0, 70, 56),
-  red900 = hsl(0, 55, 48),
+  blue50    = hsl(221, 100, 90),
+  blue100   = hsl(221, 100, 83),
+  blue200   = hsl(221, 100, 75),
+  blue300   = hsl(221, 063, 65),
+  blue400   = hsl(221, 042, 56),
 
-  magenta = hsl(318, 100, 80),
+  sky50     = hsl(191, 100, 91),
+  sky100    = hsl(191, 100, 84),
+  sky200    = hsl(191, 100, 75),
+  sky300    = hsl(191, 063, 65),
+  sky400    = hsl(191, 043, 55),
 
-  magenta100 = hsl(318, 100, 92),
-  magenta300 = hsl(318, 100, 86),
-  magenta500 = hsl(318, 100, 80),
-  magenta700 = hsl(318, 58, 69),
-  magenta900 = hsl(318, 38, 59),
-
-  violet = hsl(272, 50, 70),
-
-  violet100 = hsl(272, 53, 88),
-  violet300 = hsl(272, 51, 79),
-  violet500 = hsl(272, 50, 70),
-  violet700 = hsl(272, 33, 61),
-  violet900 = hsl(272, 24, 52),
-
-  blue = hsl(221, 100, 75),
-
-  blue100 = hsl(221, 100, 90),
-  blue300 = hsl(221, 100, 83),
-  blue500 = hsl(221, 100, 75),
-  blue700 = hsl(221, 63, 65),
-  blue900 = hsl(221, 42, 56),
-
-  cyan = hsl(191, 100, 75),
-
-  cyan100 = hsl(191, 100, 91),
-  cyan300 = hsl(191, 100, 84),
-  cyan500 = hsl(191, 100, 75),
-  cyan700 = hsl(191, 63, 65),
-  cyan900 = hsl(191, 43, 55),
-
-  green = hsl(137, 100, 70),
-
-  green100 = hsl(137, 100, 90),
-  green300 = hsl(137, 100, 81),
-  green500 = hsl(137, 100, 70),
-  green700 = hsl(137, 67, 61),
-  green900 = hsl(137, 47, 52),
-
-  bg = hsl(233, 13, 27),
-  bg_highlight = hsl(232, 7, 42),
-  fg = hsl(220, 7, 91),
+  green50   = hsl(137, 100, 90),
+  green100  = hsl(137, 100, 81),
+  green200  = hsl(137, 100, 70),
+  green300  = hsl(137, 067, 61),
+  green400  = hsl(137, 047, 52),
 }
 
 ---@return ColorScheme
@@ -111,25 +93,24 @@ function M.setup(opts)
   colors.border = colors.black
 
   -- Popups and statusline always get a dark background
-  colors.bg_popup = colors.base04
+  colors.bg_popup = colors.base900
   colors.bg_statusline = colors.bg
 
   -- Sidebar and Floats are configurable
   colors.bg_sidebar = config.options.styles.sidebars == "transparent" and colors.none
-    or config.options.styles.sidebars == "dark" and colors.base04
-    or colors.bg
+      or config.options.styles.sidebars == "dark" and colors.base900
+      or colors.bg
 
   colors.bg_float = config.options.styles.floats == "transparent" and colors.none
-    or config.options.styles.floats == "dark" and colors.base04
-    or colors.bg
+      or config.options.styles.floats == "dark" and colors.base900
+      or colors.bg
 
-  -- colors.fg_float = config.options.styles.floats == "dark" and colors.base01 or colors.fg
   colors.fg_float = colors.fg
 
-  colors.error = colors.red500
-  colors.warning = colors.yellow500
-  colors.info = colors.blue500
-  colors.hint = colors.cyan500
+  colors.error = colors.red200
+  colors.warning = colors.yellow200
+  colors.info = colors.blue200
+  colors.hint = colors.sky200
 
   return colors
 end
