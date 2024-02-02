@@ -111,6 +111,7 @@ end
 function M.template(str, table)
   return (
     str:gsub("($%b{})", function(w)
+---@diagnostic disable-next-line: deprecated
       return vim.tbl_get(table, unpack(vim.split(w:sub(3, -2), ".", { plain = true }))) or w
     end)
   )
@@ -126,10 +127,10 @@ end
 function M.terminal(colors)
   -- dark
   vim.g.terminal_color_0 = colors.black
-  vim.g.terminal_color_8 = colors.terminal_black
+  vim.g.terminal_color_8 = colors.black
 
   -- light
-  vim.g.terminal_color_7 = colors.fg_dark
+  vim.g.terminal_color_7 = colors.base100
   vim.g.terminal_color_15 = colors.fg
 
   -- colors
@@ -145,11 +146,11 @@ function M.terminal(colors)
   vim.g.terminal_color_4 = colors.blue
   vim.g.terminal_color_12 = colors.blue
 
-  vim.g.terminal_color_5 = colors.magenta
-  vim.g.terminal_color_13 = colors.magenta
+  vim.g.terminal_color_5 = colors.pink
+  vim.g.terminal_color_13 = colors.pink
 
-  vim.g.terminal_color_6 = colors.cyan
-  vim.g.terminal_color_14 = colors.cyan
+  vim.g.terminal_color_6 = colors.sky
+  vim.g.terminal_color_14 = colors.sky
 end
 
 ---@param colors ColorScheme
