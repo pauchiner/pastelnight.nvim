@@ -44,7 +44,7 @@ function M.setup()
     CursorLine     = { bg = c.base400 },                                                                         --- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
     ColorColumn    = { bg = c.base400 },                                                                         --- used for the columns set with 'colorcolumn'.
     CursorLineNr   = { fg = c.yellow },                                                                          --- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-    LineNr         = { fg = c.base200 },                                                                         --- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+    LineNr         = { fg = c.base300 },                                                                         --- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     Conceal        = { fg = c.base200, bg = c.base400 },                                                         --- placeholder characters substituted for concealed text (see 'conceallevel').
     DiffAdd        = { fg = c.none, bg = c.green },                                                              --- diff mode: Added line |diff.txt|.
     DiffChange     = { fg = c.none, bg = c.yellow },                                                             --- diff mode: Changed line |diff.txt|.
