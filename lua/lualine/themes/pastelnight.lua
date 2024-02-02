@@ -18,7 +18,7 @@ pastelnight.command = {
 }
 
 pastelnight.visual = {
-  a = { bg = colors.magenta, fg = colors.black },
+  a = { bg = colors.pink, fg = colors.black },
 }
 
 pastelnight.replace = {
