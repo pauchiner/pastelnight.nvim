@@ -84,7 +84,7 @@ M.default = {
   green900 = hsl(137, 47, 52),
 
   bg = hsl(233, 13, 27),
-  bg_highlight = hsl(233, 13, 27),
+  bg_highlight = hsl(232, 7, 42),
   fg = hsl(220, 7, 91),
 }
 
@@ -112,7 +112,7 @@ function M.setup(opts)
 
   -- Popups and statusline always get a dark background
   colors.bg_popup = colors.base04
-  colors.bg_statusline = colors.base03
+  colors.bg_statusline = colors.bg
 
   -- Sidebar and Floats are configurable
   colors.bg_sidebar = config.options.styles.sidebars == "transparent" and colors.none
@@ -130,11 +130,6 @@ function M.setup(opts)
   colors.warning = colors.yellow500
   colors.info = colors.blue500
   colors.hint = colors.cyan500
-
-  config.options.on_colors(colors)
-  if opts.transform and config.is_day() then
-    util.invert_colors(colors)
-  end
 
   return colors
 end
