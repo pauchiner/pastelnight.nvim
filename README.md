@@ -195,14 +195,16 @@ All contributions are welcome:
 ## 📃 Credits
 
 #### 🎨 Original Design
+
 <img style="border-radius: 13%; margin-bottom: 10px" width='90px' src="https://avatars.githubusercontent.com/u/8625066?v=4">
 
 This theme is highly inspired by the original theme [Palenight](https://github.com/whizkydee/vscode-palenight-theme) from [Olaolu Olawuyi](https://olaolu.dev/?utm_source=palenight).
 
 #### 🐾 Code Structure
+
 <img style="border-radius: 13%; margin-bottom: 10px" width='90px' src="https://avatars.githubusercontent.com/u/1332805?v=4">
 
-This plugin is highly inspired on the structure of the [Solarized Osaka Theme](https://github.com/craftzdog/solarized-osaka.nvim) from [Takuya Matsuyama](https://github.com/Craftzdog), take a look of this work please.
+This plugin is highly inspired on the structure of the [Solarized Osaka Theme](https://github.com/craftzdog/solarized-osaka.nvim) from [Takuya Matsuyama](https://github.com/Craftzdog), take a look of his work please.
 
 ---
 
