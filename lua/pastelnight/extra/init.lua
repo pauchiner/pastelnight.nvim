@@ -87,8 +87,9 @@ function M.setup()
     local plugin = require("pastelnight.extra." .. extra)
 
     for style, style_name in pairs(styles) do
+      ---@diagnostic disable-next-line: missing-fields
       config.setup({ style = style })
-      local colors = require("solarized-osaka.colors").setup({ transform = true })
+      local colors = require("pastelnight.colors").setup({ transform = true })
       local fname = extra .. "/pastelnight_" .. style .. "." .. info.ext
       colors["_upstream_url"] = "https://github.com/folke/tokyonight.nvim/raw/main/extras/" .. fname
       colors["_style_name"] = "PastelNight" .. style_name
