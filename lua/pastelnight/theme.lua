@@ -401,23 +401,28 @@ function M.setup()
     TelescopeNormal = { fg = c.base400, bg = c.bg_float },
 
     -- NvimTree
-    NvimTreeNormal = { fg = c.bg, bg = c.bg_sidebar },
+
+    NvimTreeVertSplit = { fg = c.base600, bg = config.transparent and c.none or c.base600 },
+    NvimTreeEndOfBuffer = { fg = c.base600, bg = config.transparent and c.none or c.base600 },
+
     NvimTreeWinSeparator = {
       fg = options.styles.sidebars == "transparent" and c.border or c.bg_sidebar,
       bg = c.bg_sidebar,
     },
+    NvimTreeNormal = { fg = c.fg, bg = config.transparent and c.none or c.base600 },
     NvimTreeNormalNC = { fg = c.bg, bg = c.bg_sidebar },
-    NvimTreeRootFolder = { fg = c.blue, bold = true },
+    NvimTreeRootFolder = { fg = c.purple200, bold = true },
     NvimTreeGitDirty = { fg = c.yellow },
     NvimTreeGitNew = { fg = c.green },
     NvimTreeGitDeleted = { fg = c.red },
     NvimTreeOpenedFile = { bg = c.base400 },
-    NvimTreeSpecialFile = { fg = c.purple, underline = true },
-    NvimTreeIndentMarker = { fg = c.base700 },
-    NvimTreeImageFile = { fg = c.bg },
-    NvimTreeSymlink = { fg = c.blue },
+    NvimTreeSpecialFile = { fg = c.purple50, underline = true },
+    NvimTreeIndentMarker = { fg = c.fg },
+    NvimTreeImageFile = { fg = c.purple400 },
+    NvimTreeSymlink = { fg = c.purple100 },
     NvimTreeFolderIcon = { bg = c.none, fg = c.blue },
-    -- NvimTreeFolderName= { fg = c.fg_float },
+    NvimTreeFolderArrowClose = {fg = c.base200},
+    NvimTreeFolderName= { fg = c.sky300 },
 
     NeoTreeNormal = { fg = c.bg, bg = c.bg_sidebar },
     NeoTreeNormalNC = { fg = c.bg, bg = c.bg_sidebar },
