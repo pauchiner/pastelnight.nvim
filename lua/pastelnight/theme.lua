@@ -80,7 +80,6 @@ function M.setup()
     TabLineFill                              = { fg = c.base200, bg = c.base400 },                                                               --- tab pages line, where there are no labels.
     TabLineSel                               = { fg = c.bg, bg = c.fg },                                                                         --- tab pages line, active tab page label.
 
-
     Search                                   = { fg = c.bg, bg = c.yellow300 },                                                                  ---
     Substitute                               = { fg = c.bg, bg = c.pink100 },                                                                    --- |:substitute| replacement text highlighting.
     MatchParen                               = { fg = c.none, bg = c.base200 },                                                                  --- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|.
@@ -149,27 +148,27 @@ function M.setup()
 
     --- Lsp Highlights ---
 
-    LspReferenceText                         = { underline = true },                   --- used for highlighting "text" references
-    LspReferenceRead                         = { underline = true },                   --- used for highlighting "read" references
-    LspReferenceWrite                        = { underline = true },                   --- used for highlighting "write" references
+    LspReferenceText                         = { underline = true },                 --- used for highlighting "text" references
+    LspReferenceRead                         = { underline = true },                 --- used for highlighting "read" references
+    LspReferenceWrite                        = { underline = true },                 --- used for highlighting "write" references
 
-    DiagnosticError                          = { fg = c.error },                       --- Used as the base highlight group. Other Diagnostic highlights link to this by default
-    DiagnosticWarn                           = { fg = c.warning },                     --- Used as the base highlight group. Other Diagnostic highlights link to this by default
-    DiagnosticInfo                           = { fg = c.info },                        --- Used as the base highlight group. Other Diagnostic highlights link to this by default
-    DiagnosticHint                           = { fg = c.hint },                        --- Used as the base highlight group. Other Diagnostic highlights link to this by default
-    DiagnosticUnnecessary                    = { fg = c.bg },                          --- Used as the base highlight group. Other Diagnostic highlights link to this by default
+    DiagnosticError                          = { fg = c.error },                     --- Used as the base highlight group.
+    DiagnosticWarn                           = { fg = c.warning },                   --- Used as the base highlight group.
+    DiagnosticInfo                           = { fg = c.info },                      --- Used as the base highlight group.
+    DiagnosticHint                           = { fg = c.hint },                      --- Used as the base highlight group.
+    DiagnosticUnnecessary                    = { fg = c.bg },                        --- Used as the base highlight group.
 
-    DiagnosticVirtualTextError               = { fg = c.red200},       --- Used for "Error" diagnostic virtual text
-    DiagnosticVirtualTextWarn                = { fg = c.yellow100}, --- Used for "Warning" diagnostic virtual text
-    DiagnosticVirtualTextInfo                = { fg = c.blue100},     --- Used for "Information" diagnostic virtual text
-    DiagnosticVirtualTextHint                = { fg = c.sky200},       --- Used for "Hint" diagnostic virtual text
+    DiagnosticVirtualTextError               = { fg = c.red200 },                    --- Used for "Error" diagnostic virtual text
+    DiagnosticVirtualTextWarn                = { fg = c.yellow100 },                 --- Used for "Warning" diagnostic virtual text
+    DiagnosticVirtualTextInfo                = { fg = c.blue100 },                   --- Used for "Information" diagnostic virtual text
+    DiagnosticVirtualTextHint                = { fg = c.sky200 },                    --- Used for "Hint" diagnostic virtual text
 
-    DiagnosticUnderlineError                 = { undercurl = true, sp = c.error },     --- Used to underline "Error" diagnostics
-    DiagnosticUnderlineWarn                  = { undercurl = true, sp = c.warning },   --- Used to underline "Warning" diagnostics
-    DiagnosticUnderlineInfo                  = { undercurl = true, sp = c.info },      --- Used to underline "Information" diagnostics
-    DiagnosticUnderlineHint                  = { undercurl = true, sp = c.hint },      --- Used to underline "Hint" diagnostics
+    DiagnosticUnderlineError                 = { undercurl = true, sp = c.error },   --- Used to underline "Error" diagnostics
+    DiagnosticUnderlineWarn                  = { undercurl = true, sp = c.warning }, --- Used to underline "Warning" diagnostics
+    DiagnosticUnderlineInfo                  = { undercurl = true, sp = c.info },    --- Used to underline "Information" diagnostics
+    DiagnosticUnderlineHint                  = { undercurl = true, sp = c.hint },    --- Used to underline "Hint" diagnostics
 
-    DapStoppedLine                           = { bg = c.yellow300 },                   --- Used for "Warning" diagnostic virtual text
+    DapStoppedLine                           = { bg = c.yellow300 },                 --- Used for "Warning" diagnostic virtual text
 
     --- Treesitter Hightlights ---
 
