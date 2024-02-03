@@ -8,6 +8,7 @@ local M = {}
 M.default = {
   none      = "NONE",
 
+  base      = hsl(220, 100, 100),
   base50    = hsl(220, 007, 91),
   base100   = hsl(231, 005, 74),
   base200   = hsl(235, 006, 58),
@@ -92,7 +93,7 @@ function M.setup(opts)
   colors.red = colors.red200
   colors.sky = colors.sky200
   colors.bg = colors.base500
-  colors.fg = colors.base50
+  colors.fg = colors.base
 
 
   util.bg = colors.bg
