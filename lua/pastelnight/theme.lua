@@ -474,8 +474,8 @@ function M.setup()
 
     --- NvimTree
 
-    NvimTreeVertSplit = { fg = c.base600, bg = config.transparent and c.none or c.bg_sidebar },
-    NvimTreeEndOfBuffer = { fg = c.base600, bg = config.transparent and c.none or c.bg_sidebar },
+    NvimTreeVertSplit = { fg = c.bg_sidebar, bg = config.transparent and c.none or c.bg_sidebar },
+    NvimTreeEndOfBuffer = { fg = c.bg_sidebar, bg = config.transparent and c.none or c.bg_sidebar },
 
     NvimTreeWinSeparator = {
       fg = options.styles.sidebars == "transparent" and c.border or c.bg_sidebar,
