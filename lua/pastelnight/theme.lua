@@ -97,10 +97,9 @@ function M.setup()
     SignColumnSB                             = { fg = c.base400 },                                                                               --- column where |signs| are displayed
     ModeMsg                                  = { fg = c.blue },                                                                                  --- 'showmode' message (e.g., "-- INSERT -- ")
     MsgArea                                  = { fg = c.base600 },                                                                               --- Area for messages and cmdline
-    NormalNC                                 = { fg = c.bg, bg = options.transparent and c.none or options.dim_inactive and c.base900 or c.bg }, --- normal text in non-current windows
-    NormalSB                                 = { fg = c.base600, bg = c.bg_sidebar },                                                            --- normal text in sidebar
+    NormalNC                                 = { fg = c.fg, bg = options.transparent and c.none or options.dim_inactive and c.base700 or c.bg }, --- normal text in non-current windows
+    NormalSB                                 = { fg = c.fg, bg = c.bg_sidebar },                                                                 --- normal text in sidebar
     FloatTitle                               = { fg = c.base200, bg = c.bg_float },                                                              ---
-    ToolbarButton                            = { fg = c.bg, bg = c.blue400 },
 
     --- Syntax Highlights ---
 
@@ -470,27 +469,28 @@ function M.setup()
     GitSignsDelete = { fg = c.red },    -- diff mode: Deleted line |diff.txt|
 
     -- Telescope
-    TelescopeBorder = { fg = c.base700, bg = c.bg_float },
-    TelescopeNormal = { fg = c.base400, bg = c.bg_float },
+    TelescopeBorder = { fg = c.purple, bg = c.bg_float },
+    TelescopeNormal = { fg = c.fg, bg = c.bg_float },
 
-    -- NvimTree
+    --- NvimTree
 
-    NvimTreeVertSplit = { fg = c.base600, bg = config.transparent and c.none or c.base600 },
-    NvimTreeEndOfBuffer = { fg = c.base600, bg = config.transparent and c.none or c.base600 },
+    NvimTreeVertSplit = { fg = c.base600, bg = config.transparent and c.none or c.bg_sidebar },
+    NvimTreeEndOfBuffer = { fg = c.base600, bg = config.transparent and c.none or c.bg_sidebar },
 
     NvimTreeWinSeparator = {
       fg = options.styles.sidebars == "transparent" and c.border or c.bg_sidebar,
       bg = c.bg_sidebar,
     },
-    NvimTreeNormal = { fg = c.fg, bg = config.transparent and c.none or c.base600 },
-    NvimTreeNormalNC = { fg = c.bg, bg = c.bg_sidebar },
+
+    NvimTreeNormal = { fg = c.fg, bg = config.transparent and c.none or c.bg_sidebar },
+    NvimTreeNormalNC = { fg = c.fg, bg = c.bg_sidebar },
     NvimTreeRootFolder = { fg = c.purple200, bold = true },
     NvimTreeGitDirty = { fg = c.yellow },
     NvimTreeGitNew = { fg = c.green },
     NvimTreeGitDeleted = { fg = c.red },
     NvimTreeOpenedFile = { bg = c.base400 },
     NvimTreeSpecialFile = { fg = c.purple50, underline = true },
-    NvimTreeIndentMarker = { fg = c.fg },
+    NvimTreeIndentMarker = { fg = c.base400 },
     NvimTreeImageFile = { fg = c.purple400 },
     NvimTreeSymlink = { fg = c.purple100 },
     NvimTreeFolderIcon = { bg = c.none, fg = c.blue },
@@ -498,9 +498,11 @@ function M.setup()
     NvimTreeFolderName = { fg = c.sky300 },
     NvimTreeEmptyFolderName = { fg = c.blue50 },
 
-    NeoTreeNormal = { fg = c.bg, bg = c.bg_sidebar },
-    NeoTreeNormalNC = { fg = c.bg, bg = c.bg_sidebar },
-    NeoTreeDimText = { fg = c.base600 },
+    --- NeoTree
+
+    NeoTreeNormal = { fg = c.fg, bg = c.bg_sidebar },
+    NeoTreeNormalNC = { fg = c.fg, bg = c.bg_sidebar },
+    NeoTreeDimText = { fg = c.base400 },
 
     -- Fern
     FernBranchText = { fg = c.blue },
