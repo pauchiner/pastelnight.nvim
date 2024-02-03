@@ -31,10 +31,15 @@ function M.setup()
     Normal                                   = { fg = c.fg, bg = options.transparent and c.none or c.bg },                                       --- Normal text.
     Terminal                                 = { fg = c.fg, bg = options.transparent and c.none or c.bg },                                       --- Terminal text.
     EndOfBuffer                              = { fg = c.bg, bg = config.transparent and c.none or c.bg },                                        --- Filler lines (~) after the end of the buffer.
-    FoldColumn                               = { fg = c.fg, bg = config.transparent and c.none or c.bg },                                        --- 'foldcolumn'.
+
     Folded                                   = { fg = c.base200, bg = config.transparent and c.none or c.base400 },                              --- line used for closed folds.
+    FoldColumn                               = { fg = c.fg, bg = config.transparent and c.none or c.bg },                                        --- 'foldcolumn'.
     SignColumn                               = { fg = c.fg, bg = config.transparent and c.none or c.bg },                                        --- column where |signs| are displayed.
+    Conceal                                  = { fg = c.base200, bg = c.base400 },                                                               --- placeholder characters substituted for concealed text (see 'conceallevel').
+    ColorColumn                              = { bg = c.base400 },                                                                               --- used for the columns set with 'colorcolumn'.
+    LineNr                                   = { fg = c.base300 },                                                                               --- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     ToolbarLine                              = { fg = c.fg },                                                                                    ---
+
     Cursor                                   = { reverse = true },                                                                               --- character under the cursor.
     vCursor                                  = { reverse = true },                                                                               ---
     iCursor                                  = { reverse = true },                                                                               ---
@@ -42,10 +47,8 @@ function M.setup()
     CursorIM                                 = { reverse = true },                                                                               --- like Cursor, but used when in IME mode |CursorIM|.
     CursorColumn                             = { bg = c.base400 },                                                                               --- Screen-column at the cursor, when 'cursorcolumn' is set.
     CursorLine                               = { bg = c.base400 },                                                                               --- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
-    ColorColumn                              = { bg = c.base400 },                                                                               --- used for the columns set with 'colorcolumn'.
     CursorLineNr                             = { fg = c.yellow },                                                                                --- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-    LineNr                                   = { fg = c.base300 },                                                                               --- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-    Conceal                                  = { fg = c.base200, bg = c.base400 },                                                               --- placeholder characters substituted for concealed text (see 'conceallevel').
+
     DiffAdd                                  = { fg = c.none, bg = c.green },                                                                    --- diff mode: Added line |diff.txt|.
     DiffChange                               = { fg = c.none, bg = c.yellow },                                                                   --- diff mode: Changed line |diff.txt|.
     DiffDelete                               = { fg = c.none, bg = c.red },                                                                      --- diff mode: Deleted line |diff.txt|.
@@ -54,31 +57,37 @@ function M.setup()
     DiffRemoved                              = colors.red,                                                                                       ---
     DiffFile                                 = colors.sky,                                                                                       ---
     DiffIndexLine                            = colors.base200,                                                                                   ---
-    Directory                                = { fg = c.blue },                                                                                  --- directory names (and other special names in listings).
+
     ErrorMsg                                 = { fg = c.red, bold = true },                                                                      --- error messages on the command line.
     MoreMsg                                  = { fg = c.blue, bold = true },                                                                     --- |more-prompt|.
     WarningMsg                               = { fg = c.orange100, bold = true },                                                                --- warning messages.
+
+    Pmenu                                    = { fg = c.fg, bg = c.base400 },                                                                    --- Popup menu: normal item.
+    PmenuSel                                 = { fg = c.base500, bg = c.purple100 },                                                             --- Popup menu: selected item.
+    PmenuSbar                                = { fg = c.base600 },                                                                               --- Popup menu: scrollbar.
+    PmenuThumb                               = { fg = c.base300 },                                                                               --- Popup menu: Thumb of the scrollbar.
+    WildMenu                                 = { fg = c.base500, bg = c.purple400 },                                                             --- current match in 'wildmenu' completion.
+
+    Question                                 = { fg = c.yellow, bold = true },                                                                   --- |hit-enter| prompt and yes/no questions.
+    SpellBad                                 = { sp = c.red100, undercurl = true },                                                              --- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
+    SpellCap                                 = { sp = c.purple100, undercurl = true },                                                           --- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
+    SpellLocal                               = { sp = c.sky100, undercurl = true },                                                              --- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
+    SpellRare                                = { sp = c.yellow100, undercurl = true },                                                           --- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
+
+    StatusLine                               = { fg = c.fg, bg = c.base500 },                                                                    --- status line of current window.
+    StatusLineTerm                           = { fg = c.fg, bg = c.base500 },                                                                    --- status line of current terminal .
+    TabLine                                  = { fg = c.fg, bg = c.base400 },                                                                    --- tab pages line, not active tab page label.
+    TabLineFill                              = { fg = c.base200, bg = c.base400 },                                                               --- tab pages line, where there are no labels.
+    TabLineSel                               = { fg = c.bg, bg = c.fg },                                                                         --- tab pages line, active tab page label.
+
+
     Search                                   = { fg = c.bg, bg = c.yellow300 },                                                                  ---
     Substitute                               = { fg = c.bg, bg = c.pink100 },                                                                    --- |:substitute| replacement text highlighting.
     MatchParen                               = { fg = c.none, bg = c.base200 },                                                                  --- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|.
     NonText                                  = { fg = c.base400 },                                                                               --- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
     Whitespace                               = { fg = c.base300 },                                                                               --- "nbsp", "space", "tab" and "trail" in 'listchars'.
     SpecialKey                               = { fg = c.base300 },                                                                               --- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|.
-    Pmenu                                    = { fg = c.fg, bg = c.base400 },                                                                    --- Popup menu: normal item.
-    PmenuSel                                 = { fg = c.base500, bg = c.purple100 },                                                             --- Popup menu: selected item.
-    PmenuSbar                                = { fg = c.base600 },                                                                               --- Popup menu: scrollbar.
-    PmenuThumb                               = { fg = c.base300 },                                                                               --- Popup menu: Thumb of the scrollbar.
-    WildMenu                                 = { fg = c.base500, bg = c.purple400 },                                                             --- current match in 'wildmenu' completion.
-    Question                                 = { fg = c.yellow, bold = true },                                                                   --- |hit-enter| prompt and yes/no questions.
-    SpellBad                                 = { sp = c.red100, undercurl = true },                                                              --- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
-    SpellCap                                 = { sp = c.purple100, undercurl = true },                                                           --- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
-    SpellLocal                               = { sp = c.sky100, undercurl = true },                                                              --- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
-    SpellRare                                = { sp = c.yellow100, undercurl = true },                                                           --- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
-    StatusLine                               = { fg = c.fg, bg = c.base500 },                                                                    --- status line of current window.
-    StatusLineTerm                           = { fg = c.fg, bg = c.base500 },                                                                    --- status line of current terminal .
-    TabLine                                  = { fg = c.fg, bg = c.base400 },                                                                    --- tab pages line, not active tab page label.
-    TabLineFill                              = { fg = c.base200, bg = c.base400 },                                                               --- tab pages line, where there are no labels.
-    TabLineSel                               = { fg = c.bg, bg = c.fg },                                                                         --- tab pages line, active tab page label.
+    Directory                                = { fg = c.blue },                                                                                  --- directory names (and other special names in listings).
     WinSeparator                             = { fg = c.base700, bold = true },                                                                  --- the column separating vertically split windows.
     Visual                                   = { bg = c.base400 },                                                                               --- Visual mode selection.
     VisualNOS                                = { bg = c.base400, underline = true },                                                             --- Visual mode selection when vim is "Not Owning the Selection".
@@ -126,37 +135,41 @@ function M.setup()
     Debug                                    = { fg = c.orange },                                   --- debugging statements.
     Tag                                      = { fg = c.green },                                    --- you can use CTRL-] on this.
     Delimiter                                = { fg = c.base100 },                                  --- character that needs attention.
+
     Comment                                  = { fg = c.base200, style = options.styles.comments }, --- any comments.
     SpecialComment                           = { fg = c.base200, style = options.styles.comments }, --- special things inside a comment.
     Todo                                     = { fg = c.red100, bg = c.base500, bold = true },      --- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX.
+
     Underlined                               = { underline = true },                                --- (preferred) text that stands out, HTML links
     Bold                                     = { bold = true },                                     ---
     Italic                                   = { italic = true },                                   ---
+
     debugPC                                  = { bg = c.bg, fg = c.pink50 },                        -- used for highlighting the current line in terminal-debug
     debugBreakpoint                          = { fg = c.red300, bg = c.base600 },                   -- used for breakpoint colors in terminal-debug
 
     --- Lsp Highlights ---
-    LspReferenceText                         = { underline = true },                   -- used for highlighting "text" references
-    LspReferenceRead                         = { underline = true },                   -- used for highlighting "read" references
-    LspReferenceWrite                        = { underline = true },                   -- used for highlighting "write" references
 
-    DiagnosticError                          = { fg = c.error },                       -- Used as the base highlight group. Other Diagnostic highlights link to this by default
-    DiagnosticWarn                           = { fg = c.warning },                     -- Used as the base highlight group. Other Diagnostic highlights link to this by default
-    DiagnosticInfo                           = { fg = c.info },                        -- Used as the base highlight group. Other Diagnostic highlights link to this by default
-    DiagnosticHint                           = { fg = c.hint },                        -- Used as the base highlight group. Other Diagnostic highlights link to this by default
-    DiagnosticUnnecessary                    = { fg = c.bg },                          -- Used as the base highlight group. Other Diagnostic highlights link to this by default
+    LspReferenceText                         = { underline = true },                   --- used for highlighting "text" references
+    LspReferenceRead                         = { underline = true },                   --- used for highlighting "read" references
+    LspReferenceWrite                        = { underline = true },                   --- used for highlighting "write" references
 
-    DiagnosticVirtualTextError               = { bg = c.red400, fg = c.red100 },       -- Used for "Error" diagnostic virtual text
-    DiagnosticVirtualTextWarn                = { bg = c.yellow400, fg = c.yellow100 }, -- Used for "Warning" diagnostic virtual text
-    DiagnosticVirtualTextInfo                = { bg = c.blue400, fg = c.blue100 },     -- Used for "Information" diagnostic virtual text
-    DiagnosticVirtualTextHint                = { bg = c.sky400, fg = c.sky100 },       -- Used for "Hint" diagnostic virtual text
+    DiagnosticError                          = { fg = c.error },                       --- Used as the base highlight group. Other Diagnostic highlights link to this by default
+    DiagnosticWarn                           = { fg = c.warning },                     --- Used as the base highlight group. Other Diagnostic highlights link to this by default
+    DiagnosticInfo                           = { fg = c.info },                        --- Used as the base highlight group. Other Diagnostic highlights link to this by default
+    DiagnosticHint                           = { fg = c.hint },                        --- Used as the base highlight group. Other Diagnostic highlights link to this by default
+    DiagnosticUnnecessary                    = { fg = c.bg },                          --- Used as the base highlight group. Other Diagnostic highlights link to this by default
 
-    DiagnosticUnderlineError                 = { undercurl = true, sp = c.error },     -- Used to underline "Error" diagnostics
-    DiagnosticUnderlineWarn                  = { undercurl = true, sp = c.warning },   -- Used to underline "Warning" diagnostics
-    DiagnosticUnderlineInfo                  = { undercurl = true, sp = c.info },      -- Used to underline "Information" diagnostics
-    DiagnosticUnderlineHint                  = { undercurl = true, sp = c.hint },      -- Used to underline "Hint" diagnostics
+    DiagnosticVirtualTextError               = { bg = c.red400, fg = c.red100 },       --- Used for "Error" diagnostic virtual text
+    DiagnosticVirtualTextWarn                = { bg = c.yellow400, fg = c.yellow100 }, --- Used for "Warning" diagnostic virtual text
+    DiagnosticVirtualTextInfo                = { bg = c.blue400, fg = c.blue100 },     --- Used for "Information" diagnostic virtual text
+    DiagnosticVirtualTextHint                = { bg = c.sky400, fg = c.sky100 },       --- Used for "Hint" diagnostic virtual text
 
-    DapStoppedLine                           = { bg = c.yellow300 },                   -- Used for "Warning" diagnostic virtual text
+    DiagnosticUnderlineError                 = { undercurl = true, sp = c.error },     --- Used to underline "Error" diagnostics
+    DiagnosticUnderlineWarn                  = { undercurl = true, sp = c.warning },   --- Used to underline "Warning" diagnostics
+    DiagnosticUnderlineInfo                  = { undercurl = true, sp = c.info },      --- Used to underline "Information" diagnostics
+    DiagnosticUnderlineHint                  = { undercurl = true, sp = c.hint },      --- Used to underline "Hint" diagnostics
+
+    DapStoppedLine                           = { bg = c.yellow300 },                   --- Used for "Warning" diagnostic virtual text
 
     --- Treesitter Hightlights ---
 
