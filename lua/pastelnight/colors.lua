@@ -8,7 +8,7 @@ local M = {}
 M.default = {
   none      = "NONE",
 
-  base      = hsl(220, 100, 100),
+  base      = hsl(220, 100, 99),
   base50    = hsl(220, 007, 91),
   base100   = hsl(231, 005, 74),
   base200   = hsl(235, 006, 58),
@@ -102,17 +102,16 @@ function M.setup(opts)
   colors.black = util.darken(colors.bg, 0.8, "#000000")
   colors.border = colors.black
 
-  -- Popups and statusline always get a dark background
-  colors.bg_popup = colors.base900
+  colors.bg_popup = colors.bg
   colors.bg_statusline = colors.bg
 
   -- Sidebar and Floats are configurable
   colors.bg_sidebar = config.options.styles.sidebars == "transparent" and colors.none
-      or config.options.styles.sidebars == "dark" and colors.base900
+      or config.options.styles.sidebars == "dark" and colors.base600
       or colors.bg
 
   colors.bg_float = config.options.styles.floats == "transparent" and colors.none
-      or config.options.styles.floats == "dark" and colors.base900
+      or config.options.styles.floats == "dark" and colors.base600
       or colors.bg
 
   colors.fg_float = colors.fg
