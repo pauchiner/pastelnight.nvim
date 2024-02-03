@@ -105,47 +105,47 @@ function M.setup()
 
     --- Syntax Highlights ---
 
-    String                                   = { fg = c.green100 },                                 ---   a string constant: "this is a string".
-    Character                                = { fg = c.orange },                                   ---  a character constant: 'c', '\n'.
-    Number                                   = { fg = c.orange100 },                                ---   a number constant: 234, 0xff.
-    Float                                    = { fg = c.orange100 },                                ---    a floating point constant: 2.3e10.
-    Boolean                                  = { fg = c.orange300 },                                ---  a boolean constant: TRUE, false.
+    String                                   = { fg = c.green100 },                                 --- a string constant: "this is a string".
+    Character                                = { fg = c.orange },                                   --- a character constant: 'c', '\n'.
+    Number                                   = { fg = c.orange100 },                                --- a number constant: 234, 0xff.
+    Float                                    = { fg = c.orange100 },                                --- a floating point constant: 2.3e10.
+    Boolean                                  = { fg = c.orange300 },                                --- a boolean constant: TRUE, false.
     Type                                     = { fg = c.yellow100 },                                --- (preferred) int, long, char, etc.
     Structure                                = { fg = c.yellow },                                   --- struct, union, enum, etc.
     StorageClass                             = { fg = c.yellow },                                   --- static, register, volatile, etc.
     Identifier                               = { fg = c.red100 },                                   --- (preferred) any variable name.
     Constant                                 = { fg = c.sky },                                      --- (preferred) any constant.
     PreProc                                  = { fg = c.purple300 },                                --- (preferred) generic Preprocessor.
-    PreCondit                                = { fg = c.purple300 },                                ---  preprocessor #if, #else, #endif, etc.
+    PreCondit                                = { fg = c.purple300 },                                --- preprocessor #if, #else, #endif, etc.
     Include                                  = { fg = c.purple300 },                                --- preprocessor #include.
-    Keyword                                  = { fg = c.purple300 },                                ---  any other keyword.
+    Keyword                                  = { fg = c.purple300 },                                --- any other keyword.
     Define                                   = { fg = c.purple300 },                                --- preprocessor #define.
-    Typedef                                  = { fg = c.yellow },                                   ---  A typedef.
-    Exception                                = { fg = c.purple100 },                                ---  try, catch, throw.
-    Conditional                              = { fg = c.purple },                                   ---  if, then, else, endif, switch, etc.
+    Typedef                                  = { fg = c.yellow },                                   --- A typedef.
+    Exception                                = { fg = c.purple100 },                                --- try, catch, throw.
+    Conditional                              = { fg = c.purple },                                   --- if, then, else, endif, switch, etc.
     Repeat                                   = { fg = c.pink300 },                                  --- for, do, while, etc.
     Statement                                = { fg = c.purple },                                   --- (preferred) any statement.
     Macro                                    = { fg = c.red },                                      --- same as Define.
     Error                                    = { fg = c.red100 },                                   --- (preferred) any erroneous construct.
     Label                                    = { fg = c.pink400 },                                  --- case, default, etc.
     Special                                  = { fg = c.orange100 },                                --- (preferred) any special symbol.
-    SpecialChar                              = { fg = c.green300 },                                 ---  special character in a constant.
+    SpecialChar                              = { fg = c.green300 },                                 --- special character in a constant.
     Function                                 = { fg = c.blue },                                     --- function name (also: methods for classes).
     Operator                                 = { fg = c.orange50 },                                 --- "sizeof", "+", "*", etc.
     Debug                                    = { fg = c.orange },                                   --- debugging statements.
     Tag                                      = { fg = c.green },                                    --- you can use CTRL-] on this.
     Delimiter                                = { fg = c.base100 },                                  --- character that needs attention.
 
+    Todo                                     = { fg = c.red100, bg = c.base500, bold = true },      --- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX.
     Comment                                  = { fg = c.base200, style = options.styles.comments }, --- any comments.
     SpecialComment                           = { fg = c.base200, style = options.styles.comments }, --- special things inside a comment.
-    Todo                                     = { fg = c.red100, bg = c.base500, bold = true },      --- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX.
 
-    Underlined                               = { underline = true },                                --- (preferred) text that stands out, HTML links
     Bold                                     = { bold = true },                                     ---
     Italic                                   = { italic = true },                                   ---
+    Underlined                               = { underline = true },                                --- (preferred) text that stands out, HTML links
 
-    debugPC                                  = { bg = c.bg, fg = c.pink50 },                        -- used for highlighting the current line in terminal-debug
-    debugBreakpoint                          = { fg = c.red300, bg = c.base600 },                   -- used for breakpoint colors in terminal-debug
+    debugPC                                  = { bg = c.bg, fg = c.pink50 },                        --- used for highlighting the current line in terminal-debug
+    debugBreakpoint                          = { fg = c.red300, bg = c.base600 },                   --- used for breakpoint colors in terminal-debug
 
     --- Lsp Highlights ---
 
