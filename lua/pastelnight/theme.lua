@@ -719,11 +719,10 @@ function M.setup()
     NavicText = { fg = c.fg, bg = c.bg_statusline },
     NavicSeparator = { fg = c.fg, bg = c.bg_statusline },
 
-    IblIndent = { fg = c.base800, nocombine = true },
-    IndentBlanklineChar = { fg = c.base800, nocombine = true },
-    IndentBlanklineContextChar = { fg = c.orange, nocombine = true },
+    --- Identline
+    IblIndent = { fg = c.base400, nocombine = true },
 
-    -- Scrollbar
+    --- Scrollbar
     ScrollbarHandle = { fg = c.none, bg = c.base400 },
 
     ScrollbarSearchHandle = { fg = c.orange, bg = c.base400 },
