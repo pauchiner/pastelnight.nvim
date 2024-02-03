@@ -129,38 +129,13 @@ function M.setup()
     Comment                                  = { fg = c.base200, style = options.styles.comments },   --- any comments.
     SpecialComment                           = { fg = c.base200, style = options.styles.comments },   --- special things inside a comment.
     Todo                                     = { fg = c.red100, bg = c.base500, bold = true },        --- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX.
-    Underlined                               = { underline = true },                                  -- (preferred) text that stands out, HTML links
-    Bold                                     = { bold = true },
-    Italic                                   = { italic = true },
-
-    qfLineNr                                 = { fg = c.base400 },
-    qfFileName                               = { fg = c.purple },
-
-    htmlH1                                   = { fg = c.pink, bold = true },
-    htmlH2                                   = { fg = c.blue, bold = true },
-
-    -- mkdHeading = { fg = c.orange, bold = true },
-    mkdCode                                  = { bg = c.green400 },
-    mkdCodeDelimiter                         = { fg = c.base400, bg = c.green300 },
-    mkdCodeStart                             = { fg = c.orange, bold = true },
-    mkdCodeEnd                               = { fg = c.orange, bold = true },
-    -- mkdLink = { fg = c.blue, underline = true },
-
-    markdownHeadingDelimiter                 = { fg = c.orange, bold = true },
-    markdownCode                             = { fg = c.yellow, bg = c.green400 },
-    markdownCodeBlock                        = { fg = c.yellow, bg = c.green400 },
-    markdownH1                               = { fg = c.pink, bold = true },
-    markdownH2                               = { fg = c.purple, bold = true },
-    markdownLinkText                         = { fg = c.blue, underline = true },
-
-    ["helpCommand"]                          = { fg = c.blue, bg = c.blue400 },
-
+    Underlined                               = { underline = true },                                  --- (preferred) text that stands out, HTML links
+    Bold                                     = { bold = true }, ---
+    Italic                                   = { italic = true }, ---
     debugPC                                  = { bg = c.bg, fg = c.pink50 },        -- used for highlighting the current line in terminal-debug
     debugBreakpoint                          = { fg = c.red300, bg = c.base600 },   -- used for breakpoint colors in terminal-debug
 
-    -- These groups are for the native LSP client. Some other LSP clients may
-    -- use these groups, or use their own. Consult your LSP client's
-    -- documentation.
+    --- Lsp Highlights ---
     LspReferenceText                         = { underline = true },                   -- used for highlighting "text" references
     LspReferenceRead                         = { underline = true },                   -- used for highlighting "read" references
     LspReferenceWrite                        = { underline = true },                   -- used for highlighting "write" references
@@ -171,21 +146,15 @@ function M.setup()
     DiagnosticHint                           = { fg = c.hint },                        -- Used as the base highlight group. Other Diagnostic highlights link to this by default
     DiagnosticUnnecessary                    = { fg = c.bg },                          -- Used as the base highlight group. Other Diagnostic highlights link to this by default
 
-    DiagnosticVirtualTextError               = { bg = c.red400, fg = c.red },          -- Used for "Error" diagnostic virtual text
-    DiagnosticVirtualTextWarn                = { bg = c.yellow400, fg = c.yellow },    -- Used for "Warning" diagnostic virtual text
-    DiagnosticVirtualTextInfo                = { bg = c.blue400, fg = c.blue },        -- Used for "Information" diagnostic virtual text
-    DiagnosticVirtualTextHint                = { bg = c.sky400, fg = c.sky },          -- Used for "Hint" diagnostic virtual text
+    DiagnosticVirtualTextError               = { bg = c.red400, fg = c.red100 },          -- Used for "Error" diagnostic virtual text
+    DiagnosticVirtualTextWarn                = { bg = c.yellow400, fg = c.yellow100 },    -- Used for "Warning" diagnostic virtual text
+    DiagnosticVirtualTextInfo                = { bg = c.blue400, fg = c.blue100 },        -- Used for "Information" diagnostic virtual text
+    DiagnosticVirtualTextHint                = { bg = c.sky400, fg = c.sky100 },          -- Used for "Hint" diagnostic virtual text
 
     DiagnosticUnderlineError                 = { undercurl = true, sp = c.error },     -- Used to underline "Error" diagnostics
     DiagnosticUnderlineWarn                  = { undercurl = true, sp = c.warning },   -- Used to underline "Warning" diagnostics
     DiagnosticUnderlineInfo                  = { undercurl = true, sp = c.info },      -- Used to underline "Information" diagnostics
     DiagnosticUnderlineHint                  = { undercurl = true, sp = c.hint },      -- Used to underline "Hint" diagnostics
-
-    LspSignatureActiveParameter              = { bg = c.base800, bold = true },
-    LspCodeLens                              = { fg = c.base600 },
-    LspInlayHint                             = { bg = c.purple400, fg = c.purple },
-
-    LspInfoBorder                            = { fg = c.base700, bg = c.bg_float },
 
     DapStoppedLine                           = { bg = c.yellow300 },   -- Used for "Warning" diagnostic virtual text
 
