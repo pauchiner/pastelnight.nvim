@@ -128,13 +128,10 @@ function M.setup()
     Delimiter                                  = { fg = c.base100 },             --- character that needs attention.
     Comment                                    = { fg = c.base200, style = options.styles.comments }, --- any comments.
     SpecialComment                             = { fg = c.base200, style = options.styles.comments }, --- special things inside a comment.
-    Todo                                       = { fg = c.bg, bg = c.red100, bold = true }, --- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX.
+    Todo                                       = { fg = c.red100, bg = c.base500, bold = true }, --- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX.
     Underlined                                 = { underline = true },           -- (preferred) text that stands out, HTML links
     Bold                                       = { bold = true },
     Italic                                     = { italic = true },
-
-    -- ("Ignore", below, may be invisible...)
-    -- Ignore = { }, -- (preferred) left blank, hidden  |hl-Ignore|
 
     qfLineNr                                   = { fg = c.base400 },
     qfFileName                                 = { fg = c.purple },
@@ -192,102 +189,154 @@ function M.setup()
 
     DapStoppedLine                             = { bg = c.yellow300 }, -- Used for "Warning" diagnostic virtual text
 
-    -- These groups are for the Neovim tree-sitter highlights.
-    -- As of writing, tree-sitter support is a WIP, group names may change.
+    --- Treesitter Hightlights ---
 
-    --- Misc
-    -- TODO:
-    -- ["@comment.documentation"] = { },
-    ["@operator"]                              = { fg = c.green }, -- For any operator: `+`, but also `->` and `*` in C.
+    ["@annotation"] = {fg = c.fg},
+    ["@attribute"] = {fg = c.sky},
+    ["@attribute.typescript"] = {fg = c.blue},
+    ["@boolean"] = {fg = c.orange},
+    ["@character"] = {fg = c.orange},
+    ["@comment"] = {fg = c.base200, style = options.styles.comments},
+    ["@comment.todo"] = {fg = c.red, style = options.styles.comments},
+    ["@comment.todo.unchecked"] = {fg = c.red, style = options.styles.comments},
+    ["@comment.todo.checked"] = {fg = c.green, style = options.styles.comments},
+    ["@constant"] = {fg = c.orange},
+    ["@constant.builtin"] = {fg = c.orange},
+    ["@constant.macro"] = {fg = c.orange},
+    ["@constructor"] = {fg = c.yellow, bold = true},
+    ["@diff.add"] = {fg = c.green},
+    ["@diff.delete"] = {fg = c.red},
+    ["@error"] = {fg = c.fg},
+    ["@function"] = {fg = c.blue},
+    ["@function.builtin"] = {fg = c.sky},
+    ["@function.macro"] = {fg = c.sky},
+    ["@function.method"] = {fg = c.blue},
+    ["@keyword"] = {fg = c.purple},
+    ["@keyword.conditional"] = {fg = c.purple},
+    ["@keyword.directive"] = {fg = c.purple},
+    ["@keyword.exception"] = {fg = c.purple},
+    ["@keyword.function"] = {fg = c.purple},
+    ["@keyword.import"] = {fg = c.purple},
+    ["@keyword.operator"] =  {fg = c.purple},
+    ["@keyword.repeat"] = {fg = c.purple},
+    ["@label"] = {fg = c.red},
+    ["@markup.emphasis"] = {fg = c.fg,italic = true},
+    ["@markup.environment"] = {fg = c.fg},
+    ["@markup.environment.name"] = {fg = c.fg},
+    ["@markup.heading"] = {fg = c.orange, bold = true},
+    ["@markup.link"] = {fg = c.blue},
+    ["@markup.link.url"] = {fg = c.sky, underline = true},
+    ["@markup.list"] = {fg = c.red},
+    ["@markup.math"] = {fg = c.fg},
+    ["@markup.raw"] = {fg = c.green},
+    ["@markup.strike"] = {fg = c.fg, strikethrough = true},
+    ["@markup.strong"] = {fg = c.fg, bold = true},
+    ["@markup.underline"] = {fg = c.fg, underline = true},
+    ["@module"] = {fg = c.yellow},
+    ["@none"] = {fg = c.fg},
+    ["@number"] = {fg = c.orange},
+    ["@number.float"] = {fg = c.orange},
+    ["@operator"] = {fg = c.fg},
+    ["@parameter.reference"] = {fg = c.fg},
+    ["@property"] = {fg = c.sky},
+    ["@punctuation.delimiter"] = colors.LightGrey,
+    ["@punctuation.bracket"] = colors.LightGrey,
+    ["@string"] = {fg = c.green},
+    ["@string.regexp"] = {fg = c.orange},
+    ["@string.escape"] = {fg = c.red},
+    ["@string.special.symbol"] = {fg = c.sky},
+    ["@tag"] = {fg = c.purple},
+    ["@tag.attribute"] = {fg = c.orange},
+    ["@tag.delimiter"] = {fg = c.purple},
+    ["@text"] = {fg = c.fg},
+    ["@note"] = {fg = c.fg},
+    ["@warning"] = {fg = c.fg},
+    ["@danger"] = {fg = c.fg},
+    ["@type"] = {fg = c.yellow},
+    ["@type.builtin"] = {fg = c.orange},
+    ["@variable"] = {fg = c.fg},
+    ["@variable.builtin"] = {fg = c.red},
+    ["@variable.member"] = {fg = c.sky},
+    ["@variable.parameter"] = {fg = c.red},
+    ["@markup.heading.1.markdown"] = {fg = c.red, bold = true},
+    ["@markup.heading.2.markdown"] = {fg = c.purple, bold = true},
+    ["@markup.heading.3.markdown"] = {fg = c.orange, bold = true},
+    ["@markup.heading.4.markdown"] = {fg = c.red, bold = true},
+    ["@markup.heading.5.markdown"] = {fg = c.purple, bold = true},
+    ["@markup.heading.6.markdown"] = {fg = c.orange, bold = true},
+    ["@markup.heading.1.marker.markdown"] = {fg = c.red, bold = true},
+    ["@markup.heading.2.marker.markdown"] = {fg = c.purple, bold = true},
+    ["@markup.heading.3.marker.markdown"] = {fg = c.orange, bold = true},
+    ["@markup.heading.4.marker.markdown"] = {fg = c.red, bold = true},
+    ["@markup.heading.5.marker.markdown"] = {fg = c.purple, bold = true},
+    ["@markup.heading.6.marker.markdown"] = {fg = c.orange, bold = true},
 
-    --- Punctuation
-    ["@punctuation.delimiter"]                 = { fg = c.green }, -- For delimiters ie: `.`
-    ["@punctuation.bracket"]                   = { fg = c.orange }, -- For brackets and parens.
-    ["@punctuation.special"]                   = { fg = c.orange }, -- For special punctutation that does not fall in the catagories before.
-    ["@punctuation.special.markdown"]          = { fg = c.orange, bold = true },
-
-    --- Literals
-    ["@string.documentation"]                  = { fg = c.sky },
-    ["@string.regex"]                          = { fg = c.sky100 }, -- For regexes.
-    ["@string.escape"]                         = { fg = c.orange300 }, -- For escape characters within a string.
-
-    --- Functions
-    ["@constructor"]                           = { fg = c.orange }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
-    ["@parameter"]                             = { fg = c.orange }, -- For parameters of a function.
-    -- TODO:
-    -- ["@parameter.builtin"] = {}, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
-
-    --- Keywords
-    ["@keyword"]                               = { fg = c.green, style = options.styles.keywords }, -- For keywords that don't fall in previous categories.
-    -- TODO:
-    -- ["@keyword.coroutine"] = { }, -- For keywords related to coroutines.
-    ["@keyword.function"]                      = { fg = c.green, style = options.styles.functions }, -- For keywords used to define a fuction.
-
-    ["@label"]                                 = { fg = c.green },              -- For labels: `label:` in C and `:label:` in Lua.
-
-    --- Types
-    ["@type.builtin"]                          = { link = "Type" },
-    ["@field"]                                 = { link = "Identifier" }, -- For fields.
-    ["@property"]                              = { link = "Identifier" },
-
-    --- Identifiers
-    ["@variable"]                              = { fg = c.base400, style = options.styles.variables }, -- Any variable name that does not have another highlight.
-    ["@variable.builtin"]                      = { fg = c.orange },       -- Variable names that are defined by the languages, like `this` or `self`.
+    ["@conditional"] = {fg = c.purple},
+    ["@exception"] = {fg = c.purple},
+    ["@field"] = {fg = c.sky},
+    ["@float"] = {fg = c.orange},
+    ["@include"] = {fg = c.purple},
+    ["@method"] = {fg = c.blue},
+    ["@namespace"] = {fg = c.yellow},
+    ["@parameter"] = {fg = c.red},
+    ["@preproc"] = {fg = c.purple},
+    ["@punctuation.special"] = {fg = c.red},
+    ["@repeat"] = {fg = c.purple},
+    ["@string.regex"] = {fg = c.orange},
+    ["@text.strong"] = {fg = c.fg, bold = true},
+    ["@text.emphasis"] = {fg = c.fg, italic = true},
+    ["@text.underline"] = {fg = c.fg, underline = true},
+    ["@text.strike"] = {fg = c.fg, strikethrough = true},
+    ["@text.title"] = {fg = c.orange, bold = true},
+    ["@text.literal"] = {fg = c.green},
+    ["@text.uri"] = {fg = c.sky, underline = true},
+    ["@text.todo"] = {fg = c.red, style = options.styles.comments},
+    ["@text.todo.unchecked"] = {fg = c.red, style = options.styles.comments},
+    ["@text.todo.checked"] = {fg = c.green, style = options.styles.comments},
+    ["@text.math"] = {fg = c.fg},
+    ["@text.reference"] = {fg = c.blue},
+    ["@text.environment"] = {fg = c.fg},
+    ["@text.environment.name"] = {fg = c.fg},
+    ["@text.diff.add"] = {fg = c.green},
+    ["@text.diff.delete"] = {fg = c.red},
 
     --- Text
     ["@text.literal.markdown"]                 = { fg = c.red },
     ["@text.literal.markdown_inline"]          = { fg = c.yellow, bg = c.green400 },
-    ["@text.reference"]                        = { fg = c.blue, underline = true },
-
-    ["@text.todo.unchecked"]                   = { fg = c.yellow }, -- For brackets and parens.
-    ["@text.todo.checked"]                     = { fg = c.green }, -- For brackets and parens.
     ["@text.warning"]                          = { fg = c.yellow400, bg = c.yellow },
     ["@text.danger"]                           = { fg = c.red400, bg = c.red },
 
-    ["@text.diff.add"]                         = { link = "DiffAdd" },
-    ["@text.diff.delete"]                      = { link = "DiffDelete" },
-
-    ["@namespace"]                             = { fg = c.blue, style = options.styles.variables },
-
-    -- tsx
+    --- tsx
     ["@tag.tsx"]                               = { fg = c.green },
-    ["@constructor.tsx"]                       = { fg = c.blue },
+    ["@constructor.tsx"]                       = { fg = c.yellow },
     ["@tag.delimiter.tsx"]                     = { fg = c.orange },
 
-    -- LSP Semantic Token Groups
-    ["@lsp.type.boolean"]                      = { link = "@boolean" },
-    ["@lsp.type.builtinType"]                  = { link = "@type.builtin" },
+    --- LSP Semantic Token Groups
     ["@lsp.type.comment"]                      = { link = "@comment" },
     ["@lsp.type.enum"]                         = { link = "@type" },
-    ["@lsp.type.enumMember"]                   = { link = "@constant" },
-    ["@lsp.type.escapeSequence"]               = { link = "@string.escape" },
-    ["@lsp.type.formatSpecifier"]              = { link = "@punctuation.special" },
-    ["@lsp.type.interface"]                    = { fg = c.blue },
+    ["@lsp.type.enumMember"]                   = { link = "@constant.builtin" },
+    ["@lsp.type.interface"]                    = { link = "@type" },
+    ["@lsp.type.typeParameter"]                = { link = "@type"},
     ["@lsp.type.keyword"]                      = { link = "@keyword" },
-    ["@lsp.type.namespace"]                    = { link = "@namespace" },
-    ["@lsp.type.number"]                       = { link = "@number" },
-    ["@lsp.type.operator"]                     = { link = "@operator" },
+    ["@lsp.type.namespace"]                    = { link = "@module" },
     ["@lsp.type.parameter"]                    = { link = "@parameter" },
     ["@lsp.type.property"]                     = { link = "@property" },
-    ["@lsp.type.selfKeyword"]                  = { link = "@variable.builtin" },
-    ["@lsp.type.string.rust"]                  = { link = "@string" },
-    ["@lsp.type.typeAlias"]                    = { link = "@type.definition" },
+    ["@lsp.type.variable"]                     = { link = "@variable"},
+    ["@lsp.type.macro"]                        = { link = "@function.macro" },
+    ["@lsp.type.method"]                       = { link = "@function.method" },
+    ["@lsp.type.number"]                       = { link = "@number" },
+    ["@lsp.type.generic"]                      = { link = "@text" },
+    ["@lsp.type.builtinType"]                  = { link = "@type.builtin" },
     ["@lsp.type.unresolvedReference"]          = { undercurl = true, sp = c.error },
-    ["@lsp.type.variable"]                     = {}, -- use treesitter styles for regular variables
-    ["@lsp.typemod.class.defaultLibrary"]      = { link = "@type.builtin" },
-    ["@lsp.typemod.enum.defaultLibrary"]       = { link = "@type.builtin" },
-    ["@lsp.typemod.enumMember.defaultLibrary"] = { link = "@constant.builtin" },
-    ["@lsp.typemod.function.defaultLibrary"]   = { link = "@function.builtin" },
-    ["@lsp.typemod.keyword.async"]             = { link = "@keyword.coroutine" },
-    ["@lsp.typemod.macro.defaultLibrary"]      = { link = "@function.builtin" },
-    ["@lsp.typemod.method.defaultLibrary"]     = { link = "@function.builtin" },
+    ["@lsp.typemod.method.defaultLibrary"]     = { link = "@function" },
+    ["@lsp.typemod.function.defaultLibrary"]   = { link = "@function" },
     ["@lsp.typemod.operator.injected"]         = { link = "@operator" },
     ["@lsp.typemod.string.injected"]           = { link = "@string" },
-    ["@lsp.typemod.type.defaultLibrary"]       = { fg = c.blue },
     ["@lsp.typemod.variable.defaultLibrary"]   = { link = "@variable.builtin" },
     ["@lsp.typemod.variable.injected"]         = { link = "@variable" },
-    -- NOTE: maybe add these with distinct highlights?
-    -- ["@lsp.typemod.variable.globalScope"] (global variables)
+    ["@lsp.typemod.variable.static"]           = { link = "@constant" },
+
+    --- Plugins Highlights ---
 
     -- ts-rainbow
     rainbowcol1                                = { fg = c.red },
