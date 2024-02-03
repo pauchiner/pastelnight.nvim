@@ -80,7 +80,7 @@ function M.setup()
     TabLineFill                                = { fg = c.base200, bg = c.base400 },                                   --- tab pages line, where there are no labels.
     TabLineSel                                 = { fg = c.bg, bg = c.fg },                                             --- tab pages line, active tab page label.
     WinSeparator                               = { fg = c.base700, bold = true },                                      --- the column separating vertically split windows.
-    Visual                                     = { bg = c.base300},                                   --- Visual mode selection.
+    Visual                                     = { bg = c.base400},                                   --- Visual mode selection.
     VisualNOS                                  = { bg = c.base400, underline = true },                                 --- Visual mode selection when vim is "Not Owning the Selection".
     QuickFixLine                               = { fg = c.blue300, underline = true },                                 --- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
     NormalFloat                                = { fg = c.fg, bg = c.base600 },                                        --- Normal text in floating windows.
