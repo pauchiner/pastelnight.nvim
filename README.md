@@ -246,10 +246,10 @@ Create a file like `lua/pastelnight/extra/cool-app.lua`.
 
 Add the name and output file extension to the extras table in `lua/pastelnight/extra/init.lua`.
 
-Run the following command to generate new extra themes from the tokyonight plugin directory:
+Run the following command to generate new extra themes from the pastelnight plugin directory:
 
 ```bash
-nvim --headless "+lua require('tokyonight.extra').setup()" +qa
+nvim --headless "+lua require('pastelnight.extra').setup()" +qa
 ```
 
 Check the newly created themes in the extra/ directory. 
@@ -261,15 +261,27 @@ Check the newly created themes in the extra/ directory.
 
 #### 🎨 Original Design
 
-<img style="border-radius: 13%; margin-bottom: 10px" width='90px' src="https://avatars.githubusercontent.com/u/8625066?v=4">
+<a target="_blank" alt="Olaolu's profile" href="https://github.com/whizkydee">
+  <img style="border-radius: 13%; margin-bottom: 10px" width='90px' src="https://avatars.githubusercontent.com/u/8625066?v=4">
+</a>
 
-This theme is highly inspired by the original theme [Palenight](https://github.com/whizkydee/vscode-palenight-theme) from [Olaolu Olawuyi](https://olaolu.dev/?utm_source=palenight).
+This theme is highly inspired by the original theme [Palenight](https://github.com/whizkydee/vscode-palenight-theme) from [Olaolu Olawuyi](https://github.com/whizkydee).
 
-#### 🐾 Code Structure
+#### 🏗️ Code Structure
 
-<img style="border-radius: 13%; margin-bottom: 10px" width='90px' src="https://avatars.githubusercontent.com/u/1332805?v=4">
+<a target="_blank" alt="folke's profile" href="https://github.com/folke">
+  <img style="border-radius: 13%; margin-bottom: 10px" width='90px' src="https://avatars.githubusercontent.com/u/292349?v=4">
+</a>
 
-This plugin is highly inspired on the structure of the [Solarized Osaka Theme](https://github.com/craftzdog/solarized-osaka.nvim) from [Takuya Matsuyama](https://github.com/Craftzdog), take a look of his work please.
+The structure of this plugin is based on the [Tokyo Night Theme](https://github.com/folke/tokyonight.nvim) from [Folke Lemaitre](https://github.com/folke), take a look of his work please.
+
+#### 🐾 Hsl support
+<a target="_blank" alt="Takuya's profile" href="https://github.com/craftzdog">
+  <img style="border-radius: 13%; margin-bottom: 10px" width='90px' src="https://avatars.githubusercontent.com/u/1332805?v=4">
+</a>
+
+The way of implement and create the color palette is inspired on the new  [Solarized Osaka Theme](https://github.com/craftzdog/solarized-osaka.nvim)
+from [Takuya Matsuyama](https://github.com/Craftzdog), see he's profile to know more.
 
 ---
 
