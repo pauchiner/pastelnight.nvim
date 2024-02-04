@@ -582,8 +582,30 @@ function M.setup()
     healthWarning = { fg = c.warning },
 
     --- BufferLine
+    BufferlineBackground = { bg = c.bg},
+    BufferlineIndicatorSelected = { fg = c.purple, bg = c.bg },
+    BufferlineSeparator = {fg = c.bg, bg = c.bg},
+    BufferlineFill = { fg = c.bg, bg = c.bg },
+    BufferlineDuplicate = {bg = c.bg},
 
-    BufferLineIndicatorSelected = { fg = c.purple },
+    BufferlineVisible = {bg = c.purple},
+    BufferlineSelected = {fg = c.purple, bg = c.bg, bold = false, italic = false},
+
+    BufferlineHint = {bg = c.bg},
+    BufferlineHintDiagnostic = {fg = c.hint, bg = c.bg},
+
+    BufferlineError = {bg = c.bg},
+    BufferlineErrorDiagnostic = {fg = c.error, bg = c.bg},
+
+    BufferlineWarning = {bg = c.bg},
+    BufferlineWarningDiagnostic = {fg = c.warning, bg = c.bg},
+
+    BufferlineInfo = {bg = c.bg},
+    BufferlineInfoDiagnostic = {fg = c.info, bg = c.bg},
+
+    BufferlineModified = { fg = c.purple, bg = c.bg },
+    BufferlineModifiedSelected = { fg = c.purple, bg = c.bg },
+    BufferlineModifiedVisible = { fg = c.purple, bg = c.bg },
 
     --- Barbar
 
