@@ -24,26 +24,26 @@ function M.generate(colors)
   local gitui = util.template(
     [[
 (
-  selected_tab: ${magenta}
-  command_fg: ${comment}
-  selection_bg: ${bg_highlight}
-  selection_fg: ${cyan}
+  selected_tab: ${purple}
+  command_fg: ${base300}
+  selection_bg: ${base400}
+  selection_fg: ${sky}
   cmdbar_bg: ${bg}
   cmdbar_extra_lines_bg: ${bg}
-  disabled_fg: ${comment}
+  disabled_fg: ${base300}
   diff_line_add: ${green}
   diff_line_delete: ${red}
-  diff_file_added: ${green1}
-  diff_file_removed: ${red1}
-  diff_file_moved: ${magenta2}
+  diff_file_added: ${green100}
+  diff_file_removed: ${red100}
+  diff_file_moved: ${pink200}
   diff_file_modified: ${yellow}
-  commit_hash: ${magenta}
-  commit_time: ${teal}
+  commit_hash: ${purple}
+  commit_time: ${blue}
   commit_author: ${green}
   danger_fg: ${red}
   push_gauge_bg: ${bg}
   push_gauge_fg: ${fg}
-  tag_fg: ${magenta2}
+  tag_fg: ${pink200}
   branch_fg: ${yellow}
 )
 ]],

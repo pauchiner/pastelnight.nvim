@@ -7,17 +7,17 @@ function M.generate(colors)
   local delta = util.template(
     [[
 [delta]
-  minus-style                   = syntax "${diff.delete}"
-  minus-non-emph-style          = syntax "${diff.delete}"
-  minus-emph-style              = syntax "${delta.delete}"
-  minus-empty-line-marker-style = syntax "${diff.delete}"
-  line-numbers-minus-style      = "${gitSigns.delete}"
-  plus-style                    = syntax "${diff.add}"
-  plus-non-emph-style           = syntax "${diff.add}"
-  plus-emph-style               = syntax "${delta.add}"
-  plus-empty-line-marker-style  = syntax "${diff.add}"
-  line-numbers-plus-style       = "${gitSigns.add}"
-  line-numbers-zero-style       = "${fg_gutter}"
+  minus-style                   = syntax "${red100}"
+  minus-non-emph-style          = syntax "${red100}"
+  minus-emph-style              = syntax "${red}"
+  minus-empty-line-marker-style = syntax "${red100}"
+  line-numbers-minus-style      = "${red300}"
+  plus-style                    = syntax "${green100}"
+  plus-non-emph-style           = syntax "${green100}"
+  plus-emph-style               = syntax "${green}"
+  plus-empty-line-marker-style  = syntax "${green100}"
+  line-numbers-plus-style       = "${green300}"
+  line-numbers-zero-style       = "${base100}"
 ]],
     colors
   )

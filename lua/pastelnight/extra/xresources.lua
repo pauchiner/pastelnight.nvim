@@ -16,17 +16,17 @@ function M.generate(colors)
 *color2: ${green}
 *color3: ${yellow}
 *color4: ${blue}
-*color5: ${magenta}
-*color6: ${cyan}
-*color7: ${fg_dark}
+*color5: ${purple}
+*color6: ${sky}
+*color7: ${base50}
 
-*color8: ${terminal_black}
+*color8: ${base900}
 *color9: ${red}
 *color10: ${green}
 *color11: ${yellow}
 *color12: ${blue}
-*color13: ${magenta}
-*color14: ${cyan}
+*color13: ${purple}
+*color14: ${sky}
 *color15: ${fg}
  
 ]],

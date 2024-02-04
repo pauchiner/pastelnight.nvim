@@ -10,19 +10,19 @@ function M.generate(colors)
 # For more configuraion options see https://github.com/dunst-project/dunst/blob/master/dunstrc
 
 [urgency_low]
-    background = "${bg_dark}"
+    background = "${base600}"
     foreground = "${fg}"
-    frame_color = "${fg}"
+    frame_color = "${green100}"
 
 [urgency_normal]
     background = "${bg}"
     foreground = "${fg}"
-    frame_color = "${fg}"
+    frame_color = "${yellow100}"
 
 [urgency_critical]
-    background = "${bg_highlight}"
+    background = "${base500}"
     foreground = "${error}"
-    frame_color = "${error}"
+    frame_color = "${red100}"
 ]],
     colors
   )

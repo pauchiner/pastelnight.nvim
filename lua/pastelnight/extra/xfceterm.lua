@@ -11,10 +11,10 @@ Name=PastelNight Colors
 ColorBackground=${bg}
 ColorForeground=${fg}
 
-ColorSelectionBackground=${bg_visual}
+ColorSelectionBackground=${base400}
 ColorSelection=${fg}
 
-ColorPalette=${black};${red};${green};${yellow};${blue};${magenta};${cyan};${fg_dark};${terminal_black};${red};${green};${yellow};${blue};${magenta};${cyan};${fg}
+ColorPalette=${black};${red};${green};${yellow};${blue};${purple};${sky};${base50};${base900};${red};${green};${yellow};${blue};${purple};${sky};${fg}
 ]],
     colors
   )

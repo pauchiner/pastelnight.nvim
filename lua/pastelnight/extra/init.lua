@@ -88,7 +88,7 @@ function M.setup()
       config.setup({ style = style })
       local colors = require('pastelnight.colors').setup({ transform = true })
       local fname = extra .. '/pastelnight_' .. style .. '.' .. info.ext
-      colors['_upstream_url'] = 'https://github.com/folke/tokyonight.nvim/raw/main/extras/' .. fname
+      colors['_upstream_url'] = 'https://github.com/pauchiner/pastelnight.nvim/raw/main/extras/' .. fname
       colors['_style_name'] = 'PastelNight' .. style_name
       write(plugin.generate(colors), fname)
     end

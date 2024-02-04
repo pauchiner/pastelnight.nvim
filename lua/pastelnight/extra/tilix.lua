@@ -18,16 +18,16 @@ function M.generate(colors)
         "${green}",
         "${yellow}",
         "${blue}",
-        "${magenta}",
-        "${cyan}",
-        "${fg_dark}",
-        "${terminal_black}",
+        "${purple}",
+        "${sky}",
+        "${base50}",
+        "${base900}",
         "${red}",
         "${green}",
         "${yellow}",
         "${blue}",
-        "${magenta}",
-        "${cyan}",
+        "${purple}",
+        "${sky}",
         "${fg}"
     ]
 }

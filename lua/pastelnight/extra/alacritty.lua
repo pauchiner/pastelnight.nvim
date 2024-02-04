@@ -22,18 +22,18 @@ colors:
 
   # Normal colors
   normal:
-    black:   '${black}'
+    black:   '${base900}'
     red:     '${red}'
     green:   '${green}'
     yellow:  '${yellow}'
     blue:    '${blue}'
-    magenta: '${magenta}'
-    cyan:    '${cyan}'
-    white:   '${fg_dark}'
+    magenta: '${purple}'
+    cyan:    '${sky}'
+    white:   '${base50}'
 
   # Bright colors
   bright:
-    black:   '${terminal_black}'
+    black:   '${black}'
     red:     '${red}'
     green:   '${green}'
     yellow:  '${yellow}'
@@ -44,7 +44,7 @@ colors:
 
   indexed_colors:
     - { index: 16, color: '${orange}' }
-    - { index: 17, color: '${red1}' }
+    - { index: 17, color: '${red100}' }
     
   ]],
     alacrittyColors

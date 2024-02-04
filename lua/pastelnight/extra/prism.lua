@@ -29,13 +29,13 @@ module.exports =  {
     {
       types: ["symbol"],
       style: {
-        color: "${blue1}",
+        color: "${blue100}",
       },
     },
     {
       types: ["punctuation"],
       style: {
-        color: "${magenta}",
+        color: "${purple}",
       },
     },
     {
@@ -53,7 +53,7 @@ module.exports =  {
     {
       types: ["operator"],
       style: {
-        color: "${blue5}",
+        color: "${blue300}",
       },
     },
     {
@@ -71,7 +71,7 @@ module.exports =  {
     {
       types: ["comment"],
       style: {
-        color: "${comment}",
+        color: "${base300}",
         fontStyle: "italic",
       },
     },

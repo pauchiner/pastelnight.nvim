@@ -10,12 +10,12 @@ function M.generate(colors)
 
 # PastelNight colors for Tmux
 
-set -g mode-style "fg=${blue},bg=${fg_gutter}"
+set -g mode-style "fg=${blue},bg=${base50}"
 
-set -g message-style "fg=${blue},bg=${fg_gutter}"
-set -g message-command-style "fg=${blue},bg=${fg_gutter}"
+set -g message-style "fg=${blue},bg=${base50}"
+set -g message-command-style "fg=${blue},bg=${base50}"
 
-set -g pane-border-style "fg=${fg_gutter}"
+set -g pane-border-style "fg=${base50}"
 set -g pane-active-border-style "fg=${blue}"
 
 set -g status "on"
@@ -30,16 +30,16 @@ set -g status-left-style ${none}
 set -g status-right-style ${none}
 
 set -g status-left "#[fg=${black},bg=${blue},bold] #S #[fg=${blue},bg=${bg_statusline},nobold,nounderscore,noitalics]"
-set -g status-right "#[fg=${bg_statusline},bg=${bg_statusline},nobold,nounderscore,noitalics]#[fg=${blue},bg=${bg_statusline}] #{prefix_highlight} #[fg=${fg_gutter},bg=${bg_statusline},nobold,nounderscore,noitalics]#[fg=${blue},bg=${fg_gutter}] %Y-%m-%d  %I:%M %p #[fg=${blue},bg=${fg_gutter},nobold,nounderscore,noitalics]#[fg=${black},bg=${blue},bold] #h "
+set -g status-right "#[fg=${bg_statusline},bg=${bg_statusline},nobold,nounderscore,noitalics]#[fg=${blue},bg=${bg_statusline}] #{prefix_highlight} #[fg=${base50},bg=${bg_statusline},nobold,nounderscore,noitalics]#[fg=${blue},bg=${fg_gutter}] %Y-%m-%d  %I:%M %p #[fg=${blue},bg=${fg_gutter},nobold,nounderscore,noitalics]#[fg=${black},bg=${blue},bold] #h "
 if-shell '[ "$(tmux show-option -gqv "clock-mode-style")" == "24" ]' {
-  set -g status-right "#[fg=${bg_statusline},bg=${bg_statusline},nobold,nounderscore,noitalics]#[fg=${blue},bg=${bg_statusline}] #{prefix_highlight} #[fg=${fg_gutter},bg=${bg_statusline},nobold,nounderscore,noitalics]#[fg=${blue},bg=${fg_gutter}] %Y-%m-%d  %H:%M #[fg=${blue},bg=${fg_gutter},nobold,nounderscore,noitalics]#[fg=${black},bg=${blue},bold] #h "
+  set -g status-right "#[fg=${bg_statusline},bg=${bg_statusline},nobold,nounderscore,noitalics]#[fg=${blue},bg=${bg_statusline}] #{prefix_highlight} #[fg=${base50},bg=${bg_statusline},nobold,nounderscore,noitalics]#[fg=${blue},bg=${fg_gutter}] %Y-%m-%d  %H:%M #[fg=${blue},bg=${fg_gutter},nobold,nounderscore,noitalics]#[fg=${black},bg=${blue},bold] #h "
 }
 
-setw -g window-status-activity-style "underscore,fg=${fg_sidebar},bg=${bg_statusline}"
+setw -g window-status-activity-style "underscore,fg=${fg},bg=${bg_statusline}"
 setw -g window-status-separator ""
-setw -g window-status-style "${none},fg=${fg_sidebar},bg=${bg_statusline}"
+setw -g window-status-style "${none},fg=${fg},bg=${bg_statusline}"
 setw -g window-status-format "#[fg=${bg_statusline},bg=${bg_statusline},nobold,nounderscore,noitalics]#[default] #I  #W #F #[fg=${bg_statusline},bg=${bg_statusline},nobold,nounderscore,noitalics]"
-setw -g window-status-current-format "#[fg=${bg_statusline},bg=${fg_gutter},nobold,nounderscore,noitalics]#[fg=${blue},bg=${fg_gutter},bold] #I  #W #F #[fg=${fg_gutter},bg=${bg_statusline},nobold,nounderscore,noitalics]"
+setw -g window-status-current-format "#[fg=${bg_statusline},bg=${base50},nobold,nounderscore,noitalics]#[fg=${blue},bg=${fg_gutter},bold] #I  #W #F #[fg=${fg_gutter},bg=${bg_statusline},nobold,nounderscore,noitalics]"
 
 # tmux-plugins/tmux-prefix-highlight support
 set -g @prefix_highlight_output_prefix "#[fg=${yellow}]#[bg=${bg_statusline}]#[fg=${bg_statusline}]#[bg=${yellow}]"
