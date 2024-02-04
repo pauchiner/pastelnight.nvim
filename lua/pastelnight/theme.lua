@@ -96,7 +96,7 @@ function M.setup()
     VertSplit                                = { fg = c.bg },                                                                                    --- the column separating vertically split windows
     SignColumnSB                             = { fg = c.base400 },                                                                               --- column where |signs| are displayed
     ModeMsg                                  = { fg = c.blue },                                                                                  --- 'showmode' message (e.g., "-- INSERT -- ")
-    MsgArea                                  = { fg = c.base600 },                                                                               --- Area for messages and cmdline
+    MsgArea                                  = { fg = c.base200 },                                                                               --- Area for messages and cmdline
     NormalNC                                 = { fg = c.fg, bg = options.transparent and c.none or options.dim_inactive and c.base700 or c.bg }, --- normal text in non-current windows
     NormalSB                                 = { fg = c.fg, bg = c.bg_sidebar },                                                                 --- normal text in sidebar
     FloatTitle                               = { fg = c.base200, bg = c.bg_float },                                                              ---
