@@ -66,18 +66,18 @@ jobs:
       - name: Check styles
         id: check_styles
         uses: JohnnyMorganz/stylua-action@v3.0.0
-          with:
-            token: ${{ secrets.GITHUB_TOKEN }}
-            version: latest
-            args: --check lua/
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          version: latest
+          args: --check lua/
 
       - name: Format code
         if: steps.check_styles.outputs.exit_code != 0
         uses: JohnnyMorganz/stylua-action@v3.0.0
-          with:
-            token: ${{ secrets.GITHUB_TOKEN }}
-            version: latest
-            args: lua/
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          version: latest
+          args: lua/
 
 
       - name: Push changes
