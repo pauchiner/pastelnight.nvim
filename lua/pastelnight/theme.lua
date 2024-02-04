@@ -155,7 +155,7 @@ function M.setup()
     DiagnosticWarn                           = { fg = c.warning },                   --- Used as the base highlight group.
     DiagnosticInfo                           = { fg = c.info },                      --- Used as the base highlight group.
     DiagnosticHint                           = { fg = c.hint },                      --- Used as the base highlight group.
-    DiagnosticUnnecessary                    = { fg = c.bg },                        --- Used as the base highlight group.
+    DiagnosticUnnecessary                    = { fg = c.base300 },                        --- Used as the base highlight group.
 
     DiagnosticVirtualTextError               = { fg = c.red200 },                    --- Used for "Error" diagnostic virtual text
     DiagnosticVirtualTextWarn                = { fg = c.yellow100 },                 --- Used for "Warning" diagnostic virtual text
