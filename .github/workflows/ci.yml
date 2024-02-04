@@ -69,7 +69,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           version: latest
-          args: --check lua/
+       continue-on-error: true
 
       - name: Format code
         if: steps.check_styles.outputs.exit_code != 0
