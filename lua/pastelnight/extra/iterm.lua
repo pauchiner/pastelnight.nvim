@@ -96,26 +96,26 @@ function M.generate(colors)
 		<key>Alpha Component</key>
 		<real>1</real>
 		<key>Blue Component</key>
-		<real>${magenta.b}</real>
+		<real>${pink.b}</real>
 		<key>Color Space</key>
 		<string>sRGB</string>
 		<key>Green Component</key>
-		<real>${magenta.g}</real>
+		<real>${pink.g}</real>
 		<key>Red Component</key>
-		<real>${magenta.r}</real>
+		<real>${pink.r}</real>
 	</dict>
 	<key>Ansi 14 Color</key>
 	<dict>
 		<key>Alpha Component</key>
 		<real>1</real>
 		<key>Blue Component</key>
-		<real>${cyan.b}</real>
+		<real>${sky.b}</real>
 		<key>Color Space</key>
 		<string>sRGB</string>
 		<key>Green Component</key>
-		<real>${cyan.g}</real>
+		<real>${sky.g}</real>
 		<key>Red Component</key>
-		<real>${cyan.r}</real>
+		<real>${sky.r}</real>
 	</dict>
 	<key>Ansi 15 Color</key>
 	<dict>
@@ -174,52 +174,52 @@ function M.generate(colors)
 		<key>Alpha Component</key>
 		<real>1</real>
 		<key>Blue Component</key>
-		<real>${magenta.b}</real>
+		<real>${pink.b}</real>
 		<key>Color Space</key>
 		<string>sRGB</string>
 		<key>Green Component</key>
-		<real>${magenta.g}</real>
+		<real>${pink.g}</real>
 		<key>Red Component</key>
-		<real>${magenta.r}</real>
+		<real>${pink.r}</real>
 	</dict>
 	<key>Ansi 6 Color</key>
 	<dict>
 		<key>Alpha Component</key>
 		<real>1</real>
 		<key>Blue Component</key>
-		<real>${cyan.b}</real>
+		<real>${sky.b}</real>
 		<key>Color Space</key>
 		<string>sRGB</string>
 		<key>Green Component</key>
-		<real>${cyan.g}</real>
+		<real>${sky.g}</real>
 		<key>Red Component</key>
-		<real>${cyan.r}</real>
+		<real>${sky.r}</real>
 	</dict>
 	<key>Ansi 7 Color</key>
 	<dict>
 		<key>Alpha Component</key>
 		<real>1</real>
 		<key>Blue Component</key>
-		<real>${fg_dark.b}</real>
+		<real>${base600.b}</real>
 		<key>Color Space</key>
 		<string>sRGB</string>
 		<key>Green Component</key>
-		<real>${fg_dark.g}</real>
+		<real>${base600.g}</real>
 		<key>Red Component</key>
-		<real>${fg_dark.r}</real>
+		<real>${base600.r}</real>
 	</dict>
 	<key>Ansi 8 Color</key>
 	<dict>
 		<key>Alpha Component</key>
 		<real>1</real>
 		<key>Blue Component</key>
-		<real>${terminal_black.b}</real>
+		<real>${base900.b}</real>
 		<key>Color Space</key>
 		<string>sRGB</string>
 		<key>Green Component</key>
-		<real>${terminal_black.g}</real>
+		<real>${base900.g}</real>
 		<key>Red Component</key>
-		<real>${terminal_black.r}</real>
+		<real>${base900.r}</real>
 	</dict>
 	<key>Ansi 9 Color</key>
 	<dict>
@@ -265,13 +265,13 @@ function M.generate(colors)
 		<key>Alpha Component</key>
 		<real>1</real>
 		<key>Blue Component</key>
-		<real>${teal.b}</real>
+		<real>${purple.b}</real>
 		<key>Color Space</key>
 		<string>sRGB</string>
 		<key>Green Component</key>
-		<real>${teal.g}</real>
+		<real>${purple.g}</real>
 		<key>Red Component</key>
-		<real>${teal.r}</real>
+		<real>${purple.r}</real>
 	</dict>
 	<key>Cursor Color</key>
 	<dict>
@@ -330,13 +330,13 @@ function M.generate(colors)
 		<key>Alpha Component</key>
 		<real>1</real>
 		<key>Blue Component</key>
-		<real>${green1.b}</real>
+		<real>${green.b}</real>
 		<key>Color Space</key>
 		<string>sRGB</string>
 		<key>Green Component</key>
-		<real>${green1.g}</real>
+		<real>${green.g}</real>
 		<key>Red Component</key>
-		<real>${green1.r}</real>
+		<real>${green.r}</real>
 	</dict>
 	<key>Selected Text Color</key>
 	<dict>
@@ -356,13 +356,13 @@ function M.generate(colors)
 		<key>Alpha Component</key>
 		<real>1</real>
 		<key>Blue Component</key>
-		<real>${bg_visual.b}</real>
+		<real>${base400.b}</real>
 		<key>Color Space</key>
 		<string>sRGB</string>
 		<key>Green Component</key>
-		<real>${bg_visual.g}</real>
+		<real>${base400.g}</real>
 		<key>Red Component</key>
-		<real>${bg_visual.r}</real>
+		<real>${base400.r}</real>
 	</dict>
 </dict>
 </plist>]],
