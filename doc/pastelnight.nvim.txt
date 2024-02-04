@@ -5,17 +5,19 @@ Table of Contents                         *pastelnight.nvim-table-of-contents*
 
   - Colors                                           |pastelnight.nvim-colors|
   - Features                                       |pastelnight.nvim-features|
-  - Installation                               |pastelnight.nvim-installation|
+  - Quick Start                                 |pastelnight.nvim-quick-start|
   - Configuration                             |pastelnight.nvim-configuration|
-  - Overriding Highlights             |pastelnight.nvim-overriding-highlights|
-  - ‍‍ Contributing                 |pastelnight.nvim-‍‍-contributing|
+  - Overriding Colors & Highlights|pastelnight.nvim-overriding-colors-&-highlights|
+  - Common Issues                             |pastelnight.nvim-common-issues|
+  - Contributing                               |pastelnight.nvim-contributing|
   - Credits                                         |pastelnight.nvim-credits|
 
-PastelNightPalette 
+PastelNight Quick Start 
 ·
- Quick Start 
+ Extras 
 ·
- Configuration A Neovim theme inspired on the original Palenight theme, fully written in Lua.
+ Configuration A Neovim theme inspired on the original Palenight theme, fully written in Lua.Includes themes for Kitty,
+Alacritty, iTerm2 and Fish.
 
 
 COLORS                                               *pastelnight.nvim-colors*
@@ -34,10 +36,34 @@ FEATURES                                           *pastelnight.nvim-features*
 - Enhances terminal colors.
 - Supports all major plugins.
 - Supports the latest Neovim 0.9.0 features.
-- Introduces a darker background option for sidebar-like windows.
+- Provides extra themes for numerous other applications.
 
 
-INSTALLATION                                   *pastelnight.nvim-installation*
+EXTRAS ~
+
+- Alacritty <https://github.com/alacritty/alacritty> (alacritty <extras/alacritty>)
+- Delta <https://github.com/dandavison/delta> (delta <extras/delta>)
+- Dunst <https://dunst-project.org/> (dunst <extras/dunst>)
+- Fish <https://fishshell.com/docs/current/index.html> (fish <extras/fish>)
+- Fish Themes <https://fishshell.com/docs/current/interactive.html#syntax-highlighting> (fish_themes <extras/fish_themes>)
+- Foot <https://codeberg.org/dnkl/foot> (foot <extras/foot>)
+- GitUI <https://github.com/extrawurst/gitui> (gitui <extras/gitui>)
+- iTerm <https://iterm2.com/> (iterm <extras/iterm>)
+- Kitty <https://sw.kovidgoyal.net/kitty/conf.html> (kitty <extras/kitty>)
+- Lua Table for testing <https://www.lua.org> (lua <extras/lua>)
+- Prism <https://prismjs.com> (prism <extras/prism>)
+- Sublime Text <https://www.sublimetext.com/docs/themes> (sublime <extras/sublime>)
+- Terminator <https://gnome-terminator.readthedocs.io/en/latest/config.html> (terminator <extras/terminator>)
+- Tilix <https://github.com/gnunn1/tilix> (tilix <extras/tilix>)
+- Tmux <https://github.com/tmux/tmux/wiki> (tmux <extras/tmux>)
+- WezTerm <https://wezfurlong.org/wezterm/config/files.html> (wezterm <extras/wezterm>)
+- Windows Terminal <https://aka.ms/terminal-documentation> (windows_terminal <extras/windows_terminal>)
+- Xfce Terminal <https://docs.xfce.org/apps/terminal/advanced> (xfceterm <extras/xfceterm>)
+- Xresources <https://wiki.archlinux.org/title/X_resources> (xresources <extras/xresources>)
+- Zathura <https://pwmt.org/projects/zathura/> (zathura <extras/zathura>)
+
+
+QUICK START                                     *pastelnight.nvim-quick-start*
 
 
 REQUIREMENTS ~
@@ -45,7 +71,7 @@ REQUIREMENTS ~
 - Neovim <https://neovim.io/> 7.2 <https://github.com/neovim/neovim/releases/tag/v0.7.2> or higher
 
 
-QUICK START ~
+INSTALLATION ~
 
 First install the theme with your preferred package manager:
 
@@ -61,7 +87,8 @@ LAZY.NVIM
     }
 <
 
-Then set the theme:
+
+USAGE ~
 
 
 VIMSCRIPT
@@ -83,8 +110,11 @@ CONFIGURATION                                 *pastelnight.nvim-configuration*
 
   [!WARNING] Set the configuration **before** loading the color scheme with
   `colorscheme pastelnight`.
+PastelNight <https://github.com/pauchiner/pastelnight.nvim> uses the default
+options, unless setup is explicitly called.
 
-DEFAULT SETUP
+
+DEFAULT OPTIONS
 
 >lua
     require("pastelnight").setup({
@@ -108,10 +138,11 @@ DEFAULT SETUP
         floats = "dark",
       },
     
-      --- Set a darker background on sidebar-like windows. ['vista_kind', 'terminal', 'packer'...].
+      --- Set a darker background on sidebar-like windows. ['terminal', 'packer'...].
       sidebars = { "qf", "help" },
     
-      --- Enabling this option, will hide inactive statuslines and replace them with a thin border instead.
+      --- Enabling this option, will hide inactive statuslines and replace them
+      ---with a thin border instead.
       hide_inactive_statusline = false,
     
       --- dims inactive windows.
@@ -134,7 +165,7 @@ DEFAULT SETUP
 <
 
 
-OVERRIDING HIGHLIGHTS                 *pastelnight.nvim-overriding-highlights*
+OVERRIDING COLORS & HIGHLIGHTS*pastelnight.nvim-overriding-colors-&-highlights*
 
 How the highlight groups are calculated:
 
@@ -144,8 +175,8 @@ override them using `config.on_colors(colors)`.
 3. `config.on_highlights(highlights, colors)` can be used to override highlight
 groups.
 
-For default values of `colors` and `highlights`, please consult the colors.lua
-<lua/solarized-osaka/colors.lua> file.
+For default values of `colors` and `highlights`, please consult the colors
+<lua/pastelnight/colors.lua> and highlights <lua/highlights/colors.lua> files.
 
 
 SETTINGS AND COLOR ALTERATION DEMONSTRATION ~
@@ -199,7 +230,27 @@ BORDERLESS TELESCOPE EXAMPLE ~
 <
 
 
-‍‍ CONTRIBUTING                     *pastelnight.nvim-‍‍-contributing*
+COMMON ISSUES                                 *pastelnight.nvim-common-issues*
+
+
+FIX UNDERCURLS IN TMUX ~
+
+To have undercurls show up and in color, add the following to your Tmux
+<https://github.com/tmux/tmux> configuration file:
+
+>sh
+    set -g default-terminal "${TERM}"
+    set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'
+<
+
+Also you can enable undescore colors but this needs **tmux 3.0**
+
+>sh
+    set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'
+<
+
+
+CONTRIBUTING                                   *pastelnight.nvim-contributing*
 
 All contributions are welcome:
 
@@ -210,6 +261,31 @@ CODE_OF_CONDUCT.md
 <https://github.com/pauchiner/pastelnight.nvim/blob/main/.github/CODE_OF_CONDUCT.md>
 
 
+CREATING NEW EXTRAS ~
+
+For the extras, we use a simple template system that can be used to generate
+themes for the different styles.
+
+How to add a new extra template:
+
+Create a file like `lua/pastelnight/extra/cool-app.lua`.
+
+Add the name and output file extension to the extras table in
+`lua/pastelnight/extra/init.lua`.
+
+Run the following command to generate new extra themes from the pastelnight
+plugin directory:
+
+>bash
+    nvim --headless "+lua require('pastelnight.extra').setup()" +qa
+<
+
+Check the newly created themes in the extra/ directory.
+
+
+  [!CAUTION] Please DO NOT commit them, as they are already automatically built
+  by the CI.
+
 CREDITS                                             *pastelnight.nvim-credits*
 
 
@@ -219,16 +295,26 @@ ORIGINAL DESIGN
 
 This theme is highly inspired by the original theme Palenight
 <https://github.com/whizkydee/vscode-palenight-theme> from Olaolu Olawuyi
-<https://olaolu.dev/?utm_source=palenight>.
+<https://github.com/whizkydee>.
 
 
 CODE STRUCTURE
 
 
 
-This plugin is highly inspired on the structure of the Solarized Osaka Theme
-<https://github.com/craftzdog/solarized-osaka.nvim> from Takuya Matsuyama
-<https://github.com/Craftzdog>, take a look of his work please.
+The structure of this plugin is based on the Tokyo Night Theme
+<https://github.com/folke/tokyonight.nvim> from Folke Lemaitre
+<https://github.com/folke>, take a look of his work please.
+
+
+HSL SUPPORT
+
+
+
+The way of implement and create the color palette is inspired on the new
+Solarized Osaka Theme <https://github.com/craftzdog/solarized-osaka.nvim> from
+Takuya Matsuyama <https://github.com/Craftzdog>, see he’s profile to know
+more.
 
 ------------------------------------------------------------------------------
 
