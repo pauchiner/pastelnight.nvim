@@ -131,7 +131,6 @@ jobs:
         id: release
         with:
           release-type: simple
-          package-name: pastelnight.nvim
       - uses: actions/checkout@v3
       - name: tag stable versions
         if: ${{ steps.release.outputs.release_created }}
