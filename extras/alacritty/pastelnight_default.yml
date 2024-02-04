@@ -7,18 +7,18 @@ colors:
 
   # Normal colors
   normal:
-    black:   '0x212230'
+    black:   '0x0f1019'
     red:     '0xfe4c4c'
     green:   '0x65ff91'
     yellow:  '0xffc965'
     blue:    '0x7fa7ff'
-    magenta: '${magenta}'
-    cyan:    '${cyan}'
-    white:   '${fg_dark}'
+    magenta: '0xb58cd8'
+    cyan:    '0x7fe7ff'
+    white:   '0xe6e7e9'
 
   # Bright colors
   bright:
-    black:   '${terminal_black}'
+    black:   '0x212230'
     red:     '0xfe4c4c'
     green:   '0x65ff91'
     yellow:  '0xffc965'
@@ -29,6 +29,6 @@ colors:
 
   indexed_colors:
     - { index: 16, color: '0xfe854c' }
-    - { index: 17, color: '${red1}' }
+    - { index: 17, color: '0xff8484' }
     
   

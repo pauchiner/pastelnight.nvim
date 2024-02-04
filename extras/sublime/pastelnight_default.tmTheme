@@ -67,7 +67,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${comment}</string>
+				<string>#636572</string>
 			</dict>
 		</dict>
 		<dict>
@@ -78,7 +78,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${comment}</string>
+				<string>#636572</string>
 			</dict>
 		</dict>
 		<dict>
@@ -135,7 +135,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${magenta}</string>
+				<string>#ff99e0</string>
 			</dict>
 		</dict>
 		<dict>
@@ -146,7 +146,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${magenta}</string>
+				<string>#ff99e0</string>
 			</dict>
 		</dict>
 		<dict>
@@ -168,7 +168,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${cyan}</string>
+				<string>#7fe7ff</string>
 			</dict>
 		</dict>
 		<dict>
@@ -192,7 +192,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${blue5}</string>
+				<string>#6d91dd</string>
 			</dict>
 		</dict>
 		<dict>
@@ -203,7 +203,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${cyan}</string>
+				<string>#7fe7ff</string>
 			</dict>
 		</dict>
 		<dict>
@@ -214,7 +214,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${magenta}</string>
+				<string>#ff99e0</string>
 			</dict>
 		</dict>
 		<dict>
@@ -225,7 +225,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${cyan}</string>
+				<string>#7fe7ff</string>
 			</dict>
 		</dict>
 		<dict>
@@ -236,7 +236,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${magenta}</string>
+				<string>#ff99e0</string>
 			</dict>
 		</dict>
 		<dict>
@@ -280,7 +280,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${blue2}</string>
+				<string>#7fa7ff</string>
 			</dict>
 		</dict>
 		<dict>
@@ -346,7 +346,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${green1}</string>
+				<string>#9effb9</string>
 			</dict>
 		</dict>
 		<dict>
@@ -357,7 +357,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${cyan}</string>
+				<string>#7fe7ff</string>
 			</dict>
 		</dict>
 		<dict>
@@ -445,7 +445,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${magenta}</string>
+				<string>#ff99e0</string>
 			</dict>
 		</dict>
 		<dict>
@@ -456,7 +456,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${magenta}</string>
+				<string>#ff99e0</string>
 			</dict>
 		</dict>
 		<dict>
@@ -469,7 +469,7 @@
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>${magenta}</string>
+				<string>#ff99e0</string>
 			</dict>
 		</dict>
 		<dict>
@@ -601,7 +601,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${magenta}</string>
+				<string>#ff99e0</string>
 			</dict>
 		</dict>
 		<dict>
@@ -689,7 +689,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${magenta}</string>
+				<string>#ff99e0</string>
 			</dict>
 		</dict>
 		<dict>
@@ -700,7 +700,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${magenta}</string>
+				<string>#ff99e0</string>
 			</dict>
 		</dict>
 		<dict>
@@ -711,7 +711,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${blue5}</string>
+				<string>#5f7dbd</string>
 			</dict>
 		</dict>
 		<dict>
@@ -733,7 +733,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${magenta}</string>
+				<string>#ff99e0</string>
 			</dict>
 		</dict>
 		<dict>
@@ -744,7 +744,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${git.add}</string>
+				<string>#9effb9</string>
 			</dict>
 		</dict>
 		<dict>
@@ -755,7 +755,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${git.delete}</string>
+				<string>#ff8484</string>
 			</dict>
 		</dict>
 		<dict>
@@ -766,7 +766,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${git.change}</string>
+				<string>#ffdb99</string>
 			</dict>
 		</dict>
 		<dict>
@@ -777,7 +777,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${blue6}</string>
+				<string>#5f7dbd</string>
 			</dict>
 		</dict>
 		<dict>
@@ -799,7 +799,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${magenta}</string>
+				<string>#ff99e0</string>
 			</dict>
 		</dict>
 		<dict>
@@ -821,7 +821,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${blue5}</string>
+				<string>#6d91dd</string>
 			</dict>
 		</dict>
 		<dict>
@@ -843,7 +843,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${blue5}</string>
+				<string>#6d91dd</string>
 			</dict>
 		</dict>
 		<dict>
@@ -887,7 +887,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${blue2}</string>
+				<string>#7fa7ff</string>
 			</dict>
 		</dict>
 		<dict>
@@ -898,7 +898,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${cyan}</string>
+				<string>#7fe7ff</string>
 			</dict>
 		</dict>
 		<dict>
@@ -909,7 +909,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${magenta}</string>
+				<string>#ff99e0</string>
 			</dict>
 		</dict>
 		<dict>
@@ -931,7 +931,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${blue2}</string>
+				<string>#a8c3ff</string>
 			</dict>
 		</dict>
 		<dict>
@@ -942,7 +942,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${green1}</string>
+				<string>#9effb9</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1030,7 +1030,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${magenta}</string>
+				<string>#ff99e0</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1054,7 +1054,7 @@
 				<key>fontStyle</key>
 				<string>bold</string>
 				<key>foreground</key>
-				<string>${blue5}</string>
+				<string>#5f7dbd</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1202,7 +1202,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${green1}</string>
+				<string>#9effb9</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1213,7 +1213,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${blue5}</string>
+				<string>#6d91dd</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1248,7 +1248,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${blue2}</string>
+				<string>#6d91dd</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1270,7 +1270,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${red1}</string>
+				<string>#ff8484</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1303,7 +1303,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${green1}</string>
+				<string>#9effb9</string>
 			</dict>
 		</dict>
 		<dict>

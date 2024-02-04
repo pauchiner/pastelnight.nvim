@@ -10,16 +10,16 @@
         "#65ff91",
         "#ffc965",
         "#7fa7ff",
-        "${magenta}",
-        "${cyan}",
-        "${fg_dark}",
-        "${terminal_black}",
+        "#b58cd8",
+        "#7fe7ff",
+        "#e6e7e9",
+        "#0f1019",
         "#fe4c4c",
         "#65ff91",
         "#ffc965",
         "#7fa7ff",
-        "${magenta}",
-        "${cyan}",
+        "#b58cd8",
+        "#7fe7ff",
         "#f9fbff"
     ]
 }

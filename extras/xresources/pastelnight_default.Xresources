@@ -8,16 +8,16 @@
 *color2: #65ff91
 *color3: #ffc965
 *color4: #7fa7ff
-*color5: ${magenta}
-*color6: ${cyan}
-*color7: ${fg_dark}
+*color5: #b58cd8
+*color6: #7fe7ff
+*color7: #e6e7e9
 
-*color8: ${terminal_black}
+*color8: #0f1019
 *color9: #fe4c4c
 *color10: #65ff91
 *color11: #ffc965
 *color12: #7fa7ff
-*color13: ${magenta}
-*color14: ${cyan}
+*color13: #b58cd8
+*color14: #7fe7ff
 *color15: #f9fbff
  

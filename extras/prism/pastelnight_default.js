@@ -19,13 +19,13 @@ module.exports =  {
     {
       types: ["symbol"],
       style: {
-        color: "${blue1}",
+        color: "#a8c3ff",
       },
     },
     {
       types: ["punctuation"],
       style: {
-        color: "${magenta}",
+        color: "#b58cd8",
       },
     },
     {
@@ -43,7 +43,7 @@ module.exports =  {
     {
       types: ["operator"],
       style: {
-        color: "${blue5}",
+        color: "#6d91dd",
       },
     },
     {
@@ -61,7 +61,7 @@ module.exports =  {
     {
       types: ["comment"],
       style: {
-        color: "${comment}",
+        color: "#636572",
         fontStyle: "italic",
       },
     },
