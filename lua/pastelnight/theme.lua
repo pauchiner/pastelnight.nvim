@@ -749,8 +749,8 @@ function M.setup()
     YankyYanked = { link = "IncSearch" },
 
     -- Lazy
-    LazyProgressDone = { bold = true, fg = c.pink },
-    LazyProgressTodo = { bold = true, fg = c.base600 },
+    LazyProgressDone = { bold = true, fg = c.purple50 },
+    LazyProgressTodo = { bold = true, fg = c.purple400 },
     LazyH1 = { fg = c.purple200, bold = true },
     LazyNoCond = { fg = c.base200 },
     LazySpecial = { fg = c.base100 },
