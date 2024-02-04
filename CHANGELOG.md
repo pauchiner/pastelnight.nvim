@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/pauchiner/pastelnight.nvim/compare/v2.0.0...v2.1.0) (2024-02-04)
+
+
+### Features
+
+* **extra:** add iterm support ([ddb65d0](https://github.com/pauchiner/pastelnight.nvim/commit/ddb65d04f4c103c2da92e9f6cd57c20fefeb326a))
+
 ## [2.0.0](https://github.com/pauchiner/pastelnight.nvim/compare/v1.1.0...v2.0.0) (2024-02-04)
 
 
