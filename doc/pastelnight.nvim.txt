@@ -1,0 +1,315 @@
+*pastelnight.nvim.txt*      For Neovim >= 0.8.0     Last change: 2024 February 4
+
+==============================================================================
+Table of Contents                          *pastelnight.nvim-table-of-contents*
+
+1. PastelNight                                                   |pastelnight.nvim|
+  - Features                                            |pastelnight.nvim-features|
+  - Requirements                                    |pastelnight.nvim-requirements|
+  - Installation                                    |pastelnight.nvim-installation|
+  - Usage                                                  |pastelnight.nvim-usage|
+  - Configuration                                  |pastelnight.nvim-configuration|
+  - Overriding Highlights                  |pastelnight.nvim-overriding-highlights|
+  - Extras                                                |pastelnight.nvim-extras|
+  - Contributing                                    |pastelnight.nvim-contributing|
+
+==============================================================================
+1. PastelNight                                               *pastelnight.nvim*
+
+A Neovim <https://github.com/neovim/neovim> theme inspired on the original 
+Palenight<https://github.com/whizkydee/vscode-palenight-theme> fully written in
+Lua <https://www.lua.org>.
+Includes
+|pastelnight.nvim-extra| themes for Kitty
+<https://sw.kovidgoyal.net/kitty/conf.html>, Alacritty
+<https://github.com/alacritty/alacritty>, iTerm <https://iterm2.com/> and Fish
+<https://fishshell.com/docs/current/index.html>.
+
+FEATURES                                            *pastelnight.nvim-features*
+
+- Enhances terminal colors.
+- Supports all major plugins.
+- Supports the latest Neovim <https://github.com/neovim/neovim>
+    0.9.0 <https://github.com/neovim/neovim/releases/tag/v0.9.0> features.
+- Introduces a darker background option for sidebar-like windows.
+- Provides PastelNight <https://github.com/pauchiner/pastelnight.nvim>
+    |pastelnight.nvim-extras| for numerous other applications.
+
+
+EXTRAS ~
+
+- Alacritty <https://github.com/alacritty/alacritty> (alacritty <extras/alacritty>)
+- Delta <https://github.com/dandavison/delta> (delta <extras/delta>)
+- Dunst <https://dunst-project.org/> (dunst <extras/dunst>)
+- Fish <https://fishshell.com/docs/current/index.html> (fish <extras/fish>)
+- Fish Themes <https://fishshell.com/docs/current/interactive.html#syntax-highlighting> (fish_themes <extras/fish_themes>)
+- Foot <https://codeberg.org/dnkl/foot> (foot <extras/foot>)
+- GitUI <https://github.com/extrawurst/gitui> (gitui <extras/gitui>)
+- iTerm <https://iterm2.com/> (iterm <extras/iterm>)
+- Kitty <https://sw.kovidgoyal.net/kitty/conf.html> (kitty <extras/kitty>)
+- Lua Table for testing <https://www.lua.org> (lua <extras/lua>)
+- Prism <https://prismjs.com> (prism <extras/prism>)
+- Sublime Text <https://www.sublimetext.com/docs/themes> (sublime <extras/sublime>)
+- Terminator <https://gnome-terminator.readthedocs.io/en/latest/config.html> (terminator <extras/terminator>)
+- Tilix <https://github.com/gnunn1/tilix> (tilix <extras/tilix>)
+- Tmux <https://github.com/tmux/tmux/wiki> (tmux <extras/tmux>)
+- WezTerm <https://wezfurlong.org/wezterm/config/files.html> (wezterm <extras/wezterm>)
+- Windows Terminal <https://aka.ms/terminal-documentation> (windows_terminal <extras/windows_terminal>)
+- Xfce Terminal <https://docs.xfce.org/apps/terminal/advanced> (xfceterm <extras/xfceterm>)
+- Xresources <https://wiki.archlinux.org/title/X_resources> (xresources <extras/xresources>)
+- Zathura <https://pwmt.org/projects/zathura/> (zathura <extras/zathura>)
+
+
+REQUIREMENTS                                        *pastelnight.nvim-requirements*
+
+- Neovim <https://github.com/neovim/neovim> >=
+    0.8.0 <https://github.com/neovim/neovim/releases/tag/v0.8.0>
+
+
+INSTALLATION                                        *pastelnight.nvim-installation*
+
+Install the theme with your preferred package manager, such as folke/lazy.nvim
+<https://github.com/folke/lazy.nvim>
+
+>lua
+    {
+      "pauchiner/pastelnight.nvim",
+      lazy = false,
+      priority = 1000,
+      opts = {},
+    }
+<
+
+
+USAGE						          *pastelnight.nvim-usage*
+
+
+VIM SCRIPT ~
+
+
+    colorscheme pastelnight
+<
+
+
+LUA ~
+
+>lua
+    vim.cmd[[colorscheme pastelnight]]
+<
+
+
+EXTERNAL PLUGINS
+
+
+BARBECUE
+
+>lua
+    -- Lua
+    require('barbecue').setup {
+      -- ... your barbecue config
+      theme = 'pastelnight',
+      -- ... your barbecue config
+    }
+<
+
+
+LUALINE
+
+>lua
+    -- Lua
+    require('lualine').setup {
+      options = {
+        -- ... your lualine config
+        theme = 'pastelnight'
+        -- ... your lualine config
+      }
+    }
+<
+
+
+LIGHTLINE
+
+>vim
+    " Vim Script
+    let g:lightline = {'colorscheme': 'pastelnight'}
+<
+
+
+CONFIGURATION                                      *pastelnight.nvim-configuration*
+
+DEFAULT SETUP
+
+  Set the configuration **BEFORE** loading the color scheme with `colorscheme
+  pastelnight`.
+
+>lua
+    require("pastelnight").setup({
+
+      --- Enable this to disable setting the background color.
+      transparent = false,
+
+      --- Configure the colors used when opening a `:terminal`.
+      terminal_colors = true,
+
+      styles = {
+
+	--- Style to be applied to different syntax groups.
+	comments = { italic = true },
+	keywords = { italic = true },
+	functions = {},
+	variables = {},
+
+	--- Background styles. Can be 'dark', 'transparent' or 'normal'.
+	sidebars = "dark",
+	floats = "dark",
+      },
+
+      --- Set a darker background on sidebar-like windows. ['vista_kind', 'terminal', 'packer'...].
+      sidebars = { "qf", "help" },
+
+      --- Enabling this option, will hide inactive statuslines and replace them with a thin border instead.
+      hide_inactive_statusline = false,
+
+      --- dims inactive windows.
+      dim_inactive = false,
+
+      --- When true, section headers in the lualine theme will be bold.
+      lualine_bold = false,
+
+      --- You can override specific color groups to use other groups or a hex color,
+      --- function will be called with a ColorScheme table.
+      ---@param colors ColorScheme
+      on_colors = function(colors) end,
+
+      --- You can override specific highlights to use other groups or a hex color,
+      --- function will be called with a Highlights and ColorScheme table.
+      ---@param highlights Highlights
+      ---@param colors ColorScheme
+      on_highlights = function(highlights, colors) end,
+    })
+<
+
+
+OVERRIDING HIGHLIGHTS                      *pastelnight.nvim-overriding-highlights*
+
+How the highlight groups are calculated:
+
+1. `colors` are determined based on your configuration, with the ability to
+override them using `config.on_colors(colors)`.
+2. These `colors` are utilized to generate the highlight groups.
+3. `config.on_highlights(highlights, colors)` can be used to override highlight
+groups.
+
+
+SETTINGS AND COLOR ALTERATION DEMONSTRATION ~
+
+>lua
+    require("pastelnight").setup({
+      --- Change the "hint" color to the "orange" color, and make the "error" color bright red
+      on_colors = function(colors)
+        colors.hint = colors.orange
+        colors.error = "ff0000"
+      end
+    })
+<
+
+
+BORDERLESS TELESCOPE EXAMPLE ~
+
+>lua
+    require("pastelnight").setup({
+      on_highlights = function(hl, c)
+        local prompt = "2d3149"
+        hl.TelescopeNormal = {
+          bg = c.bg_dark,
+          fg = c.fg_dark,
+        }
+        hl.TelescopeBorder = {
+          bg = c.bg_dark,
+          fg = c.bg_dark,
+        }
+        hl.TelescopePromptNormal = {
+          bg = prompt,
+        }
+        hl.TelescopePromptBorder = {
+          bg = prompt,
+          fg = prompt,
+        }
+        hl.TelescopePromptTitle = {
+          bg = prompt,
+          fg = prompt,
+        }
+        hl.TelescopePreviewTitle = {
+          bg = c.bg_dark,
+          fg = c.bg_dark,
+        }
+        hl.TelescopeResultsTitle = {
+          bg = c.bg_dark,
+          fg = c.bg_dark,
+        }
+      end,
+    })
+<
+
+
+FIX UNDERCURLS IN TMUX ~
+
+To have undercurls show up and in color, add the following to your Tmux
+<https://github.com/tmux/tmux> configuration file:
+
+>sh
+     Undercurl
+    set -g default-terminal "${TERM}"
+    set -as terminal-overrides ',:Smulx=\E[4::%p1%dm'   undercurl support
+    set -as terminal-overrides ',:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'   underscore colours - needs tmux-3.0
+<
+
+
+EXTRAS                                                    *pastelnight.nvim-extras*
+
+Extra color configs for Kitty <https://sw.kovidgoyal.net/kitty/conf.html>,
+Alacritty <https://github.com/alacritty/alacritty>, Fish
+<https://www.lua.org/>, WezTerm
+<https://wezfurlong.org/wezterm/config/files.html>, iTerm <https://iterm2.com/>
+and foot <https://codeberg.org/dnkl/foot> can be found in extras <extras/>. To
+use them, refer to their respective documentation.
+
+You can easily use the color palette for other plugins inside your Neovim
+<https://github.com/neovim/neovim> configuration:
+
+>lua
+    local colors = require("pastelnight.colors").setup()
+    local util = require("pastelnight.util")
+    
+    aplugin.background = colors.bg_dark
+    aplugin.my_error = util.lighten(colors.red1, 0.3) -- number between 0 and 1. 0 results in white, 1 results in red1
+<
+
+
+CONTRIBUTING			                    *pastelnight.nvim-contributing*
+
+Pull requests are welcome.
+
+For the |pastelnight.nvim-extras|, we use a simple template system that can be
+used to generate themes for the different styles.
+
+How to add a new extra template:
+
+1. Create a file like `lua/pastelnight/extra/cool-app.lua`.
+
+
+2. Add the name and output file extension to the `extras` table in
+`lua/pastelnight/extra/init.lua`.
+
+
+3. Run the following command to generate new |pastelnight.nvim-extra| themes:
+
+>sh
+    nvim --headless "+lua require('pastelnight.extra').setup()" +qa
+<
+
+
+4. Check the newly created themes in the `extra/` directory. Please **DO NOT**
+commit them, as they are already automatically built by the CI.
+
+vim:tw=78:ts=8:noet:ft=help:norl:
