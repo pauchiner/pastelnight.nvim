@@ -81,11 +81,38 @@ jobs:
           commit_user_name: "github-actions[bot]"
           commit_user_email: "github-actions[bot]@users.noreply.github.com"
           commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+
+  docs:
+    name: 📔 Docs
+    runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/main' }}
+    needs:
+      - styles
+      - tests
+    steps:
+      - uses: actions/checkout@v3
+      - run: git pull
+      - name: Generate Docs
+        uses: kdheepak/panvimdoc@main
+        with:
+          vimdoc: pastelnight.nvim
+          version: "Neovim >= 0.8.0"
+          demojify: true
+          treesitter: true
+      - name: Push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "chore(build): auto-generate docs"
+          commit_user_name: "github-actions[bot]"
+          commit_user_email: "github-actions[bot]@users.noreply.github.com"
+          commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+
   release:
     name: 📦 Release
     if: ${{ github.ref == 'refs/heads/main' }}
     needs:
       - styles
+      - docs
       - tests
     runs-on: ubuntu-latest
 
