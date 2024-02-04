@@ -35,6 +35,7 @@ jobs:
   tests:
     name: 🧪 Tests
     needs: extras
+    if: always()
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -65,14 +66,14 @@ jobs:
 
       - name: Check styles
         id: check_styles
+        if: always()
         uses: JohnnyMorganz/stylua-action@v3.0.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           version: latest
-       continue-on-error: true
 
       - name: Format code
-        if: steps.check_styles.outputs.exit_code != 0
+        if: ${{ steps.check_styles.outputs.exit_code != '0' }}
         uses: JohnnyMorganz/stylua-action@v3.0.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -81,7 +82,7 @@ jobs:
 
 
       - name: Push changes
-        if: steps.check_styles.outputs.exit_code != 0
+        if: ${{ steps.check_styles.outputs.exit_code != '0' }}
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "styles: auto-format with stylua"
