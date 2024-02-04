@@ -76,7 +76,10 @@ function M.setup()
 
   -- map of style to style name
   local styles = {
-    default = "default"
+    storm = ' Storm',
+    night = '',
+    day = ' Day',
+    moon = ' Moon',
   }
 
   for extra, info in pairs(M.extras) do
