@@ -1,4 +1,4 @@
-local colors = require("pastelnight.colors").setup({ transform = true })
+local colors = require('pastelnight.colors').setup({ transform = true })
 
 local pastelnight = {}
 

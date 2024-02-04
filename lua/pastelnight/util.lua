@@ -1,9 +1,9 @@
-local ts = require("pastelnight.treesitter")
+local ts = require('pastelnight.treesitter')
 
 local M = {}
 
-M.bg = "#000000"
-M.fg = "#ffffff"
+M.bg = '#000000'
+M.fg = '#ffffff'
 M.day_brightness = 0.3
 
 ---@param c  string
@@ -16,7 +16,7 @@ end
 ---@param background string background color
 ---@param alpha number|string number between 0 and 1. 0 results in bg, 1 results in fg
 function M.blend(foreground, background, alpha)
-  alpha = type(alpha) == "string" and (tonumber(alpha, 16) / 0xff) or alpha
+  alpha = type(alpha) == 'string' and (tonumber(alpha, 16) / 0xff) or alpha
   local bg = hexToRgb(background)
   local fg = hexToRgb(foreground)
 
@@ -25,7 +25,7 @@ function M.blend(foreground, background, alpha)
     return math.floor(math.min(math.max(0, ret), 255) + 0.5)
   end
 
-  return string.format("#%02x%02x%02x", blendChannel(1), blendChannel(2), blendChannel(3))
+  return string.format('#%02x%02x%02x', blendChannel(1), blendChannel(2), blendChannel(3))
 end
 
 function M.darken(hex, amount, bg)
@@ -43,11 +43,11 @@ function M.highlight(group, hl)
     return
   end
   if hl.style then
-    if type(hl.style) == "table" then
-      hl = vim.tbl_extend("force", hl, hl.style)
-    elseif hl.style:lower() ~= "none" then
+    if type(hl.style) == 'table' then
+      hl = vim.tbl_extend('force', hl, hl.style)
+    elseif hl.style:lower() ~= 'none' then
       -- handle old string style definitions
-      for s in string.gmatch(hl.style, "([^,]+)") do
+      for s in string.gmatch(hl.style, '([^,]+)') do
         hl[s] = true
       end
     end
@@ -58,9 +58,9 @@ end
 
 ---@param config Config
 function M.autocmds(config)
-  local group = vim.api.nvim_create_augroup("pastelnight", { clear = true })
+  local group = vim.api.nvim_create_augroup('pastelnight', { clear = true })
 
-  vim.api.nvim_create_autocmd("ColorSchemePre", {
+  vim.api.nvim_create_autocmd('ColorSchemePre', {
     group = group,
     callback = function()
       vim.api.nvim_del_augroup_by_id(group)
@@ -68,21 +68,21 @@ function M.autocmds(config)
   })
   local function set_whl()
     local win = vim.api.nvim_get_current_win()
-    local whl = vim.split(vim.wo[win].winhighlight, ",")
-    vim.list_extend(whl, { "Normal:NormalSB", "SignColumn:SignColumnSB" })
+    local whl = vim.split(vim.wo[win].winhighlight, ',')
+    vim.list_extend(whl, { 'Normal:NormalSB', 'SignColumn:SignColumnSB' })
     whl = vim.tbl_filter(function(hl)
-      return hl ~= ""
+      return hl ~= ''
     end, whl)
-    vim.opt_local.winhighlight = table.concat(whl, ",")
+    vim.opt_local.winhighlight = table.concat(whl, ',')
   end
 
-  vim.api.nvim_create_autocmd("FileType", {
+  vim.api.nvim_create_autocmd('FileType', {
     group = group,
-    pattern = table.concat(config.sidebars, ","),
+    pattern = table.concat(config.sidebars, ','),
     callback = set_whl,
   })
-  if vim.tbl_contains(config.sidebars, "terminal") then
-    vim.api.nvim_create_autocmd("TermOpen", {
+  if vim.tbl_contains(config.sidebars, 'terminal') then
+    vim.api.nvim_create_autocmd('TermOpen', {
       group = group,
       callback = set_whl,
     })
@@ -97,9 +97,9 @@ end
 ---@param table table key value pairs to replace in the string
 function M.template(str, table)
   return (
-    str:gsub("($%b{})", function(w)
----@diagnostic disable-next-line: deprecated
-      return vim.tbl_get(table, unpack(vim.split(w:sub(3, -2), ".", { plain = true }))) or w
+    str:gsub('($%b{})', function(w)
+      ---@diagnostic disable-next-line: deprecated
+      return vim.tbl_get(table, unpack(vim.split(w:sub(3, -2), '.', { plain = true }))) or w
     end)
   )
 end
@@ -144,11 +144,11 @@ end
 function M.load(theme)
   -- only needed to clear when not the default colorscheme
   if vim.g.colors_name then
-    vim.cmd("hi clear")
+    vim.cmd('hi clear')
   end
 
   vim.o.termguicolors = true
-  vim.g.colors_name = "pastelnight"
+  vim.g.colors_name = 'pastelnight'
 
   if ts.new_style() then
     for group, colors in pairs(ts.defaults) do

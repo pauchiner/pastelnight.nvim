@@ -4,7 +4,7 @@ local M = {}
 function M.generate(colors)
   local function deepcopy(tbl)
     local ret = tbl
-    if type(tbl) == "table" then
+    if type(tbl) == 'table' then
       ret = {}
       for key, value in pairs(tbl) do
         ret[key] = deepcopy(value)
@@ -17,11 +17,11 @@ function M.generate(colors)
   colors._upstream_url = nil
   colors._style_name = nil
 
-  local ret = "local colors = "
+  local ret = 'local colors = '
     .. vim.inspect(colors)
-    .. "\n\nlocal highlights = "
-    .. vim.inspect(deepcopy(require("pastelnight.theme").setup().highlights))
-    .. "\n"
+    .. '\n\nlocal highlights = '
+    .. vim.inspect(deepcopy(require('pastelnight.theme').setup().highlights))
+    .. '\n'
   return ret
 end
 

@@ -1,4 +1,4 @@
-local util = require("pastelnight.util")
+local util = require('pastelnight.util')
 
 local M = {}
 
@@ -6,8 +6,8 @@ local M = {}
 function M.generate(colors)
   local alacrittyColors = {}
   for k, v in pairs(colors) do
-    if type(v) == "string" then
-      alacrittyColors[k] = v:gsub("^#", "0x")
+    if type(v) == 'string' then
+      alacrittyColors[k] = v:gsub('^#', '0x')
     end
   end
 

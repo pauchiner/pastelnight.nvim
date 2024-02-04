@@ -1,53 +1,53 @@
-local colors = require("pastelnight.colors").setup({ transform = true })
-local config = require("pastelnight.config").options
+local colors = require('pastelnight.colors').setup({ transform = true })
+local config = require('pastelnight.config').options
 
 local pastelnight = {}
 
 pastelnight.normal = {
-  a = { bg = colors.purple, fg = colors.bg, gui = "bold" },
+  a = { bg = colors.purple, fg = colors.bg, gui = 'bold' },
   b = { bg = colors.bg_statusline, fg = colors.purple300 },
   c = { bg = colors.bg_statusline, fg = colors.base400 },
 }
 
 pastelnight.insert = {
-  a = { bg = colors.blue, fg = colors.bg, gui = "bold" },
+  a = { bg = colors.blue, fg = colors.bg, gui = 'bold' },
   b = { bg = colors.bg_statusline, fg = colors.blue300 },
   c = { bg = colors.bg_statusline, fg = colors.base400 },
 }
 
 pastelnight.command = {
-  a = { bg = colors.purple, fg = colors.bg, gui = "bold" },
+  a = { bg = colors.purple, fg = colors.bg, gui = 'bold' },
   b = { bg = colors.bg_statusline, fg = colors.purple300 },
   c = { bg = colors.bg_statusline, fg = colors.base400 },
 }
 
 pastelnight.visual = {
-  a = { bg = colors.yellow, fg = colors.bg, gui = "bold" },
+  a = { bg = colors.yellow, fg = colors.bg, gui = 'bold' },
   b = { bg = colors.bg_statusline, fg = colors.yellow300 },
   c = { bg = colors.bg_statusline, fg = colors.base400 },
 }
 
 pastelnight.replace = {
-  a = { bg = colors.green, fg = colors.bg, gui = "bold" },
+  a = { bg = colors.green, fg = colors.bg, gui = 'bold' },
   b = { bg = colors.bg_statusline, fg = colors.green300 },
   c = { bg = colors.bg_statusline, fg = colors.base400 },
 }
 
 pastelnight.terminal = {
-  a = { bg = colors.pink, fg = colors.bg, gui = "bold" },
+  a = { bg = colors.pink, fg = colors.bg, gui = 'bold' },
   b = { bg = colors.bg_statusline, fg = colors.pink300 },
   c = { bg = colors.bg_statusline, fg = colors.base400 },
 }
 
 pastelnight.inactive = {
-  a = { bg = colors.bg_statusline, fg = colors.purple, gui ="bold" },
+  a = { bg = colors.bg_statusline, fg = colors.purple, gui = 'bold' },
   b = { bg = colors.bg_statusline, fg = colors.base400 },
   c = { bg = colors.bg_statusline, fg = colors.base400 },
 }
 
 if config.lualine_bold then
   for _, mode in pairs(pastelnight) do
-    mode.a.gui = "bold"
+    mode.a.gui = 'bold'
   end
 end
 

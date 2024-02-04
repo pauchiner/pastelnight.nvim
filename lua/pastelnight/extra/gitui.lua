@@ -1,13 +1,13 @@
-local util = require("pastelnight.util")
+local util = require('pastelnight.util')
 
 local function hex2rgb(key, value)
-  local hex = value:gsub("#", "")
+  local hex = value:gsub('#', '')
 
   local r = tonumber(hex:sub(1, 2), 16)
   local g = tonumber(hex:sub(3, 4), 16)
   local b = tonumber(hex:sub(5, 6), 16)
 
-  return string.format("Rgb(%s,%s,%s), // %s %s", r, g, b, key, value)
+  return string.format('Rgb(%s,%s,%s), // %s %s', r, g, b, key, value)
 end
 
 local M = {}
@@ -16,7 +16,7 @@ local M = {}
 function M.generate(colors)
   local gitui_colors = {}
   for k, v in pairs(colors) do
-    if type(v) == "string" then
+    if type(v) == 'string' then
       gitui_colors[k] = hex2rgb(k, v)
     end
   end

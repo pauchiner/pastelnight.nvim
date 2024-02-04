@@ -6,7 +6,7 @@ function M.new_style()
 end
 
 function M.get(group)
-  if group:sub(1, 1) ~= "@" or M.new_style() then
+  if group:sub(1, 1) ~= '@' or M.new_style() then
     return group
   end
 
@@ -15,365 +15,365 @@ function M.get(group)
   local lang
   while group do
     if M.fallbacks[group] then
-      return (lang or "") .. M.fallbacks[group]
+      return (lang or '') .. M.fallbacks[group]
     end
-    group, lang = group:match("(.*)%.(.*)")
+    group, lang = group:match('(.*)%.(.*)')
   end
 end
 
 --- taken from https://github.com/nvim-treesitter/nvim-treesitter/blob/master/lua/nvim-treesitter/highlight.lua
 M.fallbacks = {
-  ["annotation"] = "TSAnnotation",
-  ["attribute"] = "TSAttribute",
-  ["boolean"] = "TSBoolean",
-  ["character"] = "TSCharacter",
-  ["character.special"] = "TSCharacterSpecial",
-  ["comment"] = "TSComment",
-  ["conditional"] = "TSConditional",
-  ["constant"] = "TSConstant",
-  ["constant.builtin"] = "TSConstBuiltin",
-  ["constant.macro"] = "TSConstMacro",
-  ["constructor"] = "TSConstructor",
-  ["debug"] = "TSDebug",
-  ["define"] = "TSDefine",
-  ["error"] = "TSError",
-  ["exception"] = "TSException",
-  ["field"] = "TSField",
-  ["float"] = "TSFloat",
-  ["function"] = "TSFunction",
-  ["function.call"] = "TSFunctionCall",
-  ["function.builtin"] = "TSFuncBuiltin",
-  ["function.macro"] = "TSFuncMacro",
-  ["include"] = "TSInclude",
-  ["keyword"] = "TSKeyword",
-  ["keyword.function"] = "TSKeywordFunction",
-  ["keyword.operator"] = "TSKeywordOperator",
-  ["keyword.return"] = "TSKeywordReturn",
-  ["label"] = "TSLabel",
-  ["method"] = "TSMethod",
-  ["method.call"] = "TSMethodCall",
-  ["namespace"] = "TSNamespace",
-  ["none"] = "TSNone",
-  ["number"] = "TSNumber",
-  ["operator"] = "TSOperator",
-  ["parameter"] = "TSParameter",
-  ["parameter.reference"] = "TSParameterReference",
-  ["preproc"] = "TSPreProc",
-  ["property"] = "TSProperty",
-  ["punctuation.delimiter"] = "TSPunctDelimiter",
-  ["punctuation.bracket"] = "TSPunctBracket",
-  ["punctuation.special"] = "TSPunctSpecial",
-  ["repeat"] = "TSRepeat",
-  ["storageclass"] = "TSStorageClass",
-  ["string"] = "TSString",
-  ["string.regex"] = "TSStringRegex",
-  ["string.escape"] = "TSStringEscape",
-  ["string.special"] = "TSStringSpecial",
-  ["symbol"] = "TSSymbol",
-  ["tag"] = "TSTag",
-  ["tag.attribute"] = "TSTagAttribute",
-  ["tag.delimiter"] = "TSTagDelimiter",
-  ["text"] = "TSText",
-  ["text.strong"] = "TSStrong",
-  ["text.emphasis"] = "TSEmphasis",
-  ["text.underline"] = "TSUnderline",
-  ["text.strike"] = "TSStrike",
-  ["text.title"] = "TSTitle",
-  ["text.literal"] = "TSLiteral",
-  ["text.uri"] = "TSURI",
-  ["text.math"] = "TSMath",
-  ["text.reference"] = "TSTextReference",
-  ["text.environment"] = "TSEnvironment",
-  ["text.environment.name"] = "TSEnvironmentName",
-  ["text.note"] = "TSNote",
-  ["text.warning"] = "TSWarning",
-  ["text.danger"] = "TSDanger",
-  ["text.todo"] = "TSTodo",
-  ["type"] = "TSType",
-  ["type.builtin"] = "TSTypeBuiltin",
-  ["type.qualifier"] = "TSTypeQualifier",
-  ["type.definition"] = "TSTypeDefinition",
-  ["variable"] = "TSVariable",
-  ["variable.builtin"] = "TSVariableBuiltin",
+  ['annotation'] = 'TSAnnotation',
+  ['attribute'] = 'TSAttribute',
+  ['boolean'] = 'TSBoolean',
+  ['character'] = 'TSCharacter',
+  ['character.special'] = 'TSCharacterSpecial',
+  ['comment'] = 'TSComment',
+  ['conditional'] = 'TSConditional',
+  ['constant'] = 'TSConstant',
+  ['constant.builtin'] = 'TSConstBuiltin',
+  ['constant.macro'] = 'TSConstMacro',
+  ['constructor'] = 'TSConstructor',
+  ['debug'] = 'TSDebug',
+  ['define'] = 'TSDefine',
+  ['error'] = 'TSError',
+  ['exception'] = 'TSException',
+  ['field'] = 'TSField',
+  ['float'] = 'TSFloat',
+  ['function'] = 'TSFunction',
+  ['function.call'] = 'TSFunctionCall',
+  ['function.builtin'] = 'TSFuncBuiltin',
+  ['function.macro'] = 'TSFuncMacro',
+  ['include'] = 'TSInclude',
+  ['keyword'] = 'TSKeyword',
+  ['keyword.function'] = 'TSKeywordFunction',
+  ['keyword.operator'] = 'TSKeywordOperator',
+  ['keyword.return'] = 'TSKeywordReturn',
+  ['label'] = 'TSLabel',
+  ['method'] = 'TSMethod',
+  ['method.call'] = 'TSMethodCall',
+  ['namespace'] = 'TSNamespace',
+  ['none'] = 'TSNone',
+  ['number'] = 'TSNumber',
+  ['operator'] = 'TSOperator',
+  ['parameter'] = 'TSParameter',
+  ['parameter.reference'] = 'TSParameterReference',
+  ['preproc'] = 'TSPreProc',
+  ['property'] = 'TSProperty',
+  ['punctuation.delimiter'] = 'TSPunctDelimiter',
+  ['punctuation.bracket'] = 'TSPunctBracket',
+  ['punctuation.special'] = 'TSPunctSpecial',
+  ['repeat'] = 'TSRepeat',
+  ['storageclass'] = 'TSStorageClass',
+  ['string'] = 'TSString',
+  ['string.regex'] = 'TSStringRegex',
+  ['string.escape'] = 'TSStringEscape',
+  ['string.special'] = 'TSStringSpecial',
+  ['symbol'] = 'TSSymbol',
+  ['tag'] = 'TSTag',
+  ['tag.attribute'] = 'TSTagAttribute',
+  ['tag.delimiter'] = 'TSTagDelimiter',
+  ['text'] = 'TSText',
+  ['text.strong'] = 'TSStrong',
+  ['text.emphasis'] = 'TSEmphasis',
+  ['text.underline'] = 'TSUnderline',
+  ['text.strike'] = 'TSStrike',
+  ['text.title'] = 'TSTitle',
+  ['text.literal'] = 'TSLiteral',
+  ['text.uri'] = 'TSURI',
+  ['text.math'] = 'TSMath',
+  ['text.reference'] = 'TSTextReference',
+  ['text.environment'] = 'TSEnvironment',
+  ['text.environment.name'] = 'TSEnvironmentName',
+  ['text.note'] = 'TSNote',
+  ['text.warning'] = 'TSWarning',
+  ['text.danger'] = 'TSDanger',
+  ['text.todo'] = 'TSTodo',
+  ['type'] = 'TSType',
+  ['type.builtin'] = 'TSTypeBuiltin',
+  ['type.qualifier'] = 'TSTypeQualifier',
+  ['type.definition'] = 'TSTypeDefinition',
+  ['variable'] = 'TSVariable',
+  ['variable.builtin'] = 'TSVariableBuiltin',
 }
 
 M.defaults = {
-  ["@annotation"] = {
+  ['@annotation'] = {
     default = true,
-    link = "PreProc",
+    link = 'PreProc',
   },
-  ["@attribute"] = {
+  ['@attribute'] = {
     default = true,
-    link = "PreProc",
+    link = 'PreProc',
   },
-  ["@boolean"] = {
+  ['@boolean'] = {
     default = true,
-    link = "Boolean",
+    link = 'Boolean',
   },
-  ["@character"] = {
+  ['@character'] = {
     default = true,
-    link = "Character",
+    link = 'Character',
   },
-  ["@character.special"] = {
+  ['@character.special'] = {
     default = true,
-    link = "SpecialChar",
+    link = 'SpecialChar',
   },
-  ["@comment"] = {
+  ['@comment'] = {
     default = true,
-    link = "Comment",
+    link = 'Comment',
   },
-  ["@conditional"] = {
+  ['@conditional'] = {
     default = true,
-    link = "Conditional",
+    link = 'Conditional',
   },
-  ["@constant"] = {
+  ['@constant'] = {
     default = true,
-    link = "Constant",
+    link = 'Constant',
   },
-  ["@constant.builtin"] = {
+  ['@constant.builtin'] = {
     default = true,
-    link = "Special",
+    link = 'Special',
   },
-  ["@constant.macro"] = {
+  ['@constant.macro'] = {
     default = true,
-    link = "Define",
+    link = 'Define',
   },
-  ["@constructor"] = {
+  ['@constructor'] = {
     default = true,
-    link = "Special",
+    link = 'Special',
   },
-  ["@debug"] = {
+  ['@debug'] = {
     default = true,
-    link = "Debug",
+    link = 'Debug',
   },
-  ["@define"] = {
+  ['@define'] = {
     default = true,
-    link = "Define",
+    link = 'Define',
   },
-  ["@exception"] = {
+  ['@exception'] = {
     default = true,
-    link = "Exception",
+    link = 'Exception',
   },
-  ["@field"] = {
+  ['@field'] = {
     default = true,
-    link = "Identifier",
+    link = 'Identifier',
   },
-  ["@float"] = {
+  ['@float'] = {
     default = true,
-    link = "Float",
+    link = 'Float',
   },
-  ["@function"] = {
+  ['@function'] = {
     default = true,
-    link = "Function",
+    link = 'Function',
   },
-  ["@function.builtin"] = {
+  ['@function.builtin'] = {
     default = true,
-    link = "Special",
+    link = 'Special',
   },
-  ["@function.call"] = {
+  ['@function.call'] = {
     default = true,
-    link = "@function",
+    link = '@function',
   },
-  ["@function.macro"] = {
+  ['@function.macro'] = {
     default = true,
-    link = "Macro",
+    link = 'Macro',
   },
-  ["@include"] = {
+  ['@include'] = {
     default = true,
-    link = "Include",
+    link = 'Include',
   },
-  ["@keyword"] = {
+  ['@keyword'] = {
     default = true,
-    link = "Keyword",
+    link = 'Keyword',
   },
-  ["@keyword.coroutine"] = {
+  ['@keyword.coroutine'] = {
     default = true,
-    link = "@keyword",
+    link = '@keyword',
   },
-  ["@keyword.function"] = {
+  ['@keyword.function'] = {
     default = true,
-    link = "Keyword",
+    link = 'Keyword',
   },
-  ["@keyword.operator"] = {
+  ['@keyword.operator'] = {
     default = true,
-    link = "@operator",
+    link = '@operator',
   },
-  ["@keyword.return"] = {
+  ['@keyword.return'] = {
     default = true,
-    link = "@keyword",
+    link = '@keyword',
   },
-  ["@label"] = {
+  ['@label'] = {
     default = true,
-    link = "Label",
+    link = 'Label',
   },
-  ["@method"] = {
+  ['@method'] = {
     default = true,
-    link = "Function",
+    link = 'Function',
   },
-  ["@method.call"] = {
+  ['@method.call'] = {
     default = true,
-    link = "@method",
+    link = '@method',
   },
-  ["@namespace"] = {
+  ['@namespace'] = {
     default = true,
-    link = "Include",
+    link = 'Include',
   },
-  ["@none"] = {
+  ['@none'] = {
     default = true,
   },
-  ["@number"] = {
+  ['@number'] = {
     default = true,
-    link = "Number",
+    link = 'Number',
   },
-  ["@operator"] = {
+  ['@operator'] = {
     default = true,
-    link = "Operator",
+    link = 'Operator',
   },
-  ["@parameter"] = {
+  ['@parameter'] = {
     default = true,
-    link = "Identifier",
+    link = 'Identifier',
   },
-  ["@preproc"] = {
+  ['@preproc'] = {
     default = true,
-    link = "PreProc",
+    link = 'PreProc',
   },
-  ["@property"] = {
+  ['@property'] = {
     default = true,
-    link = "Identifier",
+    link = 'Identifier',
   },
-  ["@punctuation.bracket"] = {
+  ['@punctuation.bracket'] = {
     default = true,
-    link = "Delimiter",
+    link = 'Delimiter',
   },
-  ["@punctuation.delimiter"] = {
+  ['@punctuation.delimiter'] = {
     default = true,
-    link = "Delimiter",
+    link = 'Delimiter',
   },
-  ["@punctuation.special"] = {
+  ['@punctuation.special'] = {
     default = true,
-    link = "Delimiter",
+    link = 'Delimiter',
   },
-  ["@repeat"] = {
+  ['@repeat'] = {
     default = true,
-    link = "Repeat",
+    link = 'Repeat',
   },
-  ["@storageclass"] = {
+  ['@storageclass'] = {
     default = true,
-    link = "StorageClass",
+    link = 'StorageClass',
   },
-  ["@string"] = {
+  ['@string'] = {
     default = true,
-    link = "String",
+    link = 'String',
   },
-  ["@string.escape"] = {
+  ['@string.escape'] = {
     default = true,
-    link = "SpecialChar",
+    link = 'SpecialChar',
   },
-  ["@string.regex"] = {
+  ['@string.regex'] = {
     default = true,
-    link = "String",
+    link = 'String',
   },
-  ["@string.special"] = {
+  ['@string.special'] = {
     default = true,
-    link = "SpecialChar",
+    link = 'SpecialChar',
   },
-  ["@symbol"] = {
+  ['@symbol'] = {
     default = true,
-    link = "Identifier",
+    link = 'Identifier',
   },
-  ["@tag"] = {
+  ['@tag'] = {
     default = true,
-    link = "Label",
+    link = 'Label',
   },
-  ["@tag.attribute"] = {
+  ['@tag.attribute'] = {
     default = true,
-    link = "@property",
+    link = '@property',
   },
-  ["@tag.delimiter"] = {
+  ['@tag.delimiter'] = {
     default = true,
-    link = "Delimiter",
+    link = 'Delimiter',
   },
-  ["@text"] = {
+  ['@text'] = {
     default = true,
-    link = "@none",
+    link = '@none',
   },
-  ["@text.danger"] = {
+  ['@text.danger'] = {
     default = true,
-    link = "WarningMsg",
+    link = 'WarningMsg',
   },
-  ["@text.emphasis"] = {
+  ['@text.emphasis'] = {
     default = true,
     italic = true,
   },
-  ["@text.environment"] = {
+  ['@text.environment'] = {
     default = true,
-    link = "Macro",
+    link = 'Macro',
   },
-  ["@text.environment.name"] = {
+  ['@text.environment.name'] = {
     default = true,
-    link = "Type",
+    link = 'Type',
   },
-  ["@text.literal"] = {
+  ['@text.literal'] = {
     default = true,
-    link = "String",
+    link = 'String',
   },
-  ["@text.math"] = {
+  ['@text.math'] = {
     default = true,
-    link = "Special",
+    link = 'Special',
   },
-  ["@text.note"] = {
+  ['@text.note'] = {
     default = true,
-    link = "SpecialComment",
+    link = 'SpecialComment',
   },
-  ["@text.reference"] = {
+  ['@text.reference'] = {
     default = true,
-    link = "Constant",
+    link = 'Constant',
   },
-  ["@text.strike"] = {
+  ['@text.strike'] = {
     strikethrough = true,
   },
-  ["@text.strong"] = {
+  ['@text.strong'] = {
     bold = true,
     default = true,
   },
-  ["@text.title"] = {
+  ['@text.title'] = {
     default = true,
-    link = "Title",
+    link = 'Title',
   },
-  ["@text.underline"] = {
+  ['@text.underline'] = {
     underline = true,
   },
-  ["@text.uri"] = {
+  ['@text.uri'] = {
     default = true,
-    link = "Underlined",
+    link = 'Underlined',
   },
-  ["@text.warning"] = {
+  ['@text.warning'] = {
     default = true,
-    link = "Todo",
+    link = 'Todo',
   },
-  ["@text.todo"] = {
+  ['@text.todo'] = {
     default = true,
-    link = "Todo",
+    link = 'Todo',
   },
-  ["@type"] = {
+  ['@type'] = {
     default = true,
-    link = "Type",
+    link = 'Type',
   },
-  ["@type.builtin"] = {
+  ['@type.builtin'] = {
     default = true,
-    link = "Type",
+    link = 'Type',
   },
-  ["@type.definition"] = {
+  ['@type.definition'] = {
     default = true,
-    link = "Typedef",
+    link = 'Typedef',
   },
-  ["@type.qualifier"] = {
+  ['@type.qualifier'] = {
     default = true,
-    link = "@keyword",
+    link = '@keyword',
   },
-  ["@variable.builtin"] = {
+  ['@variable.builtin'] = {
     default = true,
-    link = "Special",
+    link = 'Special',
   },
 }
 

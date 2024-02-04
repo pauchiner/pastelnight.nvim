@@ -1,4 +1,4 @@
-local util = require("pastelnight.util")
+local util = require('pastelnight.util')
 
 local M = {}
 

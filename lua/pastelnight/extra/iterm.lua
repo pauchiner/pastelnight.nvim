@@ -1,18 +1,18 @@
 local function get_component(hex, component)
-  hex = hex:gsub("#", "")
+  hex = hex:gsub('#', '')
   local num
-  if component == "r" then
-    num = tonumber("0x" .. hex:sub(1, 2)) / 255
-  elseif component == "g" then
-    num = tonumber("0x" .. hex:sub(3, 4)) / 255
-  elseif component == "b" then
-    num = tonumber("0x" .. hex:sub(5, 6)) / 255
+  if component == 'r' then
+    num = tonumber('0x' .. hex:sub(1, 2)) / 255
+  elseif component == 'g' then
+    num = tonumber('0x' .. hex:sub(3, 4)) / 255
+  elseif component == 'b' then
+    num = tonumber('0x' .. hex:sub(5, 6)) / 255
   end
-  return string.format("%.16f", num)
+  return string.format('%.16f', num)
 end
 
 local function template(str, table)
-  return (str:gsub("($%b{})", function(w)
+  return (str:gsub('($%b{})', function(w)
     return get_component(table[w:sub(3, -4)], w:sub(-2, -2))
   end))
 end
@@ -20,8 +20,8 @@ end
 local M = {}
 
 function M.generate(colors)
-
-  local iterm = template([[
+  local iterm = template(
+    [[
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">

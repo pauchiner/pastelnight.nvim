@@ -21,7 +21,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ]]
 local hsluv = {}
 
-local hexChars = "0123456789abcdef"
+local hexChars = '0123456789abcdef'
 
 local distance_line_from_origin = function(line)
   return math.abs(line.intercept) / math.sqrt((line.slope ^ 2) + 1)
@@ -255,7 +255,7 @@ hsluv.lch_to_hpluv = function(tuple)
 end
 
 hsluv.rgb_to_hex = function(tuple)
-  local h = "#"
+  local h = '#'
   for i = 1, 3 do
     local c = math.floor(tuple[i] * 255 + 0.5)
     local digit2 = math.fmod(c, 16)
