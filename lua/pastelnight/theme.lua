@@ -47,7 +47,7 @@ function M.setup()
     CursorIM                                 = { reverse = true },                                                                               --- like Cursor, but used when in IME mode |CursorIM|.
     CursorColumn                             = { bg = c.base400 },                                                                               --- Screen-column at the cursor, when 'cursorcolumn' is set.
     CursorLine                               = { bg = c.base400 },                                                                               --- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
-    CursorLineNr                             = { fg = c.yellow },                                                                                --- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    CursorLineNr                             = { fg = c.yellow50},                                                                                --- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 
     DiffAdd                                  = { fg = c.none, bg = c.green },                                                                    --- diff mode: Added line |diff.txt|.
     DiffChange                               = { fg = c.none, bg = c.yellow },                                                                   --- diff mode: Changed line |diff.txt|.
