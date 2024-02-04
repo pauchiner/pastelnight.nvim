@@ -82,11 +82,16 @@ jobs:
           commit_user_email: "github-actions[bot]@users.noreply.github.com"
           commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
   release:
-    name: release
+    name: 📦 Release
     if: ${{ github.ref == 'refs/heads/main' }}
     needs:
+      - styles
       - tests
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
     steps:
       - uses: google-github-actions/release-please-action@v3
         id: release
