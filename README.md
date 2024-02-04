@@ -1,18 +1,23 @@
 <div align="center" >
-    <img src=".github/images/logo.png" width="100", height="100">
+    <img src=".github/images/logo.png" alt="pastelnight logo" width="100", height="100">
 </div>
 <h1 align="center">PastelNight</h1>
     
-<h5 align="center">
-  <a href="#-colors">🎨 Palette </a>
-  ·
+<h4 align="center">
   <a href="#%EF%B8%8F-installation">  ⚡️ Quick Start  </a>
   ·
+  <a href="#%EF%B8%8F--configuration"> 🍬 Extras </a>
+  ·
   <a href="#%EF%B8%8F--configuration"> ⚙️ Configuration </a>
-</h5>
+</h4>
 
 <p align="center">
-A <a href="https://neovim.io/">Neovim</a> theme inspired on the original <a href="https://github.com/whizkydee/vscode-palenight-theme">Palenight</a> theme, fully written in <a href="https://www.lua.org/">Lua</a>.
+A <a target="_blank" href="https://neovim.io/">Neovim</a> theme inspired on the original <a href="https://github.com/whizkydee/vscode-palenight-theme">Palenight</a> theme, fully written in <a href="https://www.lua.org/">Lua</a>.
+</p>
+
+<p align="center">
+Includes themes for <a href="https://sw.kovidgoyal.net/kitty/conf.html">Kitty</a>,
+<a target="_blank" href="https://github.com/alacritty/alacritty">Alacritty</a>, <a href="https://iterm2.com">iTerm2</a> and <a href="https://fishshell.com/docs/current/index.html">Fish</a>.
 </p>
 
 <img align="center" src="./.github/images/showcase.png" />
@@ -21,7 +26,7 @@ A <a href="https://neovim.io/">Neovim</a> theme inspired on the original <a href
 This palette is improved from the original 16 colors to a 40 shades of those, ensuring compability with more plugins and a smooth contrast experience.
 
 
-<img align="center" src="./.github/images/colors.png" />
+<img align="center" alt="pastelnight palette" src="./.github/images/colors.png" />
 
 [See the figma document](https://www.figma.com/file/o8nP8nbYI0uvoMmAnyPaCl/Pastelnight-Color-Palette?type=design&node-id=0%3A1&mode=design&t=jXRF6JoGGayRIPxh-1)
 
@@ -29,14 +34,40 @@ This palette is improved from the original 16 colors to a 40 shades of those, en
 - Enhances terminal colors.
 - Supports all major plugins.
 - Supports the latest Neovim 0.9.0 features.
-- Introduces a darker background option for sidebar-like windows.
+- Provides extra themes for numerous other applications.
 
-## 🛠️ Installation
+### 🍬 Extras
+
+<!-- extras:start -->
+- [Alacritty](extras/alacritty)
+- [Delta](extras/delta)
+- [Dunst](extras/dunst)
+- [Fish](extras/fish)
+- [Fish Theme](extras/fish_themes)
+- [Foot](extras/foot)
+- [Fzf](extras/fzf)
+- [GitUI](extras/gitui)
+- [Helix](extras/helix)
+- [iTerm](extras/iterm)
+- [Kitty](extras/kitty)
+- [Prism](extras/prism)
+- [Sublime Text](extras/sublime)
+- [Terminator](extras/terminator)
+- [Tilix](extras/tilix)
+- [Tmux](extras/tmux)
+- [WezTerm](extras/wezterm)
+- [Windows Terminal](extras/windows_terminal)
+- [Xfce Terminal](extras/xfceterm)
+- [Xresources](extras/xresources)
+- [Zathura](extras/zathura)
+<!-- extras:end -->
+
+## ⚡️ Quick Start
 
 ### ✋ Requirements
 - [Neovim](https://neovim.io/) [7.2](https://github.com/neovim/neovim/releases/tag/v0.7.2) or higher
 
-### ⚡️ Quick Start
+### 🛠️ Installation
 
 First install the theme with your preferred package manager:
 
@@ -50,14 +81,14 @@ First install the theme with your preferred package manager:
 }
 ```
 
-Then set the theme: 
+### 🚀 Usage
 
-#### 💚 VimScript
+#### VimScript
 
 ```vim
 colorscheme pastelnight
 ```
-#### 💙 Lua 
+#### Lua 
 
 ```lua
 vim.api.nvim_command [[colorscheme pastelnight]]
@@ -68,7 +99,10 @@ vim.api.nvim_command [[colorscheme pastelnight]]
 > [!WARNING]  
 > Set the configuration **before** loading the color scheme with `colorscheme pastelnight`.
 
-#### Default Setup
+[PastelNight](https://github.com/pauchiner/pastelnight.nvim) uses the default options, unless setup is explicitly called.
+
+#### Default options
+
 ```lua
 require("pastelnight").setup({
 
@@ -91,10 +125,11 @@ require("pastelnight").setup({
     floats = "dark",
   },
 
-  --- Set a darker background on sidebar-like windows. ['vista_kind', 'terminal', 'packer'...].
+  --- Set a darker background on sidebar-like windows. ['terminal', 'packer'...].
   sidebars = { "qf", "help" },
 
-  --- Enabling this option, will hide inactive statuslines and replace them with a thin border instead.
+  --- Enabling this option, will hide inactive statuslines and replace them
+  ---with a thin border instead.
   hide_inactive_statusline = false,
 
   --- dims inactive windows.
@@ -116,7 +151,7 @@ require("pastelnight").setup({
 })
 ```
 
-## 🪓 Overriding Highlights
+## 🪓 Overriding Colors & Highlights
 
 How the highlight groups are calculated:
 
@@ -127,7 +162,7 @@ How the highlight groups are calculated:
    groups.
 
 For default values of `colors` and `highlights`, please consult the
-[colors.lua](lua/solarized-osaka/colors.lua) file.
+[colors](lua/pastelnight/colors.lua) and [highlights](lua/highlights/colors.lua) files.
 
 ### Settings and color alteration demonstration
 
@@ -177,7 +212,24 @@ require("pastelnight").setup({
   end,
 })
 ```
-## 🧑‍🤝‍🧑 Contributing
+## ⚠️ Common Issues
+
+### Fix undercurls in tmux
+
+To have undercurls show up and in color, add the following to your
+[Tmux](https://github.com/tmux/tmux) configuration file:
+
+```sh
+set -g default-terminal "${TERM}"
+set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'
+```
+
+Also you can enable <u>undescore colors</u> but this needs **tmux 3.0**
+```sh 
+set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'
+```
+
+## 🤝 Contributing
 
 All contributions are welcome:
 
@@ -185,6 +237,25 @@ All contributions are welcome:
 
 [CODE_OF_CONDUCT.md](https://github.com/pauchiner/pastelnight.nvim/blob/main/.github/CODE_OF_CONDUCT.md)
 
+### 🍬 Creating new extras
+For the extras, we use a simple template system that can be used to generate themes for the different styles.
+
+How to add a new extra template:
+
+Create a file like `lua/pastelnight/extra/cool-app.lua`.
+
+Add the name and output file extension to the extras table in `lua/pastelnight/extra/init.lua`.
+
+Run the following command to generate new extra themes from the tokyonight plugin directory:
+
+```bash
+nvim --headless "+lua require('tokyonight.extra').setup()" +qa
+```
+
+Check the newly created themes in the extra/ directory. 
+
+> [!CAUTION]
+> Please DO NOT commit them, as they are already automatically built by the CI.
 
 ## 📃 Credits
 
