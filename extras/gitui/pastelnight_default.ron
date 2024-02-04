@@ -1,0 +1,23 @@
+(
+  selected_tab: ${magenta}
+  command_fg: ${comment}
+  selection_bg: ${bg_highlight}
+  selection_fg: ${cyan}
+  cmdbar_bg: Rgb(41,43,60), // bg #292b3c
+  cmdbar_extra_lines_bg: Rgb(41,43,60), // bg #292b3c
+  disabled_fg: ${comment}
+  diff_line_add: Rgb(101,255,145), // green #65ff91
+  diff_line_delete: Rgb(254,76,76), // red #fe4c4c
+  diff_file_added: ${green1}
+  diff_file_removed: ${red1}
+  diff_file_moved: ${magenta2}
+  diff_file_modified: Rgb(255,201,101), // yellow #ffc965
+  commit_hash: ${magenta}
+  commit_time: ${teal}
+  commit_author: Rgb(101,255,145), // green #65ff91
+  danger_fg: Rgb(254,76,76), // red #fe4c4c
+  push_gauge_bg: Rgb(41,43,60), // bg #292b3c
+  push_gauge_fg: Rgb(249,251,255), // fg #f9fbff
+  tag_fg: ${magenta2}
+  branch_fg: Rgb(255,201,101), // yellow #ffc965
+)

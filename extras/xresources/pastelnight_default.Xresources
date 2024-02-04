@@ -1,0 +1,23 @@
+! PastelNight colors for Xresources
+
+*background: #292b3c
+*foreground: #f9fbff
+
+*color0: #212230
+*color1: #fe4c4c
+*color2: #65ff91
+*color3: #ffc965
+*color4: #7fa7ff
+*color5: ${magenta}
+*color6: ${cyan}
+*color7: ${fg_dark}
+
+*color8: ${terminal_black}
+*color9: #fe4c4c
+*color10: #65ff91
+*color11: #ffc965
+*color12: #7fa7ff
+*color13: ${magenta}
+*color14: ${cyan}
+*color15: #f9fbff
+ 

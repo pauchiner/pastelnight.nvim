@@ -1,0 +1,40 @@
+[colors]
+foreground = "#f9fbff"
+background = "#292b3c"
+cursor_bg = "#f9fbff"
+cursor_border = "#f9fbff"
+cursor_fg = "#292b3c"
+selection_bg = "${bg_visual}"
+selection_fg = "#f9fbff"
+
+ansi = ["#212230", "#fe4c4c", "#65ff91", "#ffc965", "#7fa7ff", "${magenta}", "${cyan}", "${fg_dark}"]
+brights = ["${terminal_black}", "#fe4c4c", "#65ff91", "#ffc965", "#7fa7ff", "${magenta}", "${cyan}", "#f9fbff"]
+
+[colors.tab_bar]
+inactive_tab_edge = "${bg_dark}"
+background = "#191b28"
+
+[colors.tab_bar.active_tab]
+fg_color = "#7fa7ff"
+bg_color = "#292b3c"
+
+[colors.tab_bar.inactive_tab]
+bg_color = "${bg_dark}"
+fg_color = "${dark3}"
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "${bg_dark}"
+fg_color = "#7fa7ff"
+
+[colors.tab_bar.new_tab_hover]
+fg_color = "${bg_dark}"
+bg_color = "#7fa7ff"
+
+[colors.tab_bar.new_tab]
+fg_color = "#7fa7ff"
+bg_color = "#191b28"
+
+[metadata]
+aliases = []
+author = "folke"
+name = "PastelNight Default"
