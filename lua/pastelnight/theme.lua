@@ -770,6 +770,18 @@ function M.setup()
     LazyNoCond = { fg = c.base200 },
     LazySpecial = { fg = c.base100 },
 
+    --- Mason
+
+    MasonNormal = {fg = c.fg, bg = c.bg_sidebar},
+    MasonHeader = {fg = c.purple100, bg = c.none, bold = true},
+
+    MasonHighlight = {fg = c.green100, bg = c.none},
+    MasonHighlightBlock = {fg = c.pink, bg = c.pink},
+    MasonHighlightBlockBold = {fg = c.bg_sidebar, bg = c.purple, bold = true},
+
+    MasonMuted = { fg = c.red100, bold = true },
+    MasonMutedBlock = { bg = c.bg_sidebar, fg = c.base300, default = true },
+
     --- Notify
 
     NotifyBackground = { fg = c.fg, bg = c.bg },
