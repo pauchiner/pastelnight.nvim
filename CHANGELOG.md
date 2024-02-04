@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/pauchiner/pastelnight.nvim/compare/v1.1.0...v1.1.1) (2024-02-04)
+
+
+### Bug Fixes
+
+* **themes:** set not tested plugin highlights ([74bdca0](https://github.com/pauchiner/pastelnight.nvim/commit/74bdca0f59d9a929407dd854cda3f96a804134fe))
+
 ## [1.1.0](https://github.com/pauchiner/pastelnight.nvim/compare/v1.0.0...v1.1.0) (2024-02-04)
 
 
