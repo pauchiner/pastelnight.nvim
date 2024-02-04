@@ -1,3 +1,6 @@
+<div align="center" >
+    <img src=".github/images/logo.png" width="100", height="100">
+</div>
 <h1 align="center">PastelNight</h1>
     
 <h5 align="center">
