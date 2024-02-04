@@ -7,6 +7,10 @@ jobs:
     name: 🎨 Extras
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
     steps:
         - name: Install Neovim
           shell: bash
@@ -28,7 +32,6 @@ jobs:
             commit_user_name: "github-actions[bot]"
             commit_user_email: "github-actions[bot]@users.noreply.github.com"
             commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
-            token: ${{ secrets.GITHUB_TOKEN }}
   tests:
     name: 🧪 Tests
     needs: extras
