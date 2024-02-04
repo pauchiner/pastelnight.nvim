@@ -53,13 +53,38 @@ jobs:
           [ ! -d tests ] && exit 0
           nvim --headless -u tests/init.lua -c "PlenaryBustedDirectory tests/ {minimal_init = 'tests/init.lua', sequential = true}"
   style:
-    needs: tests
     name: 💅 Styles
     runs-on: ubuntu-20.04
+
+    permissions:
+      contents: write
+
     steps:
-      - uses: actions/checkout@v2
-      - uses: JohnnyMorganz/stylua-action@v3.0.0
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Check styles
+        id: check_styles
+        uses: JohnnyMorganz/stylua-action@v3.0.0
+          with:
+            token: ${{ secrets.GITHUB_TOKEN }}
+            version: latest
+            args: --check lua/
+
+      - name: Format code
+        if: steps.check_styles.outputs.exit_code != 0
+        uses: JohnnyMorganz/stylua-action@v3.0.0
+          with:
+            token: ${{ secrets.GITHUB_TOKEN }}
+            version: latest
+            args: lua/
+
+
+      - name: Push changes
+        if: steps.check_styles.outputs.exit_code != 0
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          args: --check lua/
-          version: latest
+          commit_message: "styles: auto-format with stylua"
+          commit_user_name: "github-actions[bot]"
+          commit_user_email: "github-actions[bot]@users.noreply.github.com"
+          commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
