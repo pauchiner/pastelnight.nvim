@@ -10,6 +10,7 @@ Table of Contents                         *pastelnight.nvim-table-of-contents*
   - Overriding Highlights             |pastelnight.nvim-overriding-highlights|
   - ‍‍ Contributing                 |pastelnight.nvim-‍‍-contributing|
   - Credits                                         |pastelnight.nvim-credits|
+
 PastelNightPalette 
 ·
  Quick Start 
