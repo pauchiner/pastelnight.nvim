@@ -378,7 +378,7 @@ function M.setup()
 
     --- Plugins Highlights ---
 
-    --- ts-rainbow
+    --- ts-rainbow (NOT TESTED)
 
     rainbowcol1 = { fg = c.red },
     rainbowcol2 = { fg = c.orange },
@@ -388,7 +388,7 @@ function M.setup()
     rainbowcol6 = { fg = c.blue },
     rainbowcol7 = { fg = c.pink },
 
-    --- ts-rainbow2 (maintained fork)
+    --- ts-rainbow2 (NOT TESTED)
 
     TSRainbowRed = { fg = c.red },
     TSRainbowOrange = { fg = c.orange },
@@ -398,7 +398,7 @@ function M.setup()
     TSRainbowViolet = { fg = c.purple },
     TSRainbowCyan = { fg = c.sky },
 
-    --- rainbow-delimiters
+    --- rainbow-delimiters (NOT TESTED)
 
     RainbowDelimiterRed = { fg = c.red },
     RainbowDelimiterOrange = { fg = c.orange },
@@ -408,13 +408,13 @@ function M.setup()
     RainbowDelimiterViolet = { fg = c.purple },
     RainbowDelimiterCyan = { fg = c.sky },
 
-    --- LspTrouble
+    --- LspTrouble (NOT TESTED)
 
     TroubleText = { fg = c.base400 },
     TroubleCount = { fg = c.pink },
     TroubleNormal = { fg = c.base400 },
 
-    --- Illuminate
+    --- Illuminate (NOT TESTED)
 
     illuminatedWord = { bg = c.purple400 },
     illuminatedCurWord = { bg = c.purple400 },
@@ -422,7 +422,7 @@ function M.setup()
     IlluminatedWordRead = { bg = c.pink400 },
     IlluminatedWordWrite = { bg = c.pink400 },
 
-    --- Diff
+    --- Diff (NOT TESTED)
 
     diffAdded = { fg = c.green },
     diffRemoved = { fg = c.red },
@@ -433,7 +433,7 @@ function M.setup()
     diffLine = { fg = c.base600 },
     diffIndexLine = { fg = c.pink },
 
-    --- Neogit
+    --- Neogit (NOT TESTED)
 
     NeogitBranch = { fg = c.pink },
     NeogitRemote = { fg = c.purple },
@@ -443,7 +443,7 @@ function M.setup()
     NeogitDiffDeleteHighlight = { fg = c.red, bg = c.red400 },
     NeogitDiffAddHighlight = { fg = c.green, bg = c.green400 },
 
-    --- Neotest
+    --- Neotest (NOT TESTED)
 
     NeotestPassed = { fg = c.green },
     NeotestRunning = { fg = c.yellow },
@@ -462,7 +462,7 @@ function M.setup()
     NeotestMarked = { fg = c.blue },
     NeotestTarget = { fg = c.blue },
 
-    --- GitGutter
+    --- GitGutter (NOT TESTED)
 
     GitGutterAdd = { fg = c.green }, -- diff mode: Added line |diff.txt|
     GitGutterChange = { fg = c.yellow }, -- diff mode: Changed line |diff.txt|
@@ -508,17 +508,17 @@ function M.setup()
     NvimTreeFolderName = { fg = c.sky300 },
     NvimTreeEmptyFolderName = { fg = c.blue50 },
 
-    --- NeoTree
+    --- NeoTree (NOT TESTED)
 
     NeoTreeNormal = { fg = c.fg, bg = c.bg_sidebar },
     NeoTreeNormalNC = { fg = c.fg, bg = c.bg_sidebar },
     NeoTreeDimText = { fg = c.base400 },
 
-    --- Fern
+    --- Fern (NOT TESTED)
 
     FernBranchText = { fg = c.purple },
 
-    --- Glyph Palette
+    --- Glyph Palette (NOT TESTED)
 
     GlyphPalette1 = { fg = c.red },
     GlyphPalette2 = { fg = c.green },
@@ -543,7 +543,7 @@ function M.setup()
     AlphaFooter = { fg = c.sky },
     AlphaButtons = { fg = c.sky },
 
-    --- WhichKey
+    --- WhichKey (NOT TESTED)
 
     WhichKey = { fg = c.sky },
     WhichKeyGroup = { fg = c.blue },
@@ -575,7 +575,7 @@ function M.setup()
     ReferencesIcon = { fg = c.blue },
     TargetWord = { fg = c.sky },
 
-    --- NeoVim
+    --- Neovim
 
     healthError = { fg = c.error },
     healthSuccess = { fg = c.green },
@@ -607,7 +607,7 @@ function M.setup()
     BufferlineModifiedSelected = { fg = c.purple, bg = c.bg },
     BufferlineModifiedVisible = { fg = c.purple, bg = c.bg },
 
-    --- Barbar
+    --- Barbar (NOT TESTED)
 
     BufferCurrent = { bg = c.bg, fg = c.fg },
     BufferCurrentERROR = { bg = c.bg, fg = c.error },
@@ -649,12 +649,12 @@ function M.setup()
     BufferTabpageFill = { bg = util.darken(c.base400, 0.8), fg = c.purple },
     BufferTabpages = { bg = c.bg_statusline, fg = c.none },
 
-    --- Sneak
+    --- Sneak (NOT TESTED)
 
     Sneak = { fg = c.base400, bg = c.pink },
     SneakScope = { bg = c.base800 },
 
-    --- Hop
+    --- Hop (NOT TESTED)
 
     HopNextKey = { fg = c.pink, bold = true },
     HopNextKey1 = { fg = c.purple, bold = true },
@@ -726,7 +726,7 @@ function M.setup()
     CmpItemKindOperator = { fg = c.sky, bg = c.none },
     CmpItemKindSnippet = { fg = c.purple, bg = c.none },
 
-    --- Navic
+    --- Navic (NOT TESTED)
 
     NavicIconsFile = { fg = c.fg, bg = c.bg_statusline },
     NavicIconsModule = { fg = c.yellow, bg = c.bg_statusline },
@@ -832,7 +832,7 @@ function M.setup()
     NotifyDEBUGBody = { fg = c.fg, bg = options.transparent and c.none or c.bg },
     NotifyTRACEBody = { fg = c.fg, bg = options.transparent and c.none or c.bg },
 
-    --- Mini
+    --- Mini (NOT TESTED)
 
     MiniCompletionActiveParameter = { underline = true },
 
