@@ -15,19 +15,19 @@ function M.generate(colors)
     [[
     # PastelNight Color Palette
     set -l foreground ${fg}
-    set -l selection ${bg_visual}
-    set -l comment ${comment}
+    set -l selection ${base400}
+    set -l comment ${base300}
     set -l red ${red}
     set -l orange ${orange}
     set -l yellow ${yellow}
     set -l green ${green}
     set -l purple ${purple}
-    set -l cyan ${cyan}
-    set -l pink ${magenta}
+    set -l sky ${sky}
+    set -l pink ${pink}
 
     # Syntax Highlighting Colors
     set -g fish_color_normal $foreground
-    set -g fish_color_command $cyan
+    set -g fish_color_command $sky
     set -g fish_color_keyword $pink
     set -g fish_color_quote $yellow
     set -g fish_color_redirection $foreground
@@ -43,11 +43,10 @@ function M.generate(colors)
 
     # Completion Pager Colors
     set -g fish_pager_color_progress $comment
-    set -g fish_pager_color_prefix $cyan
+    set -g fish_pager_color_prefix $sky
     set -g fish_pager_color_completion $foreground
     set -g fish_pager_color_description $comment
     set -g fish_pager_color_selected_background --background=$selection
-
   ]],
     fishColors
   )
