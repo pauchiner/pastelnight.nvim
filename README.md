@@ -14,10 +14,6 @@ A <a href="https://neovim.io/">Neovim</a> theme inspired on the original <a href
 
 <img align="center" src="./.github/images/showcase.png" />
 
-
-> [!CAUTION]  
-> Theme under development, NOT READY TO USE.
-
 ## 🎨 Colors
 This palette is improved from the original 16 colors to a 40 shades of those, ensuring compability with more plugins and a smooth contrast experience.
 
