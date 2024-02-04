@@ -378,7 +378,8 @@ function M.setup()
 
     --- Plugins Highlights ---
 
-    -- ts-rainbow
+    --- ts-rainbow
+
     rainbowcol1                              = { fg = c.red },
     rainbowcol2                              = { fg = c.orange },
     rainbowcol3                              = { fg = c.yellow },
@@ -387,7 +388,8 @@ function M.setup()
     rainbowcol6                              = { fg = c.blue },
     rainbowcol7                              = { fg = c.pink },
 
-    -- ts-rainbow2 (maintained fork)
+    --- ts-rainbow2 (maintained fork)
+
     TSRainbowRed                             = { fg = c.red },
     TSRainbowOrange                          = { fg = c.orange },
     TSRainbowYellow                          = { fg = c.yellow },
@@ -396,7 +398,8 @@ function M.setup()
     TSRainbowViolet                          = { fg = c.purple },
     TSRainbowCyan                            = { fg = c.sky },
 
-    -- rainbow-delimiters
+    --- rainbow-delimiters
+
     RainbowDelimiterRed                      = { fg = c.red },
     RainbowDelimiterOrange                   = { fg = c.orange },
     RainbowDelimiterYellow                   = { fg = c.yellow },
@@ -405,19 +408,22 @@ function M.setup()
     RainbowDelimiterViolet                   = { fg = c.purple },
     RainbowDelimiterCyan                     = { fg = c.sky },
 
-    -- LspTrouble
+    --- LspTrouble
+
     TroubleText                              = { fg = c.base400 },
     TroubleCount                             = { fg = c.pink },
     TroubleNormal                            = { fg = c.base400 },
 
-    -- Illuminate
+    --- Illuminate
+
     illuminatedWord                          = { bg = c.purple400 },
     illuminatedCurWord                       = { bg = c.purple400 },
     IlluminatedWordText                      = { bg = c.purple400 },
     IlluminatedWordRead                      = { bg = c.pink400 },
     IlluminatedWordWrite                     = { bg = c.pink400 },
 
-    -- diff
+    --- Diff
+
     diffAdded                                = { fg = c.green },
     diffRemoved                              = { fg = c.red },
     diffChanged                              = { fg = c.yellow },
@@ -427,7 +433,8 @@ function M.setup()
     diffLine                                 = { fg = c.base600 },
     diffIndexLine                            = { fg = c.pink },
 
-    -- Neogit
+    --- Neogit
+
     NeogitBranch                             = { fg = c.pink },
     NeogitRemote                             = { fg = c.purple },
     NeogitHunkHeader                         = { fg = c.base400, bg = c.base700 },
@@ -436,7 +443,8 @@ function M.setup()
     NeogitDiffDeleteHighlight                = { fg = c.red, bg = c.red400 },
     NeogitDiffAddHighlight                   = { fg = c.green, bg = c.green400 },
 
-    -- Neotest
+    --- Neotest
+
     NeotestPassed                            = { fg = c.green },
     NeotestRunning                           = { fg = c.yellow },
     NeotestFailed                            = { fg = c.red },
@@ -453,9 +461,9 @@ function M.setup()
     NeotestWinSelect                         = { fg = c.blue },
     NeotestMarked                            = { fg = c.blue },
     NeotestTarget                            = { fg = c.blue },
-    --[[ NeotestUnknown = {}, ]]
 
-    -- GitGutter
+    --- GitGutter
+
     GitGutterAdd = { fg = c.green },     -- diff mode: Added line |diff.txt|
     GitGutterChange = { fg = c.yellow }, -- diff mode: Changed line |diff.txt|
     GitGutterDelete = { fg = c.red },    -- diff mode: Deleted line |diff.txt|
@@ -463,12 +471,14 @@ function M.setup()
     GitGutterChangeLineNr = { fg = c.yellow },
     GitGutterDeleteLineNr = { fg = c.red },
 
-    -- GitSigns
+    --- GitSigns
+
     GitSignsAdd = { fg = c.green },     -- diff mode: Added line |diff.txt|
     GitSignsChange = { fg = c.yellow }, -- diff mode: Changed line |diff.txt|
     GitSignsDelete = { fg = c.red },    -- diff mode: Deleted line |diff.txt|
 
-    -- Telescope
+    --- Telescope
+
     TelescopeBorder = { fg = c.purple, bg = c.bg_float },
     TelescopeNormal = { fg = c.fg, bg = c.bg_float },
 
@@ -504,10 +514,12 @@ function M.setup()
     NeoTreeNormalNC = { fg = c.fg, bg = c.bg_sidebar },
     NeoTreeDimText = { fg = c.base400 },
 
-    -- Fern
-    FernBranchText = { fg = c.blue },
+    --- Fern
 
-    -- glyph palette
+    FernBranchText = { fg = c.purple },
+
+    --- Glyph Palette
+
     GlyphPalette1 = { fg = c.red },
     GlyphPalette2 = { fg = c.green },
     GlyphPalette3 = { fg = c.yellow },
@@ -516,20 +528,23 @@ function M.setup()
     GlyphPalette7 = { fg = c.fg },
     GlyphPalette9 = { fg = c.red },
 
-    -- Dashboard
+    --- Dashboard
+
     DashboardShortCut = { fg = c.sky },
     DashboardHeader = { fg = c.blue },
     DashboardCenter = { fg = c.pink },
     DashboardFooter = { fg = c.yellow, italic = true },
 
-    -- Alpha
+    --- Alpha
+
     AlphaShortcut = { fg = c.orange },
     AlphaHeader = { fg = c.blue },
     AlphaHeaderLabel = { fg = c.orange },
     AlphaFooter = { fg = c.sky },
     AlphaButtons = { fg = c.sky },
 
-    -- WhichKey
+    --- WhichKey
+
     WhichKey = { fg = c.sky },
     WhichKeyGroup = { fg = c.blue },
     WhichKeyDesc = { fg = c.pink },
@@ -538,7 +553,8 @@ function M.setup()
     WhichKeyFloat = { bg = c.bg_sidebar },
     WhichKeyValue = { fg = c.purple },
 
-    -- LspSaga
+    --- LspSaga
+
     DiagnosticWarning = { link = "DiagnosticWarn" },
     DiagnosticInformation = { link = "DiagnosticInfo" },
 
@@ -559,19 +575,21 @@ function M.setup()
     ReferencesIcon = { fg = c.blue },
     TargetWord = { fg = c.sky },
 
-    -- NeoVim
+    --- NeoVim
+
     healthError = { fg = c.error },
-    healthSuccess = { fg = c.sky },
+    healthSuccess = { fg = c.green },
     healthWarning = { fg = c.warning },
 
-    -- BufferLine
-    BufferLineIndicatorSelected = { fg = c.yellow },
+    --- BufferLine
 
-    -- Barbar
+    BufferLineIndicatorSelected = { fg = c.purple },
+
+    --- Barbar
+
     BufferCurrent = { bg = c.bg, fg = c.fg },
     BufferCurrentERROR = { bg = c.bg, fg = c.error },
     BufferCurrentHINT = { bg = c.bg, fg = c.hint },
-    -- BufferCurrentIcon = { bg = c.bg, fg = c.},
     BufferCurrentINFO = { bg = c.bg, fg = c.info },
     BufferCurrentWARN = { bg = c.bg, fg = c.warning },
     BufferCurrentIndex = { bg = c.bg, fg = c.info },
@@ -581,7 +599,6 @@ function M.setup()
     BufferAlternate = { bg = c.base600, fg = c.fg },
     BufferAlternateERROR = { bg = c.base600, fg = c.error },
     BufferAlternateHINT = { bg = c.base600, fg = c.hint },
-    -- BufferAlternateIcon = { bg = c.base01, fg = c. },
     BufferAlternateIndex = { bg = c.base600, fg = c.info },
     BufferAlternateINFO = { bg = c.base600, fg = c.info },
     BufferAlternateMod = { bg = c.base600, fg = c.warning },
@@ -591,7 +608,6 @@ function M.setup()
     BufferVisible = { bg = c.bg_statusline, fg = c.fg },
     BufferVisibleERROR = { bg = c.bg_statusline, fg = c.error },
     BufferVisibleHINT = { bg = c.bg_statusline, fg = c.hint },
-    -- BufferVisibleIcon = { bg = c.bg_statusline, fg = c. },
     BufferVisibleINFO = { bg = c.bg_statusline, fg = c.info },
     BufferVisibleWARN = { bg = c.bg_statusline, fg = c.warning },
     BufferVisibleIndex = { bg = c.bg_statusline, fg = c.info },
@@ -601,7 +617,6 @@ function M.setup()
     BufferInactive = { bg = util.darken(c.base400, 0.4), fg = util.darken(c.purple, 0.8) },
     BufferInactiveERROR = { bg = util.darken(c.base400, 0.4), fg = util.darken(c.error, 0.8) },
     BufferInactiveHINT = { bg = util.darken(c.base400, 0.4), fg = util.darken(c.hint, 0.8) },
-    -- BufferInactiveIcon = { bg = c.bg_statusline, fg = util.darken(c., 0.1) },
     BufferInactiveINFO = { bg = util.darken(c.base400, 0.4), fg = util.darken(c.info, 0.8) },
     BufferInactiveWARN = { bg = util.darken(c.base400, 0.4), fg = util.darken(c.warning, 0.8) },
     BufferInactiveIndex = { bg = util.darken(c.base400, 0.4), fg = c.purple },
@@ -612,11 +627,13 @@ function M.setup()
     BufferTabpageFill = { bg = util.darken(c.base400, 0.8), fg = c.purple },
     BufferTabpages = { bg = c.bg_statusline, fg = c.none },
 
-    -- Sneak
+    --- Sneak
+
     Sneak = { fg = c.base400, bg = c.pink },
     SneakScope = { bg = c.base800 },
 
-    -- Hop
+    --- Hop
+
     HopNextKey = { fg = c.pink, bold = true },
     HopNextKey1 = { fg = c.purple, bold = true },
     HopNextKey2 = { fg = c.purple300 },
@@ -634,7 +651,6 @@ function M.setup()
     FlashLabel = { bg = c.pink, bold = true, fg = c.fg },
 
     LightspeedGreyWash = { fg = c.base600 },
-    -- LightspeedCursor = { link = "Cursor" },
     LightspeedLabel = { fg = c.pink, bold = true, underline = true },
     LightspeedLabelDistant = { fg = c.sky, bold = true, underline = true },
     LightspeedLabelDistantOverlapped = { fg = c.sky, underline = true },
@@ -643,11 +659,10 @@ function M.setup()
     LightspeedOneCharMatch = { bg = c.pink, fg = c.fg, bold = true },
     LightspeedPendingOpArea = { bg = c.pink, fg = c.fg },
     LightspeedShortcut = { bg = c.pink, fg = c.fg, bold = true, underline = true },
-    -- LightspeedShortcutOverlapped = { link = "LightspeedShortcut" },
-    -- LightspeedUniqueChar = { link = "LightspeedUnlabeledMatch" },
     LightspeedUnlabeledMatch = { fg = c.purple, bold = true },
 
-    -- Cmp
+    --- Cmp
+
     CmpDocumentation = { fg = c.fg, bg = c.bg_float },
     CmpDocumentationBorder = { fg = c.base700, bg = c.bg_float },
     CmpGhostText = { fg = c.base600 },
@@ -689,7 +704,8 @@ function M.setup()
     CmpItemKindOperator = { fg = c.sky, bg = c.none },
     CmpItemKindSnippet = { fg = c.purple, bg = c.none },
 
-    -- navic
+    --- Navic
+
     NavicIconsFile = { fg = c.fg, bg = c.bg_statusline },
     NavicIconsModule = { fg = c.yellow, bg = c.bg_statusline },
     NavicIconsNamespace = { fg = c.fg, bg = c.bg_statusline },
@@ -721,9 +737,11 @@ function M.setup()
     NavicSeparator = { fg = c.fg, bg = c.bg_statusline },
 
     --- Identline
+
     IblIndent = { fg = c.base400, nocombine = true },
 
     --- Scrollbar
+
     ScrollbarHandle = { fg = c.none, bg = c.base400 },
 
     ScrollbarSearchHandle = { fg = c.orange, bg = c.base400 },
@@ -744,45 +762,44 @@ function M.setup()
     ScrollbarMiscHandle = { fg = c.purple, bg = c.base400 },
     ScrollbarMisc = { fg = c.purple, bg = c.none },
 
-    -- Yanky
-    YankyPut = { link = "IncSearch" },
-    YankyYanked = { link = "IncSearch" },
+    --- Lazy
 
-    -- Lazy
     LazyProgressDone = { bold = true, fg = c.purple50 },
     LazyProgressTodo = { bold = true, fg = c.purple400 },
     LazyH1 = { fg = c.purple200, bold = true },
     LazyNoCond = { fg = c.base200 },
     LazySpecial = { fg = c.base100 },
 
-    -- Notify
+    --- Notify
+
     NotifyBackground = { fg = c.fg, bg = c.bg },
-    --- Border
+
     NotifyERRORBorder = { fg = util.darken(c.error, 0.3), bg = options.transparent and c.none or c.bg },
     NotifyWARNBorder = { fg = util.darken(c.warning, 0.3), bg = options.transparent and c.none or c.bg },
     NotifyINFOBorder = { fg = util.darken(c.info, 0.3), bg = options.transparent and c.none or c.bg },
     NotifyDEBUGBorder = { fg = util.darken(c.base600, 0.3), bg = options.transparent and c.none or c.bg },
     NotifyTRACEBorder = { fg = util.darken(c.purple, 0.3), bg = options.transparent and c.none or c.bg },
-    --- Icons
+
     NotifyERRORIcon = { fg = c.error },
     NotifyWARNIcon = { fg = c.warning },
     NotifyINFOIcon = { fg = c.info },
     NotifyDEBUGIcon = { fg = c.base600 },
     NotifyTRACEIcon = { fg = c.purple },
-    --- Title
+
     NotifyERRORTitle = { fg = c.error },
     NotifyWARNTitle = { fg = c.warning },
     NotifyINFOTitle = { fg = c.info },
     NotifyDEBUGTitle = { fg = c.base600 },
     NotifyTRACETitle = { fg = c.purple },
-    --- Body
+
     NotifyERRORBody = { fg = c.fg, bg = options.transparent and c.none or c.bg },
     NotifyWARNBody = { fg = c.fg, bg = options.transparent and c.none or c.bg },
     NotifyINFOBody = { fg = c.fg, bg = options.transparent and c.none or c.bg },
     NotifyDEBUGBody = { fg = c.fg, bg = options.transparent and c.none or c.bg },
     NotifyTRACEBody = { fg = c.fg, bg = options.transparent and c.none or c.bg },
 
-    -- Mini
+    --- Mini
+
     MiniCompletionActiveParameter = { underline = true },
 
     MiniCursorword = { bg = c.base600 },
@@ -833,7 +850,7 @@ function M.setup()
 
     MiniTrailspace = { bg = c.red },
 
-    -- Noice
+    --- Noice
 
     NoiceCompletionItemKindDefault = { fg = c.base600, bg = c.none },
 
@@ -891,15 +908,15 @@ function M.setup()
   if options.hide_inactive_statusline then
     local inactive = { underline = true, bg = c.none, fg = c.bg, sp = c.border }
 
-    -- StatusLineNC
+    --- StatusLineNC
     theme.highlights.StatusLineNC = inactive
 
-    -- LuaLine
+    --- LuaLine
     for _, section in ipairs({ "a", "b", "c" }) do
       theme.defer["lualine_" .. section .. "_inactive"] = inactive
     end
 
-    -- mini.statusline
+    --- mini.statusline
     theme.highlights.MiniStatuslineInactive = inactive
   end
 
