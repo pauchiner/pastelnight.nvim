@@ -1,5 +1,23 @@
 # Changelog
 
+## [2.0.0](https://github.com/pauchiner/pastelnight.nvim/compare/v1.1.0...v2.0.0) (2024-02-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* **extra:** update zathura config
+* **extra:** update window terminal config
+* **extra:** update tmux config
+* **extra:** update sublime config
+
+### Bug Fixes
+
+* **extra:** update sublime config ([9f746c1](https://github.com/pauchiner/pastelnight.nvim/commit/9f746c106aff821445aa2e9b6d767903aa637b0e))
+* **extra:** update tmux config ([d71d7d1](https://github.com/pauchiner/pastelnight.nvim/commit/d71d7d1c5d4ce4c1c85a166ec4c5c16fc078b774))
+* **extra:** update window terminal config ([9f91fde](https://github.com/pauchiner/pastelnight.nvim/commit/9f91fde5590e762533e3abfec6c693fd27a65547))
+* **extra:** update zathura config ([c03b9f7](https://github.com/pauchiner/pastelnight.nvim/commit/c03b9f7d77f152f021bb9ed5a496e0fec69f282c))
+* **themes:** set not tested plugin highlights ([74bdca0](https://github.com/pauchiner/pastelnight.nvim/commit/74bdca0f59d9a929407dd854cda3f96a804134fe))
+
 ## [1.1.1](https://github.com/pauchiner/pastelnight.nvim/compare/v1.1.0...v1.1.1) (2024-02-04)
 
 
