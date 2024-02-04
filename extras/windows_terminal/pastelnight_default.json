@@ -20,6 +20,6 @@
     "purple": "#b58cd8",
     "red": "#fe4c4c",
     "selectionBackground": "#3b3d4d",
-    "white": "${fg_dark}",
+    "white": "#e6e7e9",
     "yellow": "#ffc965"
 }

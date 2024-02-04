@@ -302,7 +302,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${blue2}</string>
+				<string>#6d91dd</string>
 			</dict>
 		</dict>
 		<dict>
@@ -379,7 +379,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${green2}</string>
+				<string>#58de7e</string>
 			</dict>
 		</dict>
 		<dict>
@@ -480,7 +480,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${blue2}</string>
+				<string>#6d91dd</string>
 			</dict>
 		</dict>
 		<dict>
@@ -502,7 +502,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${blue2}</string>
+				<string>#6d91dd</string>
 			</dict>
 		</dict>
 		<dict>
@@ -557,7 +557,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${blue2}</string>
+				<string>#6d91dd</string>
 			</dict>
 		</dict>
 		<dict>
