@@ -3,36 +3,39 @@ local colors = require('pastelnight.colors').setup({ transform = true })
 local pastelnight = {}
 
 pastelnight.normal = {
-  left = { { colors.black, colors.blue }, { colors.blue, colors.base100 } },
-  middle = { { colors.fg, colors.bg_statusline } },
-  right = { { colors.black, colors.blue }, { colors.blue, colors.base100 } },
-  error = { { colors.black, colors.error } },
+  left = { { colors.bg, colors.purple, 'bold' }, { colors.purple300, colors.bg_statusline }, { colors.base400, colors.bg_statusline }, },
+  right = { { colors.bg, colors.purple, 'bold' }, { colors.purple300, colors.bg_statusline }, { colors.base400, colors.bg_statusline }, },
+  middle = { { colors.base300, colors.bg_statusline } },
   warning = { { colors.black, colors.warning } },
+  error = { { colors.black, colors.error } },
 }
 
 pastelnight.insert = {
-  left = { { colors.black, colors.green }, { colors.blue, colors.bg } },
+  left = { { colors.bg, colors.blue, 'bold' }, { colors.blue300, colors.bg_statusline }, { colors.base400, colors.bg_statusline }, },
+  right = { { colors.bg, colors.blue, 'bold' }, { colors.blue300, colors.bg_statusline }, { colors.base400, colors.bg_statusline }, },
 }
 
 pastelnight.visual = {
-  left = { { colors.black, colors.pink }, { colors.blue, colors.bg } },
+  left = { { colors.bg, colors.yellow, 'bold' }, { colors.yellow300, colors.bg_statusline }, { colors.base400, colors.bg_statusline }, },
+  right = { { colors.bg, colors.yellow, 'bold' }, { colors.yellow300, colors.bg_statusline }, { colors.base400, colors.bg_statusline }, },
 }
 
 pastelnight.replace = {
-  left = { { colors.black, colors.red }, { colors.blue, colors.bg } },
+  left = { { colors.bg, colors.green, 'bold' }, { colors.green300, colors.bg_statusline }, { colors.base400, colors.bg_statusline }, },
+  right = { { colors.bg, colors.green, 'bold' }, { colors.green300, colors.bg_statusline }, { colors.base400, colors.bg_statusline }, },
 }
 
 pastelnight.inactive = {
-  left = { { colors.blue, colors.bg_statusline }, { colors.base700, colors.bg } },
-  middle = { { colors.base100, colors.bg_statusline } },
-  right = { { colors.base100, colors.bg_statusline }, { colors.base700, colors.bg } },
+  left = { { colors.bg_statusline, colors.purple, 'bold' }, { colors.base400, colors.bg_statusline }, { colors.base400, colors.bg_statusline }, },
+  right = { { colors.bg_statusline, colors.purple, 'bold' }, { colors.base400, colors.bg_statusline }, { colors.base400, colors.bg_statusline }, },
+  middle = { { colors.base300, colors.bg_statusline } },
 }
 
 pastelnight.tabline = {
-  left = { { colors.base700, colors.base400 }, { colors.base700, colors.bg } },
-  middle = { { colors.base100, colors.bg_statusline } },
-  right = { { colors.base100, colors.bg_statusline }, { colors.base700, colors.bg } },
-  tabsel = { { colors.blue, colors.base100 }, { colors.base700, colors.bg } },
+  left = { { colors.bg_statusline, colors.purple, 'bold' }, { colors.base400, colors.bg_statusline }, { colors.base400, colors.bg_statusline }, },
+  right = { { colors.bg_statusline, colors.purple, 'bold' }, { colors.base400, colors.bg_statusline }, { colors.base400, colors.bg_statusline }, },
+  tabsel = { { colors.purple, colors.bg }, { colors.base400, colors.bg } },
+  middle = { { colors.base300, colors.bg_statusline } },
 }
 
 return pastelnight
