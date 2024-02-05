@@ -1074,11 +1074,11 @@ local highlights = {
   },
   FoldColumn = {
     bg = "#292b3c",
-    fg = "#f9fbff"
+    fg = "#636572"
   },
   Folded = {
-    bg = "#3b3d4d",
-    fg = "#8d8e9a"
+    bg = "#222434",
+    fg = "#3b3d4d"
   },
   Function = {
     fg = "#7fa7ff"
