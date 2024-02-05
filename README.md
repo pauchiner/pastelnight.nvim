@@ -82,16 +82,43 @@ First install the theme with your preferred package manager:
 
 ### 🚀 Usage
 
-#### VimScript
+##### VimScript
 
 ```vim
 colorscheme pastelnight
 ```
-#### Lua 
+##### Lua 
 
 ```lua
 vim.api.nvim_command [[colorscheme pastelnight]]
 ```
+
+#### 🔌 Other supported plugins
+
+##### [Barbecue](https://github.com/utilyre/barbecue.nvim)
+
+```lua
+require('barbecue').setup {
+  theme = 'pastelnight',
+}
+```
+
+##### [Lualine](https://github.com/nvim-lualine/lualine.nvim)
+
+```lua
+require('lualine').setup {
+  options = {
+    theme = 'pastelnight'
+  }
+}
+```
+
+##### [Lightline](https://github.com/itchyny/lightline.vim)
+
+```vim
+let g:lightline = {'colorscheme': 'pastelnight'}
+```
+
 
 ## ⚙️  Configuration
 
