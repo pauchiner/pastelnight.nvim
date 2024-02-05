@@ -957,14 +957,12 @@ local highlights = {
   Define = {
     fg = "#9d7abc"
   },
-  DefinitionCount = {
-    fg = "#b58cd8"
-  },
-  DefinitionIcon = {
-    fg = "#7fa7ff"
-  },
   Delimiter = {
     fg = "#b9bac0"
+  },
+  DiagnosticBorder = {
+    bg = "#292b3c",
+    fg = "#9d7abc"
   },
   DiagnosticError = {
     fg = "#fe4c4c"
@@ -977,6 +975,10 @@ local highlights = {
   },
   DiagnosticInformation = {
     link = "DiagnosticInfo"
+  },
+  DiagnosticNormal = {
+    bg = "#292b3c",
+    fg = "#f9fbff"
   },
   DiagnosticUnderlineError = {
     sp = "#fe4c4c",
@@ -1146,6 +1148,12 @@ local highlights = {
   HopUnmatched = {
     fg = "#222434"
   },
+  HoverBorder = {
+    link = "DiagnosticBorder"
+  },
+  HoverNormal = {
+    link = "DiagnosticNormal"
+  },
   IblIndent = {
     fg = "#3b3d4d",
     nocombine = true
@@ -1255,10 +1263,10 @@ local highlights = {
     fg = "#636572"
   },
   LspFloatWinBorder = {
-    fg = "#1c1e2b"
+    link = "DiagnosticBorder"
   },
   LspFloatWinNormal = {
-    bg = "#222434"
+    link = "DiagnosticNormal"
   },
   LspReferenceRead = {
     underline = true
@@ -1269,14 +1277,11 @@ local highlights = {
   LspReferenceWrite = {
     underline = true
   },
-  LspSagaBorderTitle = {
-    fg = "#7fe7ff"
-  },
   LspSagaCodeActionBorder = {
     fg = "#7fa7ff"
   },
   LspSagaCodeActionContent = {
-    fg = "#b58cd8"
+    fg = "#fe4c4c"
   },
   LspSagaCodeActionTitle = {
     fg = "#7fe7ff"
@@ -1284,14 +1289,8 @@ local highlights = {
   LspSagaDefPreviewBorder = {
     fg = "#65ff91"
   },
-  LspSagaFinderSelection = {
-    fg = "#161721"
-  },
-  LspSagaHoverBorder = {
-    fg = "#7fa7ff"
-  },
-  LspSagaRenameBorder = {
-    fg = "#65ff91"
+  LspSagaDefPreviewTitle = {
+    fg = "#ccfeda"
   },
   LspSagaSignatureHelpBorder = {
     fg = "#fe4c4c"
@@ -1996,14 +1995,34 @@ local highlights = {
   RainbowDelimiterYellow = {
     fg = "#ffc965"
   },
-  ReferencesCount = {
-    fg = "#b58cd8"
+  RenameBorder = {
+    link = "DiagnosticBorder"
   },
-  ReferencesIcon = {
-    fg = "#7fa7ff"
+  RenameNormal = {
+    link = "DiagnosticNormal"
   },
   Repeat = {
     fg = "#dd82c2"
+  },
+  SagaBorder = {
+    link = "DiagnosticBorder"
+  },
+  SagaCount = {
+    bg = "NONE",
+    bold = true,
+    fg = "#ff99e0"
+  },
+  SagaFinderFname = {
+    fg = "#7fe7ff"
+  },
+  SagaInCurrent = {
+    fg = "#292b3c"
+  },
+  SagaNormal = {
+    link = "DiagnosticNormal"
+  },
+  SagaSelect = {
+    fg = "#fe4c4c"
   },
   ScrollbarError = {
     bg = "NONE",
@@ -2360,9 +2379,6 @@ local highlights = {
   Tag = {
     fg = "#65ff91"
   },
-  TargetWord = {
-    fg = "#7fe7ff"
-  },
   TelescopeBorder = {
     bg = "#222434",
     fg = "#b58cd8"
@@ -2374,6 +2390,9 @@ local highlights = {
   Terminal = {
     bg = "#292b3c",
     fg = "#f9fbff"
+  },
+  Title = {
+    fg = "#b58cd8"
   },
   Todo = {
     bg = "#292b3c",
