@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.2](https://github.com/pauchiner/pastelnight.nvim/compare/v2.2.1...v2.2.2) (2024-02-05)
+
+
+### Bug Fixes
+
+* **theme:** update the FoldColumn and Folded highlights ([cdd7969](https://github.com/pauchiner/pastelnight.nvim/commit/cdd7969c409a6109d82eebd94f94b26998dd06d0))
+
 ## [2.2.1](https://github.com/pauchiner/pastelnight.nvim/compare/v2.2.0...v2.2.1) (2024-02-05)
 
 
