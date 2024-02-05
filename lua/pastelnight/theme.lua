@@ -555,6 +555,7 @@ function M.setup()
     WhichKeyValue = { fg = c.purple },
 
     --- LspSaga
+
     DiagnosticNormal = {fg = c.fg, bg = c.bg},
     DiagnosticBorder = {fg = c.purple300, bg = c.bg},
     DiagnosticWarning = { link = 'DiagnosticWarn' },
