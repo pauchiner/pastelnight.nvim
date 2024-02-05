@@ -100,7 +100,7 @@ function M.setup()
     NormalNC = { fg = c.fg, bg = options.transparent and c.none or options.dim_inactive and c.base700 or c.bg }, --- normal text in non-current windows
     NormalSB = { fg = c.fg, bg = c.bg_sidebar }, --- normal text in sidebar
     FloatTitle = { fg = c.base200, bg = c.bg_float }, ---
-    Title = { fg = c.purple}, ---
+    Title = { fg = c.purple }, ---
 
     --- Syntax Highlights ---
 
@@ -556,22 +556,22 @@ function M.setup()
 
     --- LspSaga
 
-    DiagnosticNormal = {fg = c.fg, bg = c.bg},
-    DiagnosticBorder = {fg = c.purple300, bg = c.bg},
+    DiagnosticNormal = { fg = c.fg, bg = c.bg },
+    DiagnosticBorder = { fg = c.purple300, bg = c.bg },
     DiagnosticWarning = { link = 'DiagnosticWarn' },
     DiagnosticInformation = { link = 'DiagnosticInfo' },
 
-    HoverNormal = { link = "DiagnosticNormal" },
-    HoverBorder = { link = "DiagnosticBorder" },
+    HoverNormal = { link = 'DiagnosticNormal' },
+    HoverBorder = { link = 'DiagnosticBorder' },
 
-    RenameNormal = { link = "DiagnosticNormal" },
-    RenameBorder = { link = "DiagnosticBorder" },
+    RenameNormal = { link = 'DiagnosticNormal' },
+    RenameBorder = { link = 'DiagnosticBorder' },
 
-    SagaNormal = { link = "DiagnosticNormal" },
-    SagaBorder = { link = "DiagnosticBorder" },
+    SagaNormal = { link = 'DiagnosticNormal' },
+    SagaBorder = { link = 'DiagnosticBorder' },
 
-    LspFloatWinNormal = { link = "DiagnosticNormal"},
-    LspFloatWinBorder = { link = "DiagnosticBorder"},
+    LspFloatWinNormal = { link = 'DiagnosticNormal' },
+    LspFloatWinBorder = { link = 'DiagnosticBorder' },
 
     LspSagaCodeActionTitle = { fg = c.sky },
     LspSagaCodeActionBorder = { fg = c.blue },
@@ -582,10 +582,10 @@ function M.setup()
     LspSagaCodeActionContent = { fg = c.red },
     LspSagaSignatureHelpBorder = { fg = c.red },
 
-    SagaInCurrent = {fg = c.bg},
-    SagaCount = {fg = c.pink, bg = c.none, bold = true},
-    SagaFinderFname = {fg = c.sky},
-    SagaSelect = {fg = c.red},
+    SagaInCurrent = { fg = c.bg },
+    SagaCount = { fg = c.pink, bg = c.none, bold = true },
+    SagaFinderFname = { fg = c.sky },
+    SagaSelect = { fg = c.red },
 
     --- Neovim
 
