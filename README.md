@@ -1,3 +1,4 @@
+<!-- panvimdoc-ignore-start -->
 <div align="center" >
     <img src=".github/images/logo.png" alt="pastelnight logo" width="100", height="100">
 </div>
@@ -19,6 +20,15 @@ A <a target="_blank" href="https://neovim.io/">Neovim</a> theme inspired on the 
 Includes themes for <a href="https://sw.kovidgoyal.net/kitty/conf.html">Kitty</a>,
 <a target="_blank" href="https://github.com/alacritty/alacritty">Alacritty</a>, <a href="https://iterm2.com">iTerm2</a> and <a href="https://fishshell.com/docs/current/index.html">Fish</a>.
 </p>
+<!-- panvimdoc-ignore-end -->
+
+<!-- panvimdoc-include-comment
+# PastelNight
+
+A Neovim theme inspired on the original Palenight<https://github.com/whizkydee/vscode-palenight-theme> theme, fully written in Lua.
+
+Includes themes for Kitty<https://sw.kovidgoyal.net/kitty/conf.html>, Alacritty<https://github.com/alacritty/alacritty>, iTerm2<https://iterm2.com> and Fish<https://fishshell.com/docs/current/index.html>.
+-->
 
 <img align="center" src="./.github/images/showcase.png" />
 
@@ -122,8 +132,14 @@ let g:lightline = {'colorscheme': 'pastelnight'}
 
 ## ⚙️  Configuration
 
+<!-- panvimdoc-ignore-start -->
 > [!WARNING]  
 > Set the configuration **before** loading the color scheme with `colorscheme pastelnight`.
+<!-- panvimdoc-ignore-end -->
+
+<!-- panvimdoc-include-comment 
+> Set the configuration **before** loading the color scheme with `colorscheme pastelnight`.
+-->
 
 [PastelNight](https://github.com/pauchiner/pastelnight.nvim) uses the default options, unless setup is explicitly called.
 
@@ -202,7 +218,7 @@ require("pastelnight").setup({
 })
 ```
 
-### [Borderless Telescope](https://github.com/nvim-telescope/telescope.nvim/wiki/Gallery#borderless) example
+### Borderless Telescope example
 
 ```lua
 require("pastelnight").setup({
@@ -280,31 +296,41 @@ nvim --headless "+lua require('pastelnight.extra').setup()" +qa
 
 Check the newly created themes in the extra/ directory. 
 
+<!-- panvimdoc-ignore-start -->
 > [!CAUTION]
 > Please DO NOT commit them, as they are already automatically built by the CI.
+<!-- panvimdoc-ignore-end -->
+
+<!-- panvimdoc-include-comment 
+> Please DO NOT commit them, as they are already automatically built by the CI.
+-->
 
 ## 📃 Credits
 
 #### 🎨 Original Design
-
+<!-- panvimdoc-ignore-start -->
 <a target="_blank" alt="Olaolu's profile" href="https://github.com/whizkydee">
   <img style="border-radius: 13%; margin-bottom: 10px" width='90px' src="https://avatars.githubusercontent.com/u/8625066?v=4">
 </a>
+<!-- panvimdoc-ignore-end -->
 
 This theme is highly inspired by the original theme [Palenight](https://github.com/whizkydee/vscode-palenight-theme) from [Olaolu Olawuyi](https://github.com/whizkydee).
 
 #### 🏗️ Code Structure
-
+<!-- panvimdoc-ignore-start -->
 <a target="_blank" alt="folke's profile" href="https://github.com/folke">
   <img style="border-radius: 13%; margin-bottom: 10px" width='90px' src="https://avatars.githubusercontent.com/u/292349?v=4">
 </a>
+<!-- panvimdoc-ignore-end -->
 
 The structure of this plugin is based on the [Tokyo Night Theme](https://github.com/folke/tokyonight.nvim) from [Folke Lemaitre](https://github.com/folke), take a look of his work please.
 
 #### 🐾 Hsl support
+<!-- panvimdoc-ignore-start -->
 <a target="_blank" alt="Takuya's profile" href="https://github.com/craftzdog">
   <img style="border-radius: 13%; margin-bottom: 10px" width='90px' src="https://avatars.githubusercontent.com/u/1332805?v=4">
 </a>
+<!-- panvimdoc-ignore-end -->
 
 The way of implement and create the color palette is inspired on the new  [Solarized Osaka Theme](https://github.com/craftzdog/solarized-osaka.nvim)
 from [Takuya Matsuyama](https://github.com/Craftzdog), see he's profile to know more.
