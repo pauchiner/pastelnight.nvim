@@ -32,8 +32,8 @@ function M.setup()
     Terminal = { fg = c.fg, bg = options.transparent and c.none or c.bg }, --- Terminal text.
     EndOfBuffer = { fg = c.bg, bg = config.transparent and c.none or c.bg }, --- Filler lines (~) after the end of the buffer.
 
-    Folded = { fg = c.base200, bg = config.transparent and c.none or c.base400 }, --- line used for closed folds.
-    FoldColumn = { fg = c.fg, bg = config.transparent and c.none or c.bg }, --- 'foldcolumn'.
+    Folded = { fg = c.base400, bg = config.transparent and c.none or c.base600 }, --- line used for closed folds.
+    FoldColumn = { fg = c.base300, bg = config.transparent and c.none or c.bg}, --- 'foldcolumn'.
     SignColumn = { fg = c.fg, bg = config.transparent and c.none or c.bg }, --- column where |signs| are displayed.
     Conceal = { fg = c.base200, bg = c.base400 }, --- placeholder characters substituted for concealed text (see 'conceallevel').
     ColorColumn = { bg = c.base400 }, --- used for the columns set with 'colorcolumn'.
