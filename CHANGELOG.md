@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.1](https://github.com/pauchiner/pastelnight.nvim/compare/v2.2.0...v2.2.1) (2024-02-05)
+
+
+### Bug Fixes
+
+* **theme:** update LspSaga highlights ([e39085e](https://github.com/pauchiner/pastelnight.nvim/commit/e39085ef72cc2971f2dff28e646100d33fd48260))
+
 ## [2.2.0](https://github.com/pauchiner/pastelnight.nvim/compare/v2.1.0...v2.2.0) (2024-02-05)
 
 
