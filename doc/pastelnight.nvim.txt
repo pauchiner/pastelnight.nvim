@@ -1,4 +1,4 @@
-*pastelnight.nvim.txt*    For Neovim >= 0.8.0    Last change: 2024 February 04
+*pastelnight.nvim.txt*    For Neovim >= 0.8.0    Last change: 2024 February 05
 
 ==============================================================================
 Table of Contents                         *pastelnight.nvim-table-of-contents*
@@ -102,6 +102,36 @@ LUA
 
 >lua
     vim.api.nvim_command [[colorscheme pastelnight]]
+<
+
+
+OTHER SUPPORTED PLUGINS
+
+
+BARBECUE
+
+>lua
+    require('barbecue').setup {
+      theme = 'pastelnight',
+    }
+<
+
+
+LUALINE
+
+>lua
+    require('lualine').setup {
+      options = {
+        theme = 'pastelnight'
+      }
+    }
+<
+
+
+LIGHTLINE
+
+>vim
+    let g:lightline = {'colorscheme': 'pastelnight'}
 <
 
 

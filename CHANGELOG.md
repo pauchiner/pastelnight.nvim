@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.2.0](https://github.com/pauchiner/pastelnight.nvim/compare/v2.1.0...v2.2.0) (2024-02-05)
+
+
+### Features
+
+* **theme:** add barbecue support ([c8ce539](https://github.com/pauchiner/pastelnight.nvim/commit/c8ce539346608c0c78b69cfe73e447a1d80c3ff7))
+* **theme:** add lightline support ([fcc2ef2](https://github.com/pauchiner/pastelnight.nvim/commit/fcc2ef22fef368510960a036ce4a5c724f40d4d4))
+
 ## [2.1.0](https://github.com/pauchiner/pastelnight.nvim/compare/v2.0.0...v2.1.0) (2024-02-04)
 
 
