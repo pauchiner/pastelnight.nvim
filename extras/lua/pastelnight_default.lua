@@ -414,13 +414,13 @@ local highlights = {
     fg = "#7fe7ff"
   },
   ["@tag"] = {
-    fg = "#b58cd8"
+    fg = "#ffc965"
   },
   ["@tag.attribute"] = {
     fg = "#fe854c"
   },
   ["@tag.delimiter"] = {
-    fg = "#b58cd8"
+    fg = "#ffc965"
   },
   ["@tag.delimiter.tsx"] = {
     fg = "#fe854c"
