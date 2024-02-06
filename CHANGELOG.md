@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.3](https://github.com/pauchiner/pastelnight.nvim/compare/v2.2.2...v2.2.3) (2024-02-06)
+
+
+### Bug Fixes
+
+* **theme:** update tag highlights ([c6dfea1](https://github.com/pauchiner/pastelnight.nvim/commit/c6dfea1c455e1c16d0757371b515ae5110707f6c))
+
 ## [2.2.2](https://github.com/pauchiner/pastelnight.nvim/compare/v2.2.1...v2.2.2) (2024-02-05)
 
 
