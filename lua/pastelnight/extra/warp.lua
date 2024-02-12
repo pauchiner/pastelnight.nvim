@@ -4,13 +4,6 @@ local M = {}
 
 --- @param colors ColorScheme
 function M.generate(colors)
-  local warpColors = {}
-  for k, v in pairs(colors) do
-    if type(v) == 'string' then
-      warpColors[k] = v:gsub('^#', '0x')
-    end
-  end
-
   local warp = util.template(
     [[
 accent: '${purple}'
@@ -37,7 +30,7 @@ terminal_colors:
     white: '${fg}'
     yellow: '${yellow}'
   ]],
-    warpColors
+    colors
   )
 
   return warp
