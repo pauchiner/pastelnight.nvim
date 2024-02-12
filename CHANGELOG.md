@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.3.0](https://github.com/pauchiner/pastelnight.nvim/compare/v2.2.3...v2.3.0) (2024-02-12)
+
+
+### Features
+
+* **extra:** add warp terminal to the extras ([fcbef3d](https://github.com/pauchiner/pastelnight.nvim/commit/fcbef3dcde1fdde36d84868f076dcd51c9341094))
+
+
+### Bug Fixes
+
+* **extra:** update color format for the warp extra ([b3695ce](https://github.com/pauchiner/pastelnight.nvim/commit/b3695cea4ddeb207c6b67c7f4415edc9fdb32c96))
+
 ## [2.2.3](https://github.com/pauchiner/pastelnight.nvim/compare/v2.2.2...v2.2.3) (2024-02-06)
 
 
