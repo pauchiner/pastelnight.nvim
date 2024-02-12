@@ -8,6 +8,7 @@ M.extras = {
   fish = { ext = "fish", url = "https://fishshell.com/docs/current/index.html", label = "Fish" },
   fish_themes = { ext = "theme", url = "https://fishshell.com/docs/current/interactive.html#syntax-highlighting", label = "Fish Themes" },
   alacritty = { ext = "yml", url = "https://github.com/alacritty/alacritty", label = "Alacritty" },
+  warp = { ext = "yaml", url = "https://docs.warp.dev/appearance/custom-themes", label = "Warp" },
   wezterm = { ext = "toml", url = "https://wezfurlong.org/wezterm/config/files.html", label = "WezTerm" },
   tmux = { ext = "tmux", url = "https://github.com/tmux/tmux/wiki", label = "Tmux" },
   xresources = { ext = "Xresources", url = "https://wiki.archlinux.org/title/X_resources", label = "Xresources" },
