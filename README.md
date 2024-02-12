@@ -62,6 +62,7 @@ This palette is improved from the original 16 colors to a 40 shades of those, en
 - [Terminator](https://gnome-terminator.readthedocs.io/en/latest/config.html) ([terminator](extras/terminator))
 - [Tilix](https://github.com/gnunn1/tilix) ([tilix](extras/tilix))
 - [Tmux](https://github.com/tmux/tmux/wiki) ([tmux](extras/tmux))
+- [Warp](https://docs.warp.dev/appearance/custom-themes) ([warp](extras/warp))
 - [WezTerm](https://wezfurlong.org/wezterm/config/files.html) ([wezterm](extras/wezterm))
 - [Windows Terminal](https://aka.ms/terminal-documentation) ([windows_terminal](extras/windows_terminal))
 - [Xfce Terminal](https://docs.xfce.org/apps/terminal/advanced) ([xfceterm](extras/xfceterm))
