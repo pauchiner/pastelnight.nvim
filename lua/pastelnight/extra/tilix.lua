@@ -21,7 +21,7 @@ function M.generate(colors)
         "${purple}",
         "${sky}",
         "${base50}",
-        "${base900}",
+        "${base200}",
         "${red}",
         "${green}",
         "${yellow}",

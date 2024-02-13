@@ -14,7 +14,7 @@ function M.generate(colors)
 set notification-error-bg "${red}"
 set notification-error-fg "${fg}"
 set notification-warning-bg "${yellow}"
-set notification-warning-fg "${base900}"
+set notification-warning-fg "${base200}"
 set notification-bg "${bg}"
 set notification-fg "${fg}"
 set completion-bg "${bg}"

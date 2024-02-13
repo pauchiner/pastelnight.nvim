@@ -22,7 +22,7 @@ colors:
 
   # Normal colors
   normal:
-    black:   '${base900}'
+    black:   '${black}'
     red:     '${red}'
     green:   '${green}'
     yellow:  '${yellow}'
@@ -33,7 +33,7 @@ colors:
 
   # Bright colors
   bright:
-    black:   '${black}'
+    black:   '${base200}'
     red:     '${red}'
     green:   '${green}'
     yellow:  '${yellow}'
