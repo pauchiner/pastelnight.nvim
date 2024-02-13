@@ -6,7 +6,7 @@
 set notification-error-bg "#fe4c4c"
 set notification-error-fg "#f9fbff"
 set notification-warning-bg "#ffc965"
-set notification-warning-fg "#0f1019"
+set notification-warning-fg "#8d8e9a"
 set notification-bg "#292b3c"
 set notification-fg "#f9fbff"
 set completion-bg "#292b3c"
