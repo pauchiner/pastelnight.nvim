@@ -12,7 +12,7 @@ details: darker
 foreground: '${fg}'
 terminal_colors:
   bright:
-    black: '${base900}'
+    black: '${base200}'
     blue: '${blue}'
     cyan: '${sky}'
     green: '${green}'

@@ -16,7 +16,7 @@ selection_bg = "${base400}"
 selection_fg = "${fg}"
 
 ansi = ["${black}", "${red}", "${green}", "${yellow}", "${blue}", "${purple}", "${sky}", "${base50}"]
-brights = ["${base900}", "${red}", "${green}", "${yellow}", "${blue}", "${purple}", "${sky}", "${fg}"]
+brights = ["${base200}", "${red}", "${green}", "${yellow}", "${blue}", "${purple}", "${sky}", "${fg}"]
 
 [colors.tab_bar]
 inactive_tab_edge = "${base600}"

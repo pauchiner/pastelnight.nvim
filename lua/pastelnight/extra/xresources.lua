@@ -20,7 +20,7 @@ function M.generate(colors)
 *color6: ${sky}
 *color7: ${base50}
 
-*color8: ${base900}
+*color8: ${base200}
 *color9: ${red}
 *color10: ${green}
 *color11: ${yellow}

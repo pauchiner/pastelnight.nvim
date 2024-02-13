@@ -32,7 +32,7 @@ regular5=${purple}
 regular6=${sky}
 regular7=${base50}
 
-bright0=${base900}
+bright0=${base200}
 bright1=${red}
 bright2=${green}
 bright3=${yellow}
