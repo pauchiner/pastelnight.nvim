@@ -1,4 +1,4 @@
-*pastelnight.nvim.txt*    For Neovim >= 0.8.0    Last change: 2024 February 12
+*pastelnight.nvim.txt*    For Neovim >= 0.8.0    Last change: 2024 February 13
 
 ==============================================================================
 Table of Contents                         *pastelnight.nvim-table-of-contents*
