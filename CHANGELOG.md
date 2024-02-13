@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.3.1](https://github.com/pauchiner/pastelnight.nvim/compare/v2.3.0...v2.3.1) (2024-02-13)
+
+
+### Bug Fixes
+
+* **lightline:** increase contrasts for third sections ([a61bfc1](https://github.com/pauchiner/pastelnight.nvim/commit/a61bfc1c6cb0e4e081b645cd7d201e647e28fb31))
+* **lualine:** increase contrasts for 'c' sections ([318883d](https://github.com/pauchiner/pastelnight.nvim/commit/318883d498a68ed0727cb2025fd77f118b00f81e))
+
 ## [2.3.0](https://github.com/pauchiner/pastelnight.nvim/compare/v2.2.3...v2.3.0) (2024-02-12)
 
 
