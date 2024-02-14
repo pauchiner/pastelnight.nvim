@@ -1,0 +1,40 @@
+[colors]
+foreground = "#f9fbff"
+background = "#292b3c"
+cursor_bg = "#f9fbff"
+cursor_border = "#f9fbff"
+cursor_fg = "#292b3c"
+selection_bg = "#4b4c58"
+selection_fg = "#f9fbff"
+
+ansi = ["#212230", "#ff3d3d", "#56fe86", "#fec456", "#709dff", "#ad80d4", "#70e4ff", "#e6e7e9"]
+brights = ["#a8a9b2", "#ff3d3d", "#56fe86", "#fec456", "#709dff", "#ad80d4", "#70e4ff", "#f9fbff"]
+
+[colors.tab_bar]
+inactive_tab_edge = "#1a1c27"
+background = "#191b28"
+
+[colors.tab_bar.active_tab]
+fg_color = "#709dff"
+bg_color = "#292b3c"
+
+[colors.tab_bar.inactive_tab]
+bg_color = "#1a1c27"
+fg_color = "#b9bac0"
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#1a1c27"
+fg_color = "#709dff"
+
+[colors.tab_bar.new_tab_hover]
+bg_color = "#1a1c27"
+bg_color = "#709dff"
+
+[colors.tab_bar.new_tab]
+fg_color = "#709dff"
+bg_color = "#191b28"
+
+[metadata]
+aliases = []
+author = "pauchiner"
+name = "PastelNight HighContrast"
