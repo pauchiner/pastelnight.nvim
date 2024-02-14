@@ -95,11 +95,17 @@ First install the theme with your preferred package manager:
 
 ```vim
 colorscheme pastelnight
+
+" There are also a theme variant with greater contrast
+colorscheme pastelnight-high-contrast
 ```
 ##### Lua 
 
 ```lua
 vim.api.nvim_command [[colorscheme pastelnight]]
+
+-- There are also a theme variant with greater contrast
+vim.api.nvim_command [[colorscheme pastelnight-high-contrast]]
 ```
 
 #### 🔌 Other supported plugins
@@ -140,6 +146,9 @@ let g:lightline = {'colorscheme': 'pastelnight'}
 
 ```lua
 require("pastelnight").setup({
+
+  --- The theme comes in two styles, `default` and `highContrast`.
+  style = "default"
 
   --- Enable this to disable setting the background color.
   transparent = false,

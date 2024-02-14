@@ -1,1 +1,1 @@
-require("pastelnight").load()
+require("pastelnight")._load()

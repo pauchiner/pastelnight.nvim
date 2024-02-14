@@ -4,7 +4,6 @@ local M = {}
 
 M.bg = '#000000'
 M.fg = '#ffffff'
-M.day_brightness = 0.3
 
 ---@param c  string
 local function hexToRgb(c)
