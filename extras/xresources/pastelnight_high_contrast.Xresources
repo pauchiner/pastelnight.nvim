@@ -1,0 +1,23 @@
+! PastelNight colors for Xresources
+
+*background: #292b3c
+*foreground: #f9fbff
+
+*color0: #212230
+*color1: #fe4c4c
+*color2: #65ff91
+*color3: #ffc965
+*color4: #7fa7ff
+*color5: #b58cd8
+*color6: #7fe7ff
+*color7: #e6e7e9
+
+*color8: #8d8e9a
+*color9: #fe4c4c
+*color10: #65ff91
+*color11: #ffc965
+*color12: #7fa7ff
+*color13: #b58cd8
+*color14: #7fe7ff
+*color15: #f9fbff
+ 

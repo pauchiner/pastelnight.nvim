@@ -1,0 +1,23 @@
+(
+  selected_tab: Rgb(181,140,216), // purple #b58cd8
+  command_fg: Rgb(99,101,114), // base300 #636572
+  selection_bg: Rgb(59,61,77), // base400 #3b3d4d
+  selection_fg: Rgb(127,231,255), // sky #7fe7ff
+  cmdbar_bg: Rgb(41,43,60), // bg #292b3c
+  cmdbar_extra_lines_bg: Rgb(41,43,60), // bg #292b3c
+  disabled_fg: Rgb(99,101,114), // base300 #636572
+  diff_line_add: Rgb(101,255,145), // green #65ff91
+  diff_line_delete: Rgb(254,76,76), // red #fe4c4c
+  diff_file_added: Rgb(158,255,185), // green100 #9effb9
+  diff_file_removed: Rgb(255,132,132), // red100 #ff8484
+  diff_file_moved: Rgb(255,153,224), // pink200 #ff99e0
+  diff_file_modified: Rgb(255,201,101), // yellow #ffc965
+  commit_hash: Rgb(181,140,216), // purple #b58cd8
+  commit_time: Rgb(127,167,255), // blue #7fa7ff
+  commit_author: Rgb(101,255,145), // green #65ff91
+  danger_fg: Rgb(254,76,76), // red #fe4c4c
+  push_gauge_bg: Rgb(41,43,60), // bg #292b3c
+  push_gauge_fg: Rgb(249,251,255), // fg #f9fbff
+  tag_fg: Rgb(255,153,224), // pink200 #ff99e0
+  branch_fg: Rgb(255,201,101), // yellow #ffc965
+)

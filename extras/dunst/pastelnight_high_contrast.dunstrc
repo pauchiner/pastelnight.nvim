@@ -1,0 +1,17 @@
+# PastelNight colors for dunst
+# For more configuraion options see https://github.com/dunst-project/dunst/blob/master/dunstrc
+
+[urgency_low]
+    background = "#222434"
+    foreground = "#f9fbff"
+    frame_color = "#9effb9"
+
+[urgency_normal]
+    background = "#292b3c"
+    foreground = "#f9fbff"
+    frame_color = "#ffdb99"
+
+[urgency_critical]
+    background = "#292b3c"
+    foreground = "#fe4c4c"
+    frame_color = "#ff8484"
