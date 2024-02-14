@@ -1,4 +1,4 @@
-*pastelnight.nvim.txt*    For Neovim >= 0.8.0    Last change: 2024 February 13
+*pastelnight.nvim.txt*    For Neovim >= 0.8.0    Last change: 2024 February 14
 
 ==============================================================================
 Table of Contents                         *pastelnight.nvim-table-of-contents*
@@ -99,6 +99,9 @@ VIMSCRIPT
 
 >vim
     colorscheme pastelnight
+    
+    " There are also a theme variant with greater contrast
+    colorscheme pastelnight-high-contrast
 <
 
 
@@ -106,6 +109,9 @@ LUA
 
 >lua
     vim.api.nvim_command [[colorscheme pastelnight]]
+    
+    -- There are also a theme variant with greater contrast
+    vim.api.nvim_command [[colorscheme pastelnight-high-contrast]]
 <
 
 
@@ -152,6 +158,9 @@ DEFAULT OPTIONS
 
 >lua
     require("pastelnight").setup({
+    
+      --- The theme comes in two styles, `default` and `highContrast`.
+      style = "default"
     
       --- Enable this to disable setting the background color.
       transparent = false,
