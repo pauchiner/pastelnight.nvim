@@ -1,0 +1,38 @@
+# PastelNight color theme for Zathura
+# Swaps Foreground for Background to get a light version if the user prefers
+#
+# PastelNight color theme
+#
+set notification-error-bg "#ff3d3d"
+set notification-error-fg "#f9fbff"
+set notification-warning-bg "#fec456"
+set notification-warning-fg "#a8a9b2"
+set notification-bg "#292b3c"
+set notification-fg "#f9fbff"
+set completion-bg "#292b3c"
+set completion-fg "#e6e7e9"
+set completion-group-bg "#292b3c"
+set completion-group-fg "#e6e7e9"
+set completion-highlight-bg "#07080c"
+set completion-highlight-fg "#f9fbff"
+set index-bg "#292b3c"
+set index-fg "#f9fbff"
+set index-active-bg "#07080c"
+set index-active-fg "#f9fbff"
+set inputbar-bg "#292b3c"
+set inputbar-fg "#f9fbff"
+set statusbar-bg "#292b3c"
+set statusbar-fg "#f9fbff"
+set highlight-color "#fec456"
+set highlight-active-color "#56fe86"
+set default-bg "#292b3c"
+set default-fg "#f9fbff"
+set render-loading true
+set render-loading-fg "#292b3c"
+set render-loading-bg "#f9fbff"
+#
+# Recolor mode settings
+# <C-r> to switch modes
+#
+set recolor-lightcolor "#292b3c"
+set recolor-darkcolor "#f9fbff"
