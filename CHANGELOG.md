@@ -1,5 +1,21 @@
 # Changelog
 
+## [2.4.0](https://github.com/pauchiner/pastelnight.nvim/compare/v2.3.1...v2.4.0) (2024-02-14)
+
+
+### Features
+
+* added the high-contrast variant (only base color changed) ([7ac07a3](https://github.com/pauchiner/pastelnight.nvim/commit/7ac07a33907ba909eb89889db0043f17a379e8cf))
+* **theme:** add a _load function on the init to load different variants ([7fc58d5](https://github.com/pauchiner/pastelnight.nvim/commit/7fc58d5aaa880e2cdabf790a36cb3ce125353e98))
+
+
+### Bug Fixes
+
+* **colors:** update the current theme to match the new load method ([dc799d8](https://github.com/pauchiner/pastelnight.nvim/commit/dc799d8c29dbdb2c9273fb804999067e9dcda9d1))
+* **colors:** update the high-contrast variant ([018b963](https://github.com/pauchiner/pastelnight.nvim/commit/018b963f1e8421355168e0559037967fc79525d5))
+* **config:** update the comment of the style ([32e36cc](https://github.com/pauchiner/pastelnight.nvim/commit/32e36cc3d013892ad6aec85924eb0077cde3549c))
+* **theme:** remove day configuration ([c780324](https://github.com/pauchiner/pastelnight.nvim/commit/c7803246ffcf764848eeccaa328dd221045671e3))
+
 ## [2.3.1](https://github.com/pauchiner/pastelnight.nvim/compare/v2.3.0...v2.3.1) (2024-02-13)
 
 
