@@ -72,13 +72,13 @@ end
 
 function M.setup()
   M.docs()
-  local config = require('pastelnight.config')
+
+  local theme = require('pastelnight');
   vim.o.background = 'dark'
 
   -- map of style to style name
   local styles = {
-    default = ' Default',
-    high_contrast = ' High Contrast',
+    highcontrast = ' High Contrast',
   }
 
   for extra, info in pairs(M.extras) do
@@ -86,12 +86,14 @@ function M.setup()
     local plugin = require('pastelnight.extra.' .. extra)
 
     for style, style_name in pairs(styles) do
-      ---@diagnostic disable-next-line: missing-fields
-      config.setup({ style = style })
+      theme.setup({style = style})
+      theme.load({style = style})
+      vim.cmd.colorscheme("pastelnight-" .. style)
       local colors = require('pastelnight.colors').setup({ transform = true })
       local fname = extra .. '/pastelnight_' .. style .. '.' .. info.ext
       colors['_upstream_url'] = 'https://github.com/pauchiner/pastelnight.nvim/raw/main/extras/' .. fname
       colors['_style_name'] = 'PastelNight' .. style_name
+      colors["_name"] = "pastelnight_" .. style
       write(plugin.generate(colors), fname)
     end
   end
