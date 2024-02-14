@@ -78,7 +78,7 @@ function M.setup()
   -- map of style to style name
   local styles = {
     default = ' Default',
-    highContrast = ' HighContrast',
+    high_contrast = ' High Contrast',
   }
 
   for extra, info in pairs(M.extras) do
