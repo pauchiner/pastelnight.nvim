@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.0](https://github.com/pauchiner/pastelnight.nvim/compare/v2.4.0...v2.5.0) (2024-02-14)
+
+
+### Features
+
+* **extra:** add the highContrast style to the extras ([539fbdb](https://github.com/pauchiner/pastelnight.nvim/commit/539fbdb459e916cb5a2247231a340586054c9f56))
+
 ## [2.4.0](https://github.com/pauchiner/pastelnight.nvim/compare/v2.3.1...v2.4.0) (2024-02-14)
 
 
