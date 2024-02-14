@@ -1,5 +1,20 @@
 # Changelog
 
+## [3.0.0](https://github.com/pauchiner/pastelnight.nvim/compare/v2.5.1...v3.0.0) (2024-02-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove the high_contrast variant from the extras
+* **colors:** rename the high contrast theme variant for simplicity purposes
+
+### Bug Fixes
+
+* **colors:** rename the high contrast theme variant for simplicity purposes ([27d97c9](https://github.com/pauchiner/pastelnight.nvim/commit/27d97c9447bc96048f97db6630a27037fdb5f0f9))
+* **extra:** remove a issue in the setup function that ignores new theme variants ([13f5903](https://github.com/pauchiner/pastelnight.nvim/commit/13f5903d16190b94cac6739c5ef2330e6e99ee88))
+* **extra:** update typo on allacrity template ([b071c92](https://github.com/pauchiner/pastelnight.nvim/commit/b071c9296e1a28946311ffd1fd55b561ae65f395))
+* remove the high_contrast variant from the extras ([a1062ef](https://github.com/pauchiner/pastelnight.nvim/commit/a1062ef126b788cdf56a74d5e6af9d003413d586))
+
 ## [2.5.1](https://github.com/pauchiner/pastelnight.nvim/compare/v2.5.0...v2.5.1) (2024-02-14)
 
 
