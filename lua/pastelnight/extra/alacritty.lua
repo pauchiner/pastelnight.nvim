@@ -38,8 +38,8 @@ colors:
     green:   '${green}'
     yellow:  '${yellow}'
     blue:    '${blue}'
-    magenta: '${magenta}'
-    cyan:    '${cyan}'
+    magenta: '${purple}'
+    cyan:    '${sky}'
     white:   '${fg}'
 
   indexed_colors:
