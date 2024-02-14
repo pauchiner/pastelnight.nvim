@@ -4,7 +4,7 @@ local M = {}
 ---@field on_colors fun(colors: ColorScheme)
 ---@field on_highlights fun(highlights: Highlights, colors: ColorScheme)
 local defaults = {
-  --- The theme comes in two styles, `default` and `high-contrast`.
+  --- The theme comes in two styles, `default` and `highContrast`.
   style = 'default',
 
   --- Enable this to disable setting the background color
