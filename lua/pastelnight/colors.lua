@@ -144,7 +144,7 @@ function M.setup(opts)
 
   local style = config.options.style
   local palette = M[style] or {}
-  if type(palette) == "function" then
+  if type(palette) == 'function' then
     palette = palette()
   end
 
@@ -174,12 +174,12 @@ function M.setup(opts)
 
   -- Sidebar and Floats are configurable
   colors.bg_sidebar = config.options.styles.sidebars == 'transparent' and colors.none
-      or config.options.styles.sidebars == 'dark' and colors.base600
-      or colors.bg
+    or config.options.styles.sidebars == 'dark' and colors.base600
+    or colors.bg
 
   colors.bg_float = config.options.styles.floats == 'transparent' and colors.none
-      or config.options.styles.floats == 'dark' and colors.base600
-      or colors.bg
+    or config.options.styles.floats == 'dark' and colors.base600
+    or colors.bg
 
   colors.fg_float = colors.fg
 
