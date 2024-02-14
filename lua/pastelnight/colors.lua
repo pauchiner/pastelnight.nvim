@@ -69,13 +69,82 @@ M.default = {
   green400 = hsl(137, 047, 52),
 }
 
+M.highContrast = function()
+  local ret = {
+    none = 'NONE',
+
+    base = hsl(220, 100, 99),
+    base50 = hsl(220, 007, 91),
+    base100 = hsl(231, 005, 74),
+    base200 = hsl(235, 006, 68),
+    base300 = hsl(232, 007, 45),
+    base400 = hsl(233, 008, 32),
+
+    base500 = hsl(234, 018, 20),
+    base600 = hsl(233, 020, 13),
+    base700 = hsl(232, 021, 10),
+    base800 = hsl(235, 021, 07),
+    base900 = hsl(234, 024, 04),
+
+    yellow50 = hsl(039, 100, 86),
+    yellow100 = hsl(039, 100, 80),
+    yellow200 = hsl(039, 100, 70),
+    yellow300 = hsl(039, 067, 61),
+    yellow400 = hsl(039, 047, 52),
+
+    orange50 = hsl(019, 100, 86),
+    orange100 = hsl(019, 100, 76),
+    orange200 = hsl(019, 100, 65),
+    orange300 = hsl(019, 070, 56),
+    orange400 = hsl(019, 055, 48),
+
+    red50 = hsl(000, 100, 86),
+    red100 = hsl(000, 100, 76),
+    red200 = hsl(000, 100, 65),
+    red300 = hsl(000, 070, 56),
+    red400 = hsl(000, 055, 48),
+
+    pink50 = hsl(318, 100, 92),
+    pink100 = hsl(318, 100, 86),
+    pink200 = hsl(318, 100, 80),
+    pink300 = hsl(318, 058, 69),
+    pink400 = hsl(318, 038, 59),
+
+    purple50 = hsl(272, 053, 88),
+    purple100 = hsl(272, 051, 79),
+    purple200 = hsl(272, 050, 70),
+    purple300 = hsl(272, 033, 61),
+    purple400 = hsl(272, 024, 52),
+
+    blue50 = hsl(221, 100, 90),
+    blue100 = hsl(221, 100, 83),
+    blue200 = hsl(221, 100, 75),
+    blue300 = hsl(221, 063, 65),
+    blue400 = hsl(221, 042, 56),
+
+    sky50 = hsl(191, 100, 91),
+    sky100 = hsl(191, 100, 84),
+    sky200 = hsl(191, 100, 75),
+    sky300 = hsl(191, 063, 65),
+    sky400 = hsl(191, 043, 55),
+
+    green50 = hsl(137, 100, 90),
+    green100 = hsl(137, 100, 81),
+    green200 = hsl(137, 100, 70),
+    green300 = hsl(137, 067, 61),
+    green400 = hsl(137, 047, 52),
+  }
+  return ret
+end
+
 ---@return ColorScheme
 function M.setup(opts)
   local config = require('pastelnight.config')
   opts = opts or {}
 
-  local palette = M['default'] or {}
-  if type(palette) == 'function' then
+  local style = config.options.style
+  local palette = M[style] or {}
+  if type(palette) == "function" then
     palette = palette()
   end
 
@@ -105,12 +174,12 @@ function M.setup(opts)
 
   -- Sidebar and Floats are configurable
   colors.bg_sidebar = config.options.styles.sidebars == 'transparent' and colors.none
-    or config.options.styles.sidebars == 'dark' and colors.base600
-    or colors.bg
+      or config.options.styles.sidebars == 'dark' and colors.base600
+      or colors.bg
 
   colors.bg_float = config.options.styles.floats == 'transparent' and colors.none
-    or config.options.styles.floats == 'dark' and colors.base600
-    or colors.bg
+      or config.options.styles.floats == 'dark' and colors.base600
+      or colors.bg
 
   colors.fg_float = colors.fg
 
