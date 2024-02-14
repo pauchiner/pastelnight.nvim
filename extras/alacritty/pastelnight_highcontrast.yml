@@ -23,8 +23,8 @@ colors:
     green:   '0x56fe86'
     yellow:  '0xfec456'
     blue:    '0x709dff'
-    magenta: '${magenta}'
-    cyan:    '${cyan}'
+    magenta: '0xad80d4'
+    cyan:    '0x70e4ff'
     white:   '0xf9fbff'
 
   indexed_colors:
