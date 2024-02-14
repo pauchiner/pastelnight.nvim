@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.5.1](https://github.com/pauchiner/pastelnight.nvim/compare/v2.5.0...v2.5.1) (2024-02-14)
+
+
+### Bug Fixes
+
+* **extra:** remove the old name styles ([0ee44c9](https://github.com/pauchiner/pastelnight.nvim/commit/0ee44c9c57df7012826916748fd9a7818bf7636e))
+* **extra:** update the name of the high contrast style ([f28c4cb](https://github.com/pauchiner/pastelnight.nvim/commit/f28c4cbd4be6e11b36b40116476a0461fa695848))
+
 ## [2.5.0](https://github.com/pauchiner/pastelnight.nvim/compare/v2.4.0...v2.5.0) (2024-02-14)
 
 
