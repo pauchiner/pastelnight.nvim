@@ -557,7 +557,7 @@ function M.setup()
     --- LspSaga
 
     DiagnosticNormal = { fg = c.fg, bg = options.transparent and c.none or c.bg },
-    DiagnosticBorder = { fg = c.purple300, bg = options.transparent and c.none or c.bg  },
+    DiagnosticBorder = { fg = c.purple300, bg = options.transparent and c.none or c.bg },
     DiagnosticWarning = { link = 'DiagnosticWarn' },
     DiagnosticInformation = { link = 'DiagnosticInfo' },
 
