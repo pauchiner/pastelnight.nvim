@@ -170,7 +170,7 @@ function M.setup(opts)
   colors.border = colors.black
 
   colors.bg_popup = colors.bg
-  colors.bg_statusline = colors.bg
+  colors.bg_statusline = config.options.transparent and colors.none or colors.bg
 
   -- Sidebar and Floats are configurable
   colors.bg_sidebar = config.options.styles.sidebars == 'transparent' and colors.none

@@ -30,13 +30,13 @@ function M.setup()
 
     Normal = { fg = c.fg, bg = options.transparent and c.none or c.bg }, --- Normal text.
     Terminal = { fg = c.fg, bg = options.transparent and c.none or c.bg }, --- Terminal text.
-    EndOfBuffer = { fg = c.bg, bg = config.transparent and c.none or c.bg }, --- Filler lines (~) after the end of the buffer.
+    EndOfBuffer = { fg = config.transparent and c.none or c.bg, bg = config.transparent and c.none or c.bg }, --- Filler lines (~) after the end of the buffer.
 
     Folded = { fg = c.base400, bg = config.transparent and c.none or c.base600 }, --- line used for closed folds.
     FoldColumn = { fg = c.base300, bg = config.transparent and c.none or c.bg }, --- 'foldcolumn'.
     SignColumn = { fg = c.fg, bg = config.transparent and c.none or c.bg }, --- column where |signs| are displayed.
-    Conceal = { fg = c.base200, bg = c.base400 }, --- placeholder characters substituted for concealed text (see 'conceallevel').
-    ColorColumn = { bg = c.base400 }, --- used for the columns set with 'colorcolumn'.
+    Conceal = { fg = c.base200, bg = config.transparent and c.none or c.base400 }, --- placeholder characters substituted for concealed text (see 'conceallevel').
+    ColorColumn = { bg = config.transparent and c.none or c.base400 }, --- used for the columns set with 'colorcolumn'.
     LineNr = { fg = c.base300 }, --- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     ToolbarLine = { fg = c.fg }, ---
 
@@ -74,8 +74,8 @@ function M.setup()
     SpellLocal = { sp = c.sky100, undercurl = true }, --- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
     SpellRare = { sp = c.yellow100, undercurl = true }, --- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
 
-    StatusLine = { fg = c.fg, bg = c.base500 }, --- status line of current window.
-    StatusLineTerm = { fg = c.fg, bg = c.base500 }, --- status line of current terminal .
+    StatusLine = { fg = c.fg, bg = options.transparent and c.none or c.base500 }, --- status line of current window.
+    StatusLineTerm = { fg = c.fg, bg = options.transparent and c.none or c.base500 }, --- status line of current terminal .
     TabLine = { fg = c.fg, bg = c.base400 }, --- tab pages line, not active tab page label.
     TabLineFill = { fg = c.base200, bg = c.base400 }, --- tab pages line, where there are no labels.
     TabLineSel = { fg = c.bg, bg = c.fg }, --- tab pages line, active tab page label.
@@ -474,9 +474,9 @@ function M.setup()
 
     --- GitSigns
 
-    GitSignsAdd = { fg = c.green }, -- diff mode: Added line |diff.txt|
-    GitSignsChange = { fg = c.yellow }, -- diff mode: Changed line |diff.txt|
-    GitSignsDelete = { fg = c.red }, -- diff mode: Deleted line |diff.txt|
+    GitSignsAdd = { fg = c.green, bg = options.transparent and c.none or c.bg }, -- diff mode: Added line |diff.txt|
+    GitSignsChange = { fg = c.yellow, bg = options.transparent and c.none or c.bg }, -- diff mode: Changed line |diff.txt|
+    GitSignsDelete = { fg = c.red, bg = options.transparent and c.none or c.bg }, -- diff mode: Deleted line |diff.txt|
 
     --- Telescope
 
@@ -494,7 +494,7 @@ function M.setup()
     },
 
     NvimTreeNormal = { fg = c.fg, bg = config.transparent and c.none or c.bg_sidebar },
-    NvimTreeNormalNC = { fg = c.fg, bg = c.bg_sidebar },
+    NvimTreeNormalNC = { fg = c.fg, bg = config.transparent and c.none or c.bg_sidebar },
     NvimTreeRootFolder = { fg = c.purple200, bold = true },
     NvimTreeGitDirty = { fg = c.yellow },
     NvimTreeGitNew = { fg = c.green },
@@ -556,8 +556,8 @@ function M.setup()
 
     --- LspSaga
 
-    DiagnosticNormal = { fg = c.fg, bg = c.bg },
-    DiagnosticBorder = { fg = c.purple300, bg = c.bg },
+    DiagnosticNormal = { fg = c.fg, bg = options.transparent and c.none or c.bg },
+    DiagnosticBorder = { fg = c.purple300, bg = options.transparent and c.none or c.bg  },
     DiagnosticWarning = { link = 'DiagnosticWarn' },
     DiagnosticInformation = { link = 'DiagnosticInfo' },
 
@@ -594,14 +594,15 @@ function M.setup()
     healthWarning = { fg = c.warning },
 
     --- BufferLine
-    BufferlineBackground = { bg = c.bg },
-    BufferlineIndicatorSelected = { fg = c.purple, bg = c.bg },
-    BufferlineSeparator = { fg = c.bg, bg = c.bg },
-    BufferlineFill = { fg = c.bg, bg = c.bg },
-    BufferlineDuplicate = { bg = c.bg },
+    BufferlineBufferSelected = { bg = options.transparent and c.none or c.none },
+    BufferlineBackground = { bg = options.transparent and c.none or c.bg },
+    BufferlineIndicatorSelected = { fg = c.none, bg = options.transparent and c.none or c.bg },
+    BufferlineSeparator = { fg = options.transparent and c.none or c.bg, bg = options.transparent and c.none or c.bg },
+    BufferlineFill = { fg = c.bg, bg = options.transparent and c.none or c.bg },
+    BufferlineDuplicate = { bg = options.transparent and c.none or c.bg },
 
     BufferlineVisible = { bg = c.purple },
-    BufferlineSelected = { fg = c.purple, bg = c.bg, bold = false, italic = false },
+    BufferlineSelected = { fg = c.purple, bg = options.transparent and c.base400 or c.bg, bold = false, italic = false },
 
     BufferlineHint = { bg = c.bg },
     BufferlineHintDiagnostic = { fg = c.hint, bg = c.bg },
@@ -615,9 +616,9 @@ function M.setup()
     BufferlineInfo = { bg = c.bg },
     BufferlineInfoDiagnostic = { fg = c.info, bg = c.bg },
 
-    BufferlineModified = { fg = c.purple, bg = c.bg },
-    BufferlineModifiedSelected = { fg = c.purple, bg = c.bg },
-    BufferlineModifiedVisible = { fg = c.purple, bg = c.bg },
+    BufferlineModified = { fg = c.purple, bg = options.transparent and c.none or c.bg },
+    BufferlineModifiedSelected = { fg = c.purple, bg = options.transparent and c.none or c.bg },
+    BufferlineModifiedVisible = { fg = c.purple, bg = options.transparent and c.none or c.bg },
 
     --- Barbar (NOT TESTED)
 
@@ -772,7 +773,7 @@ function M.setup()
 
     --- Identline
 
-    IblIndent = { fg = c.base400, nocombine = true },
+    IblIndent = { fg = c.base400, bg = options.transparent and c.none or c.bg, nocombine = true },
 
     --- Scrollbar
 
@@ -800,9 +801,10 @@ function M.setup()
 
     LazyProgressDone = { bold = true, fg = c.purple50 },
     LazyProgressTodo = { bold = true, fg = c.purple400 },
+    LazyNormal = { fg = c.fg, bg = c.bg_sidebar },
     LazyH1 = { fg = c.purple200, bold = true },
-    LazyNoCond = { fg = c.base200 },
     LazySpecial = { fg = c.base100 },
+    LazyNoCond = { fg = c.base200 },
 
     --- Mason
 
