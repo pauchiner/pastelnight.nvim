@@ -169,7 +169,10 @@ function M.setup(opts)
   colors.black = util.darken(colors.bg, 0.8, '#000000')
   colors.border = colors.black
 
-  colors.bg_popup = colors.bg
+  colors.bg_popup = config.options.styles.floats == 'transparent' and colors.none
+    or config.options.styles.floats == 'dark' and colors.base600
+    or colors.bg
+
   colors.bg_statusline = config.options.transparent and colors.none or colors.bg
 
   -- Sidebar and Floats are configurable
