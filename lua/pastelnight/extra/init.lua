@@ -15,6 +15,7 @@ M.extras = {
   xfceterm = { ext = "theme", url = "https://docs.xfce.org/apps/terminal/advanced", label = "Xfce Terminal" },
   foot = { ext = "ini", url = "https://codeberg.org/dnkl/foot", label = "Foot" },
   tilix = { ext = "json", url = "https://github.com/gnunn1/tilix", label = "Tilix" },
+  ghostty = { ext = "", url = "https://github.com/ghostty-org/ghostty", label = "Ghostty" },
   iterm = { ext = "itermcolors", url = "https://iterm2.com/", label = "iTerm" },
   lua = { ext = "lua", url = "https://www.lua.org", label = "Lua Table for testing" },
   sublime = { ext = "tmTheme", url = "https://www.sublimetext.com/docs/themes", label = "Sublime Text" },
