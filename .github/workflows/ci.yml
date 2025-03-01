@@ -5,7 +5,6 @@ on:
 jobs:
   styles:
     name: 💅 Styles
-    needs: tests
     if: always()
     runs-on: ubuntu-20.04
 
