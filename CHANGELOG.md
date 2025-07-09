@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.1.0](https://github.com/pauchiner/pastelnight.nvim/compare/v3.0.0...v3.1.0) (2025-07-09)
+
+
+### Features
+
+* add an extra for ghostty ([773c04c](https://github.com/pauchiner/pastelnight.nvim/commit/773c04cc2888b13478fe6f530e89d353f2f126ad))
+
+
+### Bug Fixes
+
+* update colors for better compatibility with transparent mode ([2af1003](https://github.com/pauchiner/pastelnight.nvim/commit/2af10030ba8dffc4a3b3c86ea0f483a632d3f3ef))
+* update some colors to match better transparent mode ([21f50fc](https://github.com/pauchiner/pastelnight.nvim/commit/21f50fcbcbd6445c823a11b08ec60a27a3800b12))
+
 ## [3.0.0](https://github.com/pauchiner/pastelnight.nvim/compare/v2.5.1...v3.0.0) (2024-02-14)
 
 
