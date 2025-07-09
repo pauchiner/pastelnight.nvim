@@ -6,7 +6,7 @@ jobs:
   styles:
     name: 💅 Styles
     if: always()
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     permissions:
       contents: write
