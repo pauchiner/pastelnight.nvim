@@ -53,6 +53,7 @@ This palette is improved from the original 16 colors to a 40 shades of those, en
 - [Fish](https://fishshell.com/docs/current/index.html) ([fish](extras/fish))
 - [Fish Themes](https://fishshell.com/docs/current/interactive.html#syntax-highlighting) ([fish_themes](extras/fish_themes))
 - [Foot](https://codeberg.org/dnkl/foot) ([foot](extras/foot))
+- [Ghostty](https://github.com/ghostty-org/ghostty) ([ghostty](extras/ghostty))
 - [GitUI](https://github.com/extrawurst/gitui) ([gitui](extras/gitui))
 - [iTerm](https://iterm2.com/) ([iterm](extras/iterm))
 - [Kitty](https://sw.kovidgoyal.net/kitty/conf.html) ([kitty](extras/kitty))

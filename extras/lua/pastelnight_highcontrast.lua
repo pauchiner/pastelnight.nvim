@@ -13,7 +13,7 @@ local colors = {
   base900 = "#07080c",
   bg = "#292b3c",
   bg_float = "#1a1c27",
-  bg_popup = "#292b3c",
+  bg_popup = "#1a1c27",
   bg_sidebar = "#292b3c",
   bg_statusline = "#292b3c",
   black = "#212230",
@@ -711,6 +711,9 @@ local highlights = {
   BufferlineBackground = {
     bg = "#292b3c"
   },
+  BufferlineBufferSelected = {
+    bg = "NONE"
+  },
   BufferlineDuplicate = {
     bg = "#292b3c"
   },
@@ -734,7 +737,7 @@ local highlights = {
   },
   BufferlineIndicatorSelected = {
     bg = "#292b3c",
-    fg = "#ad80d4"
+    fg = "NONE"
   },
   BufferlineInfo = {
     bg = "#292b3c"
@@ -1103,12 +1106,15 @@ local highlights = {
     fg = "#ff3d3d"
   },
   GitSignsAdd = {
+    bg = "#292b3c",
     fg = "#56fe86"
   },
   GitSignsChange = {
+    bg = "#292b3c",
     fg = "#fec456"
   },
   GitSignsDelete = {
+    bg = "#292b3c",
     fg = "#ff3d3d"
   },
   GlyphPalette1 = {
@@ -1156,6 +1162,7 @@ local highlights = {
     link = "DiagnosticNormal"
   },
   IblIndent = {
+    bg = "#292b3c",
     fg = "#4b4c58",
     nocombine = true
   },
@@ -1189,6 +1196,10 @@ local highlights = {
   },
   LazyNoCond = {
     fg = "#a8a9b2"
+  },
+  LazyNormal = {
+    bg = "#292b3c",
+    fg = "#f9fbff"
   },
   LazyProgressDone = {
     bold = true,
