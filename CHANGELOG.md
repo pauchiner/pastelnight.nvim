@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.1](https://github.com/pauchiner/pastelnight.nvim/compare/v3.1.0...v3.1.1) (2025-07-09)
+
+
+### Bug Fixes
+
+* update the sublime extra colors ([bf9ce04](https://github.com/pauchiner/pastelnight.nvim/commit/bf9ce04defceeb54cf109fb13b331dfe1752c5c5))
+
 ## [3.1.0](https://github.com/pauchiner/pastelnight.nvim/compare/v3.0.0...v3.1.0) (2025-07-09)
 
 
