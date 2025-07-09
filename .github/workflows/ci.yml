@@ -41,7 +41,7 @@ jobs:
     permissions:
       contents: write
 
-  steps:
+    steps:
       - uses: actions/checkout@v3
 
       - name: Setup Neovim (nightly)
